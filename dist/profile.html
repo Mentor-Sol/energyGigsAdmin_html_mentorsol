@@ -31,7 +31,7 @@
         <div class="navbar-header">
             <div class="d-flex" >
                 <!-- LOGO -->
-                <div class="navbar-brand-box" style="text-align: left; padding-left: 17px;" >
+                <div class="navbar-brand-box" style="text-align: left; padding-left: 22px;" >
                     <a href="index.html" class="logo logo-dark justify-content-start" >
                         <span class="logo-sm">
                             <img src="assets/images/energy-gigs-logo.svg" alt="" width="195" height="36">
@@ -53,17 +53,20 @@
 
                 <div class="px-3 header-item" >
                 </div>
+                <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
+                    <i class="fa fa-fw fa-bars"></i>
+                </button>
 
                 <!-- App Search-->
                 <nav class="navbar navbar-expand-lg navbar-white bg-white">
                     <div class="container-fluid">
                       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav" style=" font-weight: 400; font-size: 16px; line-height: 24px;">
+                        <ul class="navbar-nav" style=" font-weight: 400; line-height: 24px;">
                           <li class="nav-item">
                             <a class="nav-link " aria-current="page" href="./../profile.html">Profile</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Projects</a>
+                            <a class="nav-link" href="../project.html">Projects</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="#">Job Board</a>
@@ -227,13 +230,19 @@
             <div id="sidebar-menu">
        
             
+               
+           
+                <!-- Left Menu Start -->
+                <ul class="metismenu list-unstyled" id="side-menu">
+                   <ul>
+                
                     <div class="form-check sidebar-checkbox ">
                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="background-color:#001f3f; border-color: #fff;">
                         <label class="form-check-label" for="flexCheckDefault">
                           Saved
                         </label>
                      </div>
-        
+               
                         <div class="form-check sidebar-checkbox ">
                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" style="background-color:#001f3f; border-color: #fff;">
                            <label class="form-check-label" for="flexCheckDefault">
@@ -241,15 +250,13 @@
                            </label>
                         </div>
                 
-                    <div class="form-check sidebar-checkbox">
-                        <input class="form-check-input " type="checkbox" value="" id="flexCheckChecked" checked style="background-color:#001f3f; border-color: #fff;" >
-                        <label class="form-check-label" for="flexCheckChecked">
-                          Hidden Contacted
+                        <div class="form-check sidebar-checkbox">
+                            <input class="form-check-input " type="checkbox" value="" id="flexCheckChecked" checked style="background-color:#001f3f; border-color: #fff;" >
+                            <label class="form-check-label" for="flexCheckChecked">
+                             Hidden Contacted
                         </label>
-                      </div>
-           
-                <!-- Left Menu Start -->
-                <ul class="metismenu list-unstyled" id="side-menu">
+                    </div>
+                    </ul> 
 
                     <li class="menu-title" key="t-menu">Freelance Profile</li>
 
@@ -343,7 +350,27 @@
                         </ul> -->
                     </li>
 
-                <button class="btn btn-outline-primary btn-lg btn-rounded sidebar-btn" >Clear Filter</button>
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <!-- <i class="bx bx-home-circle"></i> -->
+                            <span key="t-dashboards">Profile</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="../profile.html" key="t-default">Edit Profile</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);" class="has-arrow waves-effect">
+                            <!-- <i class="bx bx-home-circle"></i> -->
+                            <span key="t-dashboards">Project</span>
+                        </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="" key="t-default">Add Project</a></li>
+                        </ul>
+                    </li>
+                    <ul>
+                     <button class="btn btn-outline-primary btn-lg btn-rounded sidebar-btn" >Clear Filter</button>
+                    </ul>
 
                 </ul>
             </div>
@@ -382,7 +409,7 @@
                         <!-- end page title -->
                         <div class="row">
 
-                            <div class="col-md-4">
+                            <div class="col-md-6 col-lg-5">
 
                                 <div class="card card-body py-4">
 
@@ -393,18 +420,18 @@
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="d-flex justify-content-between align-items-center border-1 border-bottom" style="border-color :#E5E6EB; margin-bottom: 16px;">
-                                                    <p class="fs-4" style="margin-bottom: 0px;">SA Company</p><i class="bx bx-pencil text-primary fs-4"></i>
+                                                    <p class="fs-4" style="margin-bottom: 0px;"><strong>SA Company</strong></p><a href="#"><i class="bx bx-pencil text-primary fs-4"></i></a>
                                                 </div>
                                                 
                                                 <div class="d-flex justify-content-between align-items-center border-1 border-bottom" style="border-color :#E5E6EB;">
-                                                    <p style="margin-bottom: 0px;">Lorem ipsum dolor si amet</p><i class="bx bx-pencil text-primary fs-4"></i>
+                                                    <p style="margin-bottom: 0px;">Lorem ipsum dolor si amet</p><a href="#"><i class="bx bx-pencil text-primary fs-4"></i></a>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-12">
-                                                <div class="d-flex align-items-center my-3">
-                                                    <i class="bx bx-plus-circle text-primary" type="solid"></i><p class="text-primary" style="margin-bottom: 0px;"><ins>Add Category</ins></p>
+                                                <div class=" my-3">
+                                                    <a class="d-flex align-items-center" href=""><i class="bx bx-plus-circle text-primary" type="solid"></i><p class="text-primary" style="margin-bottom: 0px;"><ins>Add Category</ins></p></a></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -437,13 +464,13 @@
                                     <div class="mb-3">
                                         <label class="form-label">Description</label>
                                         <div>
-                                            <textarea required class="form-control" rows="12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </textarea>
+                                            <textarea required class="form-control" rows="12" style="resize: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </textarea>
                                         </div>
                                     </div>
                                     
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 col-lg-6">
                                 <div class="card">
                                     <div class="card-body">
                                      <!-- Nav tabs -->
@@ -493,7 +520,7 @@
                                         </div>
                                         <div class="tab-pane" id="payement1" role="tabpanel">
                                          
-                                            <p class="mb-3"><strong>Billing Informations</strong></p>
+                                            <p class="mb-3"><strong>BILLING INFORMATIONS</strong></p>
                                            <form>
                                             <div class="row">
                                                 <div class="col-md-6">
@@ -530,7 +557,7 @@
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
-                                                        <label for="formrow-inputState" class="form-label">Company Size</label>
+                                                        <label for="formrow-inputState" class="form-label">State</label>
                                                         <select id="formrow-inputState" class="form-select">
                                                             <option selected>None</option>
                                                         </select>
@@ -545,20 +572,16 @@
                                                 <hr class="border-1 border-top" style="border-color: #E5E6EB;">
                                                 <div class="row">
                                                    <div class="col-md-8">
-                                                       <p class="mb-3"><strong>Stripe Account</strong></p>
+                                                       <p class="mb-3"><strong>STRIPE ACCOUNT</strong></p>
                                                        <p class="mb-3">You have not set up your Stripe account yet.</p>
                                                    </div>
-                                                   <div class="col-md-4 justify-content-end">
-                                                    <button class="btn btn-outline-danger btn-xs btn-rounded text-dark" >Stripe Account</button>
+                                                   <div class="col-md-4 d-flex align-items-center">
+                                                    <button class="btn btn-outline-danger btn-sm btn-rounded text-dark" style=" border: 2px solid #D35555;" ><strong>Stripe Account</strong> </button>
                                                    </div>
                                                 </div> 
+                                             </div>                                                                                 
                                              </div>
-                                            
-                                                                                 
-                                             </div>
-                                            
                                             </form>
-                                      
                                         </div>
                                     </div>
                                 </div>

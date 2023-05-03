@@ -1,0 +1,138 @@
+@@include("partials/main.html")
+
+<head>
+  @@include("partials/title-meta.html", {"title": "Create New Project"})
+  @@include("partials/head-css.html")
+
+</head>
+
+@@include("partials/body.html")
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+  @@include("partials/menu.html")
+
+  <!-- ============================================================== -->
+  <!-- Start right Content here -->
+  <!-- ============================================================== -->
+  <div class="main-content">
+    <div class="page-content">
+      <div class="container-fluid">
+        @@include("partials/page-title.html", {"pagetitle": "Project", "title":
+        "Create New"})
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="font-size-24 d-flex justify-content-end mb-3" >
+                        <a href="#"><i class="bx bx-dots-horizontal-rounded"  onclick="" style="color:#4D4D4D"></i> </a>  
+                        <a href="#"><i class="bx bx-x" style="color:#4D4D4D" onclick=""></i></a> 
+                        </div>
+                        <form>
+                            <input type="text" class="form-control border-0 fs-1 fw-bold create-project-heading mb-3" placeholder="Enter Poject Title Here ">
+                            <hr class="border-1 border-top" style="border-color: #C0BDBD;">
+                            <div class="row mt-3">
+                                <div class="col-lg-4 ">
+                                    <div class="mb-3">
+                                        <label class="form-label">Location</label>
+                                        <input type="text" class="form-control rounded" placeholder="Houston, TX">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 offset-lg-2">
+                                    <div class="mb-3">
+                                        <label  class="form-label">Experience</label>
+                                            <select class="form-select">
+                                                <option value="1" selected>1 to 2 years OR beginner</option>
+                                                <option value="2" >Intermediate (2 to 4 years)</option>
+                                                <option value="3" >Expert (up to 5 years)</option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-4 ">
+                                    <div class="mb-3">
+                                        <label  class="form-label">Duration</label>
+                                            <select class="form-select project-select">
+                                                <option value="1" selected>1 to 3 months</option>
+                                                <option value="2" >3 to 6 months</option>
+                                                <option value="3" >More than 6 months</option>
+                                            </select>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 offset-lg-2">
+                                    <div class="mb-3">
+                                        <label class="form-label">Budget</label>
+                                        <input type="text" class="form-control rounded" placeholder="Enter Budget">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 mb-5">
+                                    <label class="form-label mt-3">Description</label>
+                                    <textarea class="form-control" rows="8" style="resize: none;"></textarea>
+                                </div>
+
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-xs-4 col-sm-3 col-lg-2">
+                                    <p>Industries</p>
+                                </div>
+                                <div class="col-xs-2 col-sm-1">:</div>
+                                <div class="col-xs-6 col-sm-8 col-lg-9">
+                                    <a class="d-flex align-items-center" href="">
+                                        <i class="bx bx-plus-circle text-primary" type="solid"></i>
+                                        <p class="text-primary" style="margin-bottom: 0px;"><ins>Add Category</ins></p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-sm-3 col-lg-2">
+                                    <p>Skills</p>
+                                </div>
+                                <div class="col-sm-1">:</div>
+                                <div class="col-sm-8 col-lg-9">
+                                    <a class="d-flex align-items-center" href="">
+                                        <i class="bx bx-plus-circle text-primary" type="solid"></i>
+                                        <p class="text-primary" style="margin-bottom: 0px;"><ins>Add Skills</ins></p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="row m-5"></div>
+                            <div class="row">
+                                <div class="col-sm-3 col-lg-6 d-flex align-items-center">
+                                    <a href="" class="text-danger font-size-16"><strong>Cancel</strong></a>
+                                </div>
+                                <div class="col-sm-9 col-lg-6 d-flex justify-content-end align-items-center">
+                                    <a href="" class="btn btn-primary btn-rounded font-size-16 mx-2"><strong>Submit</strong></a>
+                                    <a href="" class="btn btn-outline-primary btn-rounded font-size-16 me-5"><strong>Save Draft</strong></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page-content -->
+  
+    @@include("partials/footer.html")
+</div>
+<!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+
+@@include("partials/right-sidebar.html")
+
+@@include("partials/vendor-scripts.html")
+
+ <!-- fontawesome icons init -->
+    <script src="assets/js/pages/fontawesome.init.js"></script>
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>

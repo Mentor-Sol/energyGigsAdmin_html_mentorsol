@@ -156,6 +156,26 @@ File: Main Css File
   --bs-table-border-color: #3a425a;
 }
 
+.create-project-heading::-webkit-input-placeholder {
+  color: #D3D5DA;
+}
+
+.create-project-heading::-moz-placeholder {
+  color: #D3D5DA;
+}
+
+.create-project-heading:-ms-input-placeholder {
+  color: #D3D5DA;
+}
+
+.create-project-heading::-ms-input-placeholder {
+  color: #D3D5DA;
+}
+
+.create-project-heading::placeholder {
+  color: #D3D5DA;
+}
+
 #page-topbar {
   position: fixed;
   top: 0;
