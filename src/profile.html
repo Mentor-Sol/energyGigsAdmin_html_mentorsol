@@ -1,0 +1,233 @@
+@@include("partials/main.html")
+
+<head>
+        
+    @@include("partials/title-meta.html", {"title": "File Manager"})
+
+    @@include("partials/head-css.html")
+
+</head>
+
+@@include("partials/body.html")
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+    @@include("partials/menu.html")
+
+     <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+
+                    <div class="container-fluid">
+
+                        @@include("partials/page-title.html", {"pagetitle": "", "title": "Profile"})
+                        <div class="row">
+
+                            <div class="col-md-4">
+
+                                <div class="card card-body py-4">
+
+                                    <div class="bg-white bg-soft">
+                                        <div class="row ">
+                                            <div class="col-md-4">        
+                                            <img class="rounded-circle avatar-md" alt="80x80" src="assets/images/users/avatar-4.jpg" data-holder-rendered="true" width="80" height="80">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="d-flex justify-content-between align-items-center border-1 border-bottom" style="border-color :#E5E6EB; margin-bottom: 16px;">
+                                                    <p class="fs-4" style="margin-bottom: 0px;">SA Company</p><i class="bx bx-pencil text-primary fs-4"></i>
+                                                </div>
+                                                
+                                                <div class="d-flex justify-content-between align-items-center border-1 border-bottom" style="border-color :#E5E6EB;">
+                                                    <p style="margin-bottom: 0px;">Lorem ipsum dolor si amet</p><i class="bx bx-pencil text-primary fs-4"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="d-flex align-items-center my-3">
+                                                    <i class="bx bx-plus-circle text-primary" type="solid"></i><p class="text-primary" style="margin-bottom: 0px;"><ins>Add Category</ins></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr class="border-1 border-top" style="border-color: #E5E6EB;">
+                                    </div>
+                                    <form>
+                                        <p><strong>VISIBLE INFORMATION</strong></p>
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label class="form-label">Location</label>
+                                                <input type="text" class="form-control" placeholder="Houston, TX, USA">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="mb-3">
+                                                <label for="formrow-inputState" class="form-label">Company Size</label>
+                                                <select id="formrow-inputState" class="form-select">
+                                                    <option selected>0-150</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <p><strong>WORK LOCATION</strong></p>
+                                        <p class="my-0">Remote Only</p>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                          </div>
+                                    </form>
+                                    <hr class="border-1 border-top" style="border-color: #E5E6EB;">
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Description</label>
+                                        <div>
+                                            <textarea required class="form-control" rows="12">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </textarea>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                     <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-bs-toggle="tab" href="#general1" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                                        <span class="d-none d-sm-block">General</span> 
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#notifications1" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                                    <span class="d-none d-sm-block">Notifications</span> 
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#payement1" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                                    <span class="d-none d-sm-block">Payements</span>   
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <!-- Tab panes -->
+                                        <div class="tab-content p-3 text-muted">
+                                        <div class="tab-pane active" id="general1" role="tabpanel">
+                                            <p class="mb-0">
+                                                Raw denim you probably haven't heard of them jean shorts Austin.
+                                                Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                                cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                                butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi,
+                                                qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+                                                iphone. Seitan aliquip quis cardigan american apparel, butcher
+                                                voluptate nisi qui.
+                                            </p>
+                                        </div>
+                                        <div class="tab-pane" id="notifications1" role="tabpanel">
+                                            <p class="mb-0">
+                                            Food truck fixie locavore, accusamus mcsweeney's marfa nulla
+                                            single-origin coffee squid. Exercitation +1 labore velit, blog
+                                            sartorial PBR leggings next level wes anderson artisan four loko
+                                            farm-to-table craft beer twee. Qui photo booth letterpress,
+                                            commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
+                                            vinyl cillum PBR. Homo nostrud organic, assumenda labore
+                                            aesthetic magna delectus.
+                                            </p>
+                                        </div>
+                                        <div class="tab-pane" id="payement1" role="tabpanel">
+                                         
+                                            <p class="mb-3"><strong>Billing Informations</strong></p>
+                                           <form>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">First Name</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Your First Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Family Name</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Your Family Name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Address Line 1</label>
+                                                    <input type="text" class="form-control" placeholder="Enter Address">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Address Line 2</label>
+                                                    <input type="text" class="form-control" placeholder="Enter Address">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">City</label>
+                                                    <input type="text" class="form-control" placeholder="Enter City">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="formrow-inputState" class="form-label">Company Size</label>
+                                                        <select id="formrow-inputState" class="form-select">
+                                                            <option selected>None</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Enter Zip Code</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Zip Code">
+                                                    </div>
+                                                </div>
+                                                <hr class="border-1 border-top" style="border-color: #E5E6EB;">
+                                                <div class="row">
+                                                   <div class="col-md-8">
+                                                       <p class="mb-3"><strong>Stripe Account</strong></p>
+                                                       <p class="mb-3">You have not set up your Stripe account yet.</p>
+                                                   </div>
+                                                   <div class="col-md-4 justify-content-end">
+                                                    <button class="btn btn-outline-danger btn-xs btn-rounded text-dark" >Stripe Account</button>
+                                                   </div>
+                                                </div> 
+                                             </div>
+                                            
+                                                                                 
+                                             </div>
+                                            
+                                            </form>
+                                      
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </div>  
+</div>
+@@include("partials/footer.html")
+</div>
+<!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+@@include("partials/right-sidebar.html")
+
+@@include("partials/vendor-scripts.html")
+
+<!-- App js -->
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>
