@@ -176,6 +176,13 @@ File: Main Css File
   color: #D3D5DA;
 }
 
+.bg-icon {
+  background-image: url("../../../images/edit-pencil.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
 #page-topbar {
   position: fixed;
   top: 0;
