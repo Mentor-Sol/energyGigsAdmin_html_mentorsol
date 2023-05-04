@@ -1982,6 +1982,19 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid, body[data
   background-color: #343a40;
 }
 
+.form-check-themeblack .form-check-input:checked {
+  background-color: #001F3F;
+  border-color: #001F3F;
+}
+
+.form-radio-themeblack .form-check-input:checked {
+  border-color: #001F3F;
+  background-color: #001F3F;
+}
+.form-radio-themeblack .form-check-input:checked:after {
+  background-color: #001F3F;
+}
+
 .form-check,
 .form-check-input,
 .form-check-label {
@@ -2873,6 +2886,11 @@ input[type=checkbox].tui-full-calendar-checkbox-round + span {
 .toast-dark {
   border: 2px solid #343a40 !important;
   background-color: rgba(52, 58, 64, 0.8) !important;
+}
+
+.toast-themeblack {
+  border: 2px solid #001F3F !important;
+  background-color: rgba(0, 31, 63, 0.8) !important;
 }
 
 .toast-error {
@@ -4084,7 +4102,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
 }
 
 .auth-full-bg {
-  background-color: rgba(255, 184, 2, 0.25);
+  background: url("../images/signup-background-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4102,7 +4123,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
   border-radius: 50%;
 }
 .auth-full-bg .bg-overlay {
-  background: url("../images/bg-auth-overlay.png");
+  background: url("../images/signup-background-image.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

@@ -141,7 +141,9 @@ $colors: (
     "black":      $black,
     "white":      $white,
     "gray":       $gray-600,
-    "gray-dark":  $gray-800
+    "gray-dark":  $gray-800,
+    "themeblack": $themeblack,
+    "custom-color-heading":$custom-color-heading
 );
 // scss-docs-end colors-map
 
@@ -154,6 +156,8 @@ $warning:       $yellow;
 $danger:        $red;
 $light:         $gray-200;
 $dark:          $gray-800;
+$themeblack:    $themeblack;
+
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -166,7 +170,8 @@ $theme-colors: (
     "danger":     $danger,
     "pink":       $pink,
     "light":      $light,
-    "dark":       $dark
+    "dark":       $dark,
+    "themeblack": $themeblack
 );
 // scss-docs-end theme-colors-map
 
