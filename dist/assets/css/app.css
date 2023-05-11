@@ -183,6 +183,41 @@ File: Main Css File
   padding-left: 30px;
 }
 
+.freelancer-modal {
+  max-width: 40%;
+  margin-right: 60% !important;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 400px) {
+  .freelancer-modal {
+    max-width: 100%;
+    margin-right: 0% !important;
+  }
+}
+@media only screen and (max-width: 600px) and (min-width: 1200px) {
+  .freelancer-modal {
+    max-width: 50%;
+    margin-right: 50% !important;
+  }
+}
+.project-card-background {
+  background-color: rgb(244, 244, 246) !important;
+}
+
+.project-pill-yellow {
+  padding: 12px;
+  background-color: rgb(255, 247, 209);
+  color: #fff7d1;
+  margin-right: 5px;
+}
+
+.project-pill-purple {
+  padding: 12px;
+  background-color: #E0E8FF;
+  color: rgb(20, 55, 143);
+  margin-right: 5px;
+}
+
 #page-topbar {
   position: fixed;
   top: 0;
