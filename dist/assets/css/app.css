@@ -188,7 +188,7 @@ File: Main Css File
   margin-right: 60% !important;
 }
 
-@media only screen and (max-width: 600px) and (min-width: 400px) {
+@media only screen and (max-width: 600px) and (min-width: 200px) {
   .freelancer-modal {
     max-width: 100%;
     margin-right: 0% !important;
@@ -216,6 +216,57 @@ File: Main Css File
   background-color: #E0E8FF;
   color: rgb(20, 55, 143);
   margin-right: 5px;
+}
+
+.custom-hover:hover {
+  color: #001F3F !important;
+}
+
+.custom-dropdown {
+  position: relative;
+}
+.custom-dropdown .dropdown-toggle {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.custom-dropdown .dropdown-toggle:hover {
+  background-color: #e9ecef;
+}
+.custom-dropdown .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  z-index: 1000;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  border: 1px solid #ced4da;
+  background-color: #fff;
+  list-style: none;
+}
+.custom-dropdown .dropdown-menu .dropdown-item {
+  padding: 0.25rem 1.5rem;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.custom-dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+.custom-dropdown.show .dropdown-menu {
+  display: block;
+}
+
+.formSetting {
+  font-size: 14px;
 }
 
 #page-topbar {
@@ -2030,6 +2081,19 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid, body[data
   background-color: #001F3F;
 }
 
+.form-check-blueColor .form-check-input:checked {
+  background-color: #14378F;
+  border-color: #14378F;
+}
+
+.form-radio-blueColor .form-check-input:checked {
+  border-color: #14378F;
+  background-color: #14378F;
+}
+.form-radio-blueColor .form-check-input:checked:after {
+  background-color: #14378F;
+}
+
 .form-check,
 .form-check-input,
 .form-check-label {
@@ -2926,6 +2990,11 @@ input[type=checkbox].tui-full-calendar-checkbox-round + span {
 .toast-themeblack {
   border: 2px solid #001F3F !important;
   background-color: rgba(0, 31, 63, 0.8) !important;
+}
+
+.toast-blueColor {
+  border: 2px solid #14378F !important;
+  background-color: rgba(20, 55, 143, 0.8) !important;
 }
 
 .toast-error {
