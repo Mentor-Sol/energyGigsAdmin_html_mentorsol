@@ -1,0 +1,44 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Preloader Layout"})
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    <div class="d-flex justify-content-center align-items-center vh-100 text-center">
+        <div class="container">
+            <h1 class="text-themeblack">Location preferences</h1>
+            <p class="text-themeblack">Where do you want the freelancer to work?</p>
+            <div class="row">
+                <div class="offset-4 col-4 text-themeblack">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="card selectable-card">
+                          <div class="text-center">
+                            <img src="assets/images/home.png" class="bg-primary rounded-circle p-4" width="100px" height="100px" />
+                            <p>I only want to work remote</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="card selectable-card">
+                          <div class="text-center">
+                            <img src="assets/images/factory.png" class="bg-primary rounded-circle" width="100px" height="100px" />
+                            <p>I am flexible to work onsite</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    
+<script src="assets/js/energygigs/location-preference.js"></script>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
