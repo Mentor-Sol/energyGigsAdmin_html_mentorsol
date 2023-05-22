@@ -1,0 +1,139 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Cards"})
+
+        @@include("partials/head-css.html")
+
+        <link href="assets/libs/bootstrap-rating/bootstrap-rating.css" rel="stylesheet" type="text/css" />
+
+
+    </head>
+
+    @@include("partials/body.html")
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @@include("partials/menu.html")
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-end">
+                               <label for="selectOption" class="form-label mx-2">Sort By:</label>
+                            <div class="col-lg-2">
+                              <select id="selectOption" class="form-select">
+                                <option>Best Matches</option>
+                              </select>
+                            </div>
+                          </div>
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <div class="card p-3 bg-white">
+                                    <div class="card-body">
+                                        <div class="row">
+                                        <div class="col-lg-6 col-sm-12 col-12">
+                                            <p class="font-size-20 fw-bold mt-2 text-themeblack">Looking for a new seller</p>
+                                            <div class="col-xl-6 col-md-6 col-sm-12 ml-5">
+                                                <div class="text-center">
+                                                    <div class="rating-star d-flex align-items-center">
+                                                        <input type="hidden" class="rating" data-filled="mdi mdi-star text-primary" data-empty="mdi mdi-star-outline text-primary" data-fractions="2"/>
+                                                        <p class="mx-3 mb-0">See Reviews</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-sm-12 col-12">
+                                            <div class="d-flex flex-row justify-content-end align-items-center">
+                                            <button type="button" class="btn btn-primary rounded-pill mx-3 text-themeblack px-3 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Apply to Project</button>
+                                            Posted May 1 2023
+                                            <div class="mx-5">
+                                            <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.57812 1.44561L8.96484 1.86749L9.38672 1.48077C10.5469 0.320612 12.1992 -0.206731 13.7812 0.0745187C16.207 0.461237 18 2.57061 18 5.03155V5.20733C18 6.68389 17.3672 8.09014 16.3125 9.07452L9.94922 15.0159C9.70312 15.262 9.35156 15.3675 9 15.3675C8.61328 15.3675 8.26172 15.262 8.01562 15.0159L1.65234 9.07452C0.597656 8.09014 0 6.68389 0 5.20733V5.03155C0 2.57061 1.75781 0.461237 4.18359 0.0745187C5.76562 -0.206731 7.41797 0.320612 8.57812 1.44561C8.57812 1.48077 8.54297 1.44561 8.57812 1.44561ZM8.96484 4.25811L7.38281 2.64092C6.60938 1.90264 5.51953 1.55108 4.46484 1.72686C2.84766 2.00811 1.6875 3.37921 1.6875 5.03155V5.20733C1.6875 6.22686 2.07422 7.17608 2.8125 7.84405L9 13.6097L15.1523 7.84405C15.8906 7.17608 16.3125 6.22686 16.3125 5.20733V5.03155C16.3125 3.37921 15.1172 2.00811 13.5 1.72686C12.4453 1.55108 11.3555 1.90264 10.582 2.64092L8.96484 4.25811Z" fill="#001F3F"/>
+                                            </svg>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="18" r="2" transform="rotate(-90 12 18)" fill="#001F3F"/>
+                                                <circle cx="12" cy="12" r="2" transform="rotate(-90 12 12)" fill="#001F3F"/>
+                                                <circle cx="12" cy="6" r="2" transform="rotate(-90 12 6)" fill="#001F3F"/>
+                                            </svg>
+                                        </div>
+                                        </div>
+                                        </div>
+
+                                                
+                                        </div>
+                                        <div class="rounded project-card-background">
+                                            <div class="row p-3 mt-3">
+                                                <div class="col-lg-3 col-12"><span class="text-themeblack font-size-16 text-center fw-bold"><i class="bx bx-dollar-circle mx-2"></i> Fixed - price : $12,998</span></div>
+                                                <div class="col-lg-3 col-12"><span class="text-themeblack font-size-16 text-center fw-bold"><i class="bx bx-notepad mx-2"></i>Duration: 1 to 3 Months</span></div>
+                                                <div class="col-lg-3 col-12"><span class="text-themeblack font-size-16 text-center fw-bold"><i class="bx bx-map mx-2"></i>Houston, TX</span></div>
+                                                <div class="col-lg-3 col-12"><span class="text-themeblack font-size-16 text-center fw-bold"><i class="bx bx-check-circle mx-2"></i>Exp: intermediate</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-12">
+                                                <p class="font-size-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. incididunt ut labore et dolore magna aliqua</p>
+                                                <p class="font-size-16"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et  dolore magna aliqua Lorem ipsum dolor sit amet, consectetur adipiscing elit... full project</p>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-12 col-lg-7 col-md-7 d-flex text-wrap justify-content-start align-items-center">
+                                                <h4 class="me-3 mt-3 fw-bold">Skills required</h4>
+                                            <div>
+                                                <p class="badge mt-3 rounded-pill text-primary font-size-10 project-pill-yellow">Tag text</p>
+                                                <p class="badge mt-3 rounded-pill text-primary font-size-10 project-pill-yellow">Tag text</p>
+                                                <p class="badge mt-3 rounded-pill text-primary font-size-10 project-pill-yellow">Tag text</p>
+                                                <p class="badge mt-3 rounded-pill text-primary font-size-10 project-pill-yellow">Tag text</p>
+                                                <p class="badge mt-3 rounded-pill text-primary font-size-10 project-pill-yellow">Tag text</p>
+                                                <p class="badge mt-3 rounded-pill text-primary font-size-10 project-pill-yellow">Tag text</p>
+                                            </div>
+                                            </div>
+                                            <div class="col-12 col-lg-5 col-md-7 d-flex text-wrap justify-content-start align-items-center">
+                                                <h4 class="me-3 mt-3 fw-bold">Industries</h4>
+                                                <div><p class="badge mt-3 rounded-pill font-size-10 project-pill-purple">Tag text</p>
+                                                <p class="badge mt-3 rounded-pill font-size-10 project-pill-purple">Tag text</p>
+                                                <p class="badge mt-3 rounded-pill font-size-10 project-pill-purple">Tag text</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <!-- end card body -->
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end col -->
+                        </div>
+                    </div> <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+                @@include("partials/footer.html")
+            </div>
+            <!-- end main content-->
+
+        </div>
+        <!-- END layout-wrapper -->
+
+        @@include("partials/right-sidebar.html")
+
+        @@include("partials/vendor-scripts.html")
+
+        <!-- masonry pkgd -->
+        <script src="assets/libs/masonry-layout/masonry.pkgd.min.js"></script>
+
+        <script src="assets/libs/bootstrap-rating/bootstrap-rating.min.js"></script>
+
+        <script src="assets/js/pages/rating-init.js"></script>
+
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>

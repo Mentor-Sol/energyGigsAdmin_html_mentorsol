@@ -1,0 +1,369 @@
+@@include("partials/main.html")
+
+<head>
+        
+    @@include("partials/title-meta.html", {"title": "File Manager"})
+
+    @@include("partials/head-css.html")
+
+</head>
+
+@@include("partials/body.html")
+
+<!-- Begin page -->
+<div id="layout-wrapper">
+    @@include("partials/menu.html")
+
+     <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                <div class="page-content">
+
+                    <div class="container-fluid">
+
+                        @@include("partials/page-title.html", {"pagetitle": "", "title": "Profile"})
+                        <div class="row">
+
+                            <div class="col-md-6 col-lg-5">
+
+                                <div class="card card-body py-4">
+
+                                    <div class="bg-white bg-soft">
+                                        <div class="row ">
+                                            <div class="col-md-4">        
+                                            <img class="rounded-circle avatar-md" alt="80x80" src="assets/images/users/avatar-4.jpg" data-holder-rendered="true" width="80" height="80">
+                                            </div>
+                                           
+                                            <div class="col-md-8">
+                                                <div class="d-flex justify-content-between align-items-center border-1 border-bottom" style="border-color :#E5E6EB; margin-bottom: 16px;">
+                                                  <div class="input-group">
+                                                    <input id="company-input" type="text" class="form-control border-0 font-size-24 fw-bold" placeholder="SA Company" readonly>
+                                                    <div class="input-group-append d-flex align-items-center">
+                                                      <span class="border-0" id="heading-icon">
+                                                        <i id="edit-company-icon" class="bx bx-pencil font-size-18 text-primary"></i>
+                                                      </span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                                                              
+                                                <div class="d-flex justify-content-between align-items-center border-1 border-bottom" style="border-color :#E5E6EB;">
+                                                  <div class="input-group">
+                                                    <input id="description-input" type="text" class="form-control border-0 font-size-14" placeholder="Lorem ipsum dolor si amet" readonly>
+                                                    <div class="input-group-append d-flex align-items-center">
+                                                      <span class="border-0" id="para-icon">
+                                                        <i id="edit-description-icon" class="bx bx-pencil font-size-18 text-primary"></i>
+                                                      </span>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                              <div class="my-3">
+                                                <a id="add-category-link" class="d-flex align-items-center" href="#">
+                                                  <i class="bx bx-plus-circle text-primary"></i>
+                                                  <p class="text-primary" style="margin-bottom: 0;"><ins>Add Category</ins></p>
+                                                </a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          
+                                          <ul id="category-container" class="nav nav-pills custom-hover"></ul>
+                                         
+                                        <hr class="border-1 border-top" style="border-color: #E5E6EB;">
+                                    </div>
+                                   
+                                       
+                                        <div class="row d-flex justify-content-around">
+                                        <p><strong>VISIBLE INFORMATION</strong></p>
+                                        <div class="col-12 col-lg-6 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Location</label>
+                                                <input type="text" class="form-control" placeholder="Houston, TX, USA">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 col-md-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Rate (USD)</label>
+                                                <input type="number" class="form-control" placeholder="0.00">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row d-flex justify-content-around">
+                                        <div class="col-12 col-lg-6 col-md-6">
+                                            <div class="mb-3">
+                                                <label for="formrow-inputState" class="form-label">Rate Type</label>
+                                                <select id="formrow-inputState" class="form-select">
+                                                    <option>None</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6 col-md-6">
+                                            <div class="mb-3">
+                                                <label for="formrow-inputState" class="form-label">Company Size</label>
+                                                <select id="formrow-inputState" class="form-select">
+                                                    <option selected>0-150</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        <p><strong>WORK LOCATION</strong></p>
+                                        <p class="my-0">Remote Only</p>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                          </div>
+                                    </form>
+                                    <hr class="border-1 border-top" style="border-color: #E5E6EB;">
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Description</label>
+                                        <div>
+                                            <textarea required class="form-control" rows="12" style="resize: none;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </textarea>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                     <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs nav-tabs-custom nav-justified" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-bs-toggle="tab" href="#general1" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
+                                                        <span class="d-none d-sm-block">General</span> 
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#experience1" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
+                                                    <span class="d-none d-sm-block">Experience</span> 
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#education1" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                                    <span class="d-none d-sm-block">Education</span>   
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#payement1" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                                    <span class="d-none d-sm-block">Payements</span>   
+                                                </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#setting1" role="tab">
+                                                    <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
+                                                    <span class="d-none d-sm-block">Setting</span>   
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <!-- Tab panes -->
+                                        <div class="tab-content p-3 text-muted">
+                                        <div class="tab-pane active" id="general1" role="tabpanel">
+                                            <div class="row mb-5 mt-5">
+                                                <div class="col-12 col-lg-4 d-flex align-items-center">
+                                                  <p class="mb-0">Skills</p>
+                                                </div>
+                                                <div class="col-12 col-lg-8">
+                                                  <div class="d-flex align-items-center">
+                                                   <label class="input-group-text bg-white border-0 text-primary" >
+                                                    <a id="add-skills-link" href="#" class="pe-auto">
+                                                      <i class="bx bx-plus-circle text-primary"></i>
+                                                      <span class="ms-2">Add Skills</span>
+                                                    </a>
+                                                    </label>
+                                                </div>
+                                                <ul id="skill-pill-container" class="nav nav-pills custom-hover"></ul>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-5">
+                                                <div class="col-12 col-lg-4 d-flex align-items-center">
+                                                  <p class="mb-0">Language</p>
+                                                </div>
+                                                <div class="col-12 col-lg-8">
+                                                  <div class="d-flex align-items-center">
+                                                    <label class="input-group-text bg-white border-0 text-primary" >
+                                                        <a href="#" id="add-language-link" class="pe-auto">
+                                                      <i class="bx bx-plus-circle text-primary"></i>
+                                                      <span class="ms-2">Add Language</span>
+                                                    </a>
+                                                    </label>
+                                                  </div>
+                                                  <ul id="language-pill-container" class="nav nav-pills custom-hover"></ul>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-5">
+                                                <div class="col-12 col-lg-4 d-flex align-items-center">
+                                                  <p class="mb-0">Resume</p>
+                                                </div>
+                                                <div class="col-12 col-lg-8">
+                                                  <div class="d-flex align-items-center">
+                                                    <label class="input-group-text bg-white border-0 text-primary" for="resume">
+                                                      <i class="fas fa-upload text-primary"></i>
+                                                      <span class="ms-2">Upload Resume</span>
+                                                    </label>
+                                                    <input type="file" class="form-control d-none" id="resume" accept=".pdf,.doc,.docx">
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="experience1" role="tabpanel">
+                                            <div class="row mb-5">
+                                                <div class="col-12">
+                                                  <div class="d-flex align-items-center">
+                                                    <label class="input-group-text bg-white border-0 text-primary" >
+                                                        <a href="#" id="add-experience-link" class="pe-auto">
+                                                      <i class="bx bx-plus-circle text-primary"></i>
+                                                      <span class="ms-2">Add Experience</span>
+                                                    </a>
+                                                    </label>
+                                                    
+                                                  </div>
+                                                  <ul id="experience-pill-container" class="nav nav-pills custom-hover"></ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="tab-pane" id="education1" role="tabpanel">
+                                            <div class="row mb-5 mt-5">
+                                                <div class="col-12 col-lg-4 d-flex align-items-center">
+                                                  <p class="mb-0">Certifications & Licences</p>
+                                                </div>
+                                                <div class="col-12 col-lg-8">
+                                                  <div class="d-flex align-items-center">
+                                                    <label class="input-group-text bg-white border-0 text-primary" >
+                                                        <a href="#" id="add-Certification-link" class="pe-auto">
+                                                      <i class="bx bx-plus-circle text-primary"></i>
+                                                      <span class="ms-2">Add Certification</span>
+                                                    </a>
+                                                    </label>
+                                                    
+                                                  </div>
+                                                  <ul id="certification-pill-container" class="nav nav-pills custom-hover"></ul>
+
+                                                </div>
+                                            </div>
+                                            <div class="row mb-5 ">
+                                                <div class="col-12 col-lg-4 d-flex align-items-center">
+                                                  <p class="mb-0">School</p>
+                                                </div>
+                                                <div class="col-12 col-lg-8">
+                                                  <div class="d-flex align-items-center">
+                                                    <label class="input-group-text bg-white border-0 text-primary" >
+                                                        <a href="#" class="pe-auto">
+                                                      <i class="bx bx-plus-circle text-primary"></i>
+                                                      <span class="ms-2">Add School</span>
+                                                    </a>
+                                                    </label>
+                                                    
+                                                  </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                         <div class="tab-pane" id="setting1" role="tabpanel">
+                                            <p class="mb-0">
+                                            Food truck fixie locavore, accusamus mcsweeney's marfa nulla
+                                            single-origin coffee squid. Exercitation +1 labore velit, blog
+                                            sartorial PBR leggings next level wes anderson artisan four loko
+                                            farm-to-table craft beer twee. Qui photo booth letterpress,
+                                            commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
+                                            vinyl cillum PBR. Homo nostrud organic, assumenda labore
+                                            aesthetic magna delectus.
+                                            </p>
+                                        </div>
+                                        <div class="tab-pane" id="payement1" role="tabpanel">
+                                         
+                                            <p class="mb-3"><strong>BILLING INFORMATIONS</strong></p>
+                                           <form>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">First Name</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Your First Name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Family Name</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Your Family Name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Address Line 1</label>
+                                                    <input type="text" class="form-control" placeholder="Enter Address">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Address Line 2</label>
+                                                    <input type="text" class="form-control" placeholder="Enter Address">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="mb-3">
+                                                    <label class="form-label">City</label>
+                                                    <input type="text" class="form-control" placeholder="Enter City">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="formrow-inputState" class="form-label">State</label>
+                                                        <select id="formrow-inputState" class="form-select">
+                                                            <option selected>None</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label class="form-label">Enter Zip Code</label>
+                                                        <input type="text" class="form-control" placeholder="Enter Zip Code">
+                                                    </div>
+                                                </div>
+                                                <hr class="border-1 border-top" style="border-color: #E5E6EB;">
+                                                <div class="row">
+                                                   <div class="col-md-8">
+                                                       <p class="mb-3"><strong>STRIPE ACCOUNT</strong></p>
+                                                       <p class="mb-3">You have not set up your Stripe account yet.</p>
+                                                   </div>
+                                                   <div class="col-md-4 d-flex align-items-center">
+                                                    <button class="btn btn-outline-danger btn-sm btn-rounded text-dark" style=" border: 2px solid #D35555;" ><strong>Stripe Account</strong> </button>
+                                                   </div>
+                                                </div> 
+                                             </div>                                                                                 
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>        
+@@include("partials/footer.html")
+            </div>
+<!-- end main content-->
+
+</div>
+<!-- END layout-wrapper -->
+
+@@include("partials/right-sidebar.html")
+
+@@include("partials/vendor-scripts.html")
+
+<!-- App js -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/energygigs/profile.js"></script>
+<script src="assets/js/app.js"></script>
+
+
+
+</body>
+</html>

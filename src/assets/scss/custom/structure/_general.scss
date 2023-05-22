@@ -1,0 +1,113 @@
+.create-project-heading::placeholder{
+    color:#D3D5DA;
+}
+
+.bg-icon {
+    background-image: url('../../../images/edit-pencil.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 30px; 
+  }
+
+  .freelancer-modal {
+    max-width: 40%;
+    margin-left: 60% !important;
+  }
+
+  @media only screen and (max-width: 600px) and (min-width: 200px)  {
+    .freelancer-modal {
+      max-width: 100%;
+      margin-left: 0% !important;
+    }
+  }
+
+  @media only screen and (max-width: 600px ) and (min-width: 1200px)  {
+    .freelancer-modal {
+      max-width: 50%;
+      margin-left: 50% !important;
+    }
+  }
+
+
+  .project-card-background{
+    background-color: rgba(244, 244, 246, 1) !important;
+  }
+
+  .project-pill-yellow{
+    padding: 12px;
+    background-color:rgba(255, 247, 209, 1);
+    color: #fff7d1;
+    margin-left: 5px;
+
+  }
+
+  
+  .project-pill-purple{
+    padding: 12px;
+    background-color:#E0E8FF;
+    color: rgba(20, 55, 143, 1);
+    margin-left: 5px;
+
+  }
+
+  //custom pill hover
+
+  .custom-hover:hover{
+    color:#001F3F !important;
+  }
+
+
+  // Custom Dropdown
+.custom-dropdown {
+  position: relative;
+  
+  .dropdown-toggle {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    &:hover {
+      background-color: #e9ecef;
+    }
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    z-index: 1000;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0;
+    border: 1px solid #ced4da;
+    background-color: #fff;
+    list-style: none;
+    
+    .dropdown-item {
+      padding: 0.25rem 1.5rem;
+      color: #000;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: #f8f9fa;
+      }
+    }
+  }
+  
+  &.show {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}
+
+  
+.formSetting{
+  font-size: 14px;
+}
