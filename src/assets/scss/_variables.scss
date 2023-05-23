@@ -493,7 +493,7 @@ $position-values: (
 // Settings for the `<body>` element.
 
 $body-bg:                   #ffffff;
-$body-color:                #ffffff;
+$body-color:                $gray-700;
 $body-text-align:           null;
 
 // Links
