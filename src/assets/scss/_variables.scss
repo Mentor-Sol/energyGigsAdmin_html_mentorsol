@@ -123,6 +123,8 @@ $cyan:    #50a5f1;
 $themeblack: #001F3F;
 $custom-color-heading:#D3D5DA;
 $blueColor: #14378F;
+$themeGray:#6C727F;
+$themeBorderColor: #9EA3AE;
 
 
 // scss-docs-end color-variables
@@ -146,6 +148,8 @@ $colors: (
     "themeblack": $themeblack,
     "custom-color-heading":$custom-color-heading,
     "blueColor": $blueColor,
+    "themeGray": $themeGray,
+    "themeBorderColor": $themeBorderColor,
 );
 // scss-docs-end colors-map
 
@@ -160,6 +164,8 @@ $light:         $gray-200;
 $dark:          $gray-800;
 $themeblack:    $themeblack;
 $blueColor:     $blueColor;
+$themeGray:    $themeGray;
+$themeBorderColor:    $themeBorderColor;
 
 // scss-docs-end theme-color-variables
 
@@ -176,6 +182,8 @@ $theme-colors: (
     "dark":       $dark,
     "themeblack": $themeblack,
     "blueColor":  $blueColor,
+    "themeGray":   $themeGray,
+    "themeBorderColor":   $themeBorderColor,
 );
 // scss-docs-end theme-colors-map
 

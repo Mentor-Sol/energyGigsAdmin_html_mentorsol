@@ -1,0 +1,522 @@
+<html>
+  @@include("partials/full-page-topbar.html")
+
+  <head>
+    @@include("partials/title-meta.html", {"title": "Email Verification"})
+    @@include("partials/head-css.html")
+  </head>
+
+  <body class="overflow-x-hidden">
+    <div class="mt-4 pt-sm-5"></div>
+    <div class="container-fluid border-top border-bottom border-themeGray">
+      <div class="row py-3">
+        <div class="col-4">
+          <div class="row d-flex justify-content-start align-items-start">
+            <div class="col-2">
+              <div class="dropdown">
+                <button
+                  class="btn bg-transparent text-primary border-0 dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Deals <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Deal 1</a>
+                  <a class="dropdown-item" href="#">Deal 2</a>
+                  <a class="dropdown-item" href="#">Deal 3</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="btn-group" role="group" aria-label="View Toggle">
+                <button type="button" class="btn btn-outline-light active">
+                  <i class="fas fa-th-list"></i>
+                </button>
+                <button type="button" class="btn btn-outline-light">
+                  <i class="fas fa-th-large"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="dropdown mx-2">
+                <button
+                  class="btn text-themeblack bg-transparent rounded border-1 dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Talent Acquisition <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Talent Acquisition 1</a>
+                  <a class="dropdown-item" href="#">Talent Acquisition 2</a>
+                  <a class="dropdown-item" href="#">Talent Acquisition 3</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-2">
+              <div class="dropdown">
+                <button
+                  class="btn text-themeblack bg-white rounded border-1 dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  All Deals <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">All Deal 1</a>
+                  <a class="dropdown-item" href="#">All Deal 2</a>
+                  <a class="dropdown-item" href="#">All Deal 3</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="offset-4 col-4">
+          <div class="row gap-2 d-flex justify-content-start align-items-start">
+            <div class="col-2 mx-4">
+              <div class="dropdown">
+                <button
+                  class="btn btn-outline-primary text-themeblack rounded-pill px-4 dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Actions <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Deal 1</a>
+                  <a class="dropdown-item" href="#">Deal 2</a>
+                  <a class="dropdown-item" href="#">Deal 3</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 mx-2">
+              <button
+                class="btn btn-secondary text-light rounded-pill px-4"
+                disabled
+                style="color: #9ea3ae"
+              >
+                import
+              </button>
+            </div>
+            <div class="col-4 mx-1">
+              <button class="btn btn-primary text-themeblack rounded-pill px-4">
+                Post Project
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid border-bottom border-themeGray">
+      <div class="row d-flex justify-content-start align-items-center">
+        <div class="col-8">
+          <div class="row d-flex justify-content-start align-items-center">
+            <div class="col-3">
+              <form class="app-search m-0 d-none d-lg-block">
+                <div class="position-relative mx-1">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="myInput"
+                    placeholder="Search..."
+                    style="width: 200px; height: 35px"
+                  />
+                  <span class="bx bx-search-alt"></span>
+                </div>
+              </form>
+            </div>
+            <div class="col-8">
+              <div class="row gap-3">
+                <div class="col-2">
+                  <div class="dropdown">
+                    <button
+                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Deals Owner <i class="mdi mdi-chevron-down"></i>
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a class="dropdown-item" href="#">Owner 1</a>
+                      <a class="dropdown-item" href="#">Owner 2</a>
+                      <a class="dropdown-item" href="#">Owner 3</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="dropdown">
+                    <button
+                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Create Date <i class="mdi mdi-chevron-down"></i>
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a class="dropdown-item" href="#">Date 1</a>
+                      <a class="dropdown-item" href="#">Date 2</a>
+                      <a class="dropdown-item" href="#">Date 3</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 mr-auto">
+                  <div class="dropdown">
+                    <button
+                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Last Activity Date <i class="mdi mdi-chevron-down"></i>
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a class="dropdown-item" href="#">Last Activity 1</a>
+                      <a class="dropdown-item" href="#">Last Activity 2</a>
+                      <a class="dropdown-item" href="#">Last Activity 3</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-2">
+                  <div class="dropdown">
+                    <button
+                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Close Date <i class="mdi mdi-chevron-down"></i>
+                    </button>
+                    <div
+                      class="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <a class="dropdown-item" href="#">Close Date 1</a>
+                      <a class="dropdown-item" href="#">Close Date 2</a>
+                      <a class="dropdown-item" href="#">Close Date 3</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1">
+                  <div class="dropdown">
+                    <button
+                      class="btn btn-transparent dropdown-toggle"
+                      type="button"
+                      id="filterDropdown"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <i class="bx bx-slider-alt"></i> Filter
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="filterDropdown">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <input type="checkbox" id="option1" />
+                          <label for="option1">Option 1</label>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <input type="checkbox" id="option2" />
+                          <label for="option2">Option 2</label>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <input type="checkbox" id="option3" />
+                          <label for="option3">Option 3</label>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div
+            class="row gap-2 d-flex align-items-center justify-content-center"
+          >
+            <div class="col-4">
+              <div class="dropdown">
+                <button
+                  class="btn btn-outline-light text-dark rounded-pill px-4 dropdown-toggle"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Actions <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Deal 1</a>
+                  <a class="dropdown-item" href="#">Deal 2</a>
+                  <a class="dropdown-item" href="#">Deal 3</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-4">
+              <button class="btn btn-outline-light text-dark rounded-pill px-4">
+                <i class="bx bx-save"></i> Save View
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive rounded">
+              <table class="table align-middle table-nowrap mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th style="width: 20px">
+                      <div class="form-check font-size-16 align-middle">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="transactionCheck01"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="transactionCheck01"
+                        ></label>
+                      </div>
+                    </th>
+                    <th class="align-middle">PROJECT NAME</th>
+                    <th class="align-middle">STATUS</th>
+                    <th class="align-middle"># APPLICANTS</th>
+                    <th class="align-middle">TOTAL COST</th>
+                    <th class="align-middle">CREATE DATE</th>
+                    <th class="align-middle">CLOSE DATE</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="form-check font-size-16">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="transactionCheck02"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="transactionCheck02"
+                        ></label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="javascript: void(0);" class="text-body fw-bold"
+                        >#SK2540</a
+                      >
+                    </td>
+                    <td>Neal Matthews</td>
+                    <td>07 Oct, 2019</td>
+                    <td>$400</td>
+                    <td>
+                      <span
+                        class="badge badge-pill badge-soft-success font-size-11"
+                        >Paid</span
+                      >
+                    </td>
+                    <td>
+                      <i class="fab fa-cc-mastercard me-1"></i> Mastercard
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="form-check font-size-16">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="transactionCheck03"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="transactionCheck03"
+                        ></label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="javascript: void(0);" class="text-body fw-bold"
+                        >#SK2541</a
+                      >
+                    </td>
+                    <td>Jamal Burnett</td>
+                    <td>07 Oct, 2019</td>
+                    <td>$380</td>
+                    <td>
+                      <span
+                        class="badge badge-pill badge-soft-danger font-size-11"
+                        >Chargeback</span
+                      >
+                    </td>
+                    <td><i class="fab fa-cc-visa me-1"></i> Visa</td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      <div class="form-check font-size-16">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="transactionCheck04"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="transactionCheck04"
+                        ></label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="javascript: void(0);" class="text-body fw-bold"
+                        >#SK2542</a
+                      >
+                    </td>
+                    <td>Juan Mitchell</td>
+                    <td>06 Oct, 2019</td>
+                    <td>$384</td>
+                    <td>
+                      <span
+                        class="badge badge-pill badge-soft-success font-size-11"
+                        >Paid</span
+                      >
+                    </td>
+                    <td><i class="fab fa-cc-paypal me-1"></i> Paypal</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check font-size-16">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="transactionCheck05"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="transactionCheck05"
+                        ></label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="javascript: void(0);" class="text-body fw-bold"
+                        >#SK2543</a
+                      >
+                    </td>
+                    <td>Barry Dick</td>
+                    <td>05 Oct, 2019</td>
+                    <td>$412</td>
+                    <td>
+                      <span
+                        class="badge badge-pill badge-soft-success font-size-11"
+                        >Paid</span
+                      >
+                    </td>
+                    <td>
+                      <i class="fab fa-cc-mastercard me-1"></i> Mastercard
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check font-size-16">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="transactionCheck06"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="transactionCheck06"
+                        ></label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="javascript: void(0);" class="text-body fw-bold"
+                        >#SK2544</a
+                      >
+                    </td>
+                    <td>Ronald Taylor</td>
+                    <td>04 Oct, 2019</td>
+                    <td>$404</td>
+                    <td>
+                      <span
+                        class="badge badge-pill badge-soft-warning font-size-11"
+                        >Refund</span
+                      >
+                    </td>
+                    <td><i class="fab fa-cc-visa me-1"></i> Visa</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="form-check font-size-16">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="transactionCheck07"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="transactionCheck07"
+                        ></label>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="javascript: void(0);" class="text-body fw-bold"
+                        >#SK2545</a
+                      >
+                    </td>
+                    <td>Jacob Hunter</td>
+                    <td>04 Oct, 2019</td>
+                    <td>$392</td>
+                    <td>
+                      <span
+                        class="badge badge-pill badge-soft-success font-size-11"
+                        >Paid</span
+                      >
+                    </td>
+                    <td><i class="fab fa-cc-paypal me-1"></i> Paypal</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- end table-responsive -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @@include("partials/vendor-scripts.html")
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
