@@ -2125,6 +2125,19 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid, body[data
   background-color: #9EA3AE;
 }
 
+.form-check-customthemePills .form-check-input:checked {
+  background-color: #E5E6EB;
+  border-color: #E5E6EB;
+}
+
+.form-radio-customthemePills .form-check-input:checked {
+  border-color: #E5E6EB;
+  background-color: #E5E6EB;
+}
+.form-radio-customthemePills .form-check-input:checked:after {
+  background-color: #E5E6EB;
+}
+
 .form-check,
 .form-check-input,
 .form-check-label {
@@ -3036,6 +3049,11 @@ input[type=checkbox].tui-full-calendar-checkbox-round + span {
 .toast-themeBorderColor {
   border: 2px solid #9EA3AE !important;
   background-color: rgba(158, 163, 174, 0.8) !important;
+}
+
+.toast-customthemePills {
+  border: 2px solid #E5E6EB !important;
+  background-color: rgba(229, 230, 235, 0.8) !important;
 }
 
 .toast-error {
@@ -5427,4 +5445,41 @@ h2 {
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.project-tab {
+  white-space: nowrap;
+  font-size: 14px;
+}
+.project-tab .active {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.project-tab-heading-circle {
+  padding: 5px 10px;
+}
+
+.nav-tabs-custom .nav-item .nav-link::after {
+  content: "";
+  background: black;
+  height: 2px;
+}
+
+.candidate-address {
+  border-left: 1px solid #E5E6EB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.candidate-section {
+  border-left: 1px solid #E5E6EB;
 }

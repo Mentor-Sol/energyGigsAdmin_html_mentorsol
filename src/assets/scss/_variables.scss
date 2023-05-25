@@ -125,6 +125,7 @@ $custom-color-heading:#D3D5DA;
 $blueColor: #14378F;
 $themeGray:#6C727F;
 $themeBorderColor: #9EA3AE;
+$customthemePills: #E5E6EB;
 
 
 // scss-docs-end color-variables
@@ -150,6 +151,7 @@ $colors: (
     "blueColor": $blueColor,
     "themeGray": $themeGray,
     "themeBorderColor": $themeBorderColor,
+    "customthemePills": $customthemePills,
 );
 // scss-docs-end colors-map
 
@@ -166,6 +168,8 @@ $themeblack:    $themeblack;
 $blueColor:     $blueColor;
 $themeGray:    $themeGray;
 $themeBorderColor:    $themeBorderColor;
+$customthemePills:    $customthemePills;
+
 
 // scss-docs-end theme-color-variables
 
@@ -184,6 +188,7 @@ $theme-colors: (
     "blueColor":  $blueColor,
     "themeGray":   $themeGray,
     "themeBorderColor":   $themeBorderColor,
+    "customthemePills":   $customthemePills,
 );
 // scss-docs-end theme-colors-map
 
@@ -500,7 +505,7 @@ $position-values: (
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   #ffffff;
+$body-bg:                   #F5F5F5;
 $body-color:                $gray-700;
 $body-text-align:           null;
 
