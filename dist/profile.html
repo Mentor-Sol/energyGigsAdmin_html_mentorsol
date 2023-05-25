@@ -21,6 +21,11 @@
 
 
 
+    <link href="assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+
+
 </head>
 
 <body data-sidebar="dark" data-layout-mode="light">
@@ -31,198 +36,363 @@
 <div id="layout-wrapper">
     
     <header id="page-topbar">
-        <div class="navbar-header">
-            <div class="d-flex" >
-                <!-- LOGO -->
-                <div class="navbar-brand-box" style="text-align: left; padding-left: 22px;" >
-                    <a href="index.html" class="logo logo-dark justify-content-start" >
-                        <span class="logo-sm">
-                            <img src="assets/images/energy-gigs-logo.svg" alt="" width="195" height="36">
-                        </span>
-                        <span class="logo-lg">
-                            <img src="assets/images/energy-gigs-logo.svg" alt="" width="195" height="36">
-                        </span>
-                    </a>
+      <div class="navbar-header">
+        <div class="d-flex">
+          <!-- LOGO -->
+          <div
+            class="navbar-brand-box"
+            style="text-align: left; padding-left: 22px"
+          >
+            <a href="index.html" class="logo logo-dark justify-content-start">
+              <span class="logo-sm">
+                <img
+                  src="assets/images/energy-gigs-logo.svg"
+                  alt=""
+                  width="195"
+                  height="36"
+                />
+              </span>
+              <span class="logo-lg">
+                <img
+                  src="assets/images/energy-gigs-logo.svg"
+                  alt=""
+                  width="195"
+                  height="36"
+                />
+              </span>
+            </a>
 
-                    <a href="index.html" class="logo logo-light">
-                        <span class="logo-sm">
-                            <img src="assets/images/energy-gigs-logo.svg" alt="" width="195" height="36">
-                        </span>
-                        <span class="logo-lg" >
-                            <img src="assets/images/energy-gigs-logo.svg" alt="" width="195" height="36">
-                        </span>
-                    </a>
+            <a href="index.html" class="logo logo-light">
+              <span class="logo-sm">
+                <img
+                  src="assets/images/energy-gigs-logo.svg"
+                  alt=""
+                  width="195"
+                  height="36"
+                />
+              </span>
+              <span class="logo-lg">
+                <img
+                  src="assets/images/energy-gigs-logo.svg"
+                  alt=""
+                  width="195"
+                  height="36"
+                />
+              </span>
+            </a>
+          </div>
+
+          <div class="px-3 header-item"></div>
+          <button
+            type="button"
+            class="btn btn-sm px-3 font-size-16 header-item waves-effect"
+            id="vertical-menu-btn"
+          >
+            <i class="fa fa-fw fa-bars"></i>
+          </button>
+
+          <!-- App Search-->
+          <nav class="navbar navbar-expand-lg navbar-white bg-white">
+            <div class="container-fluid">
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav" style="font-weight: 400; line-height: 24px">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./../profile.html"
+                      >Profile</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../project.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link text-nowrap" href="#">Job Board</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="../freelance.html"
+                      >Freelancers</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <div class="d-flex">
+          <form class="app-search d-none d-lg-block">
+            <div class="position-relative">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search..."
+                style="width: 300px; height: 40px"
+              />
+              <span class="bx bx-search-alt"></span>
+            </div>
+          </form>
+          <div class="dropdown d-inline-block d-lg-none ms-2">
+            <button
+              type="button"
+              class="btn header-item noti-icon waves-effect"
+              id="page-header-search-dropdown"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="mdi mdi-magnify"></i>
+            </button>
+            <div
+              class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+              aria-labelledby="page-header-search-dropdown"
+            >
+              <form class="p-3">
+                <div class="form-group m-0">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search ..."
+                      aria-label="Recipient's username"
+                    />
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" type="submit">
+                        <i class="mdi mdi-magnify"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
+              </form>
+            </div>
+          </div>
 
-                <div class="px-3 header-item" >
+          <div class="dropdown d-inline-block">
+            <button
+              type="button"
+              style="margin-left: 50px"
+              class="btn header-item noti-icon waves-effect"
+              id="page-header-notifications-dropdown"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <i class="bx bx-bell bx-tada"></i>
+              <span class="badge bg-danger rounded-pill">3</span>
+            </button>
+            <div
+              class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+              aria-labelledby="page-header-notifications-dropdown"
+            >
+              <div class="p-3">
+                <div class="row align-items-center">
+                  <div class="col">
+                    <h6 class="m-0" key="t-notifications">Notifications</h6>
+                  </div>
+                  <div class="col-auto">
+                    <button
+                      type="button"
+                      class="btn-close font-size-12"
+                      aria-label="Close"
+                    ></button>
+                  </div>
                 </div>
-                <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
-                    <i class="fa fa-fw fa-bars"></i>
-                </button>
+              </div>
+              <div data-simplebar style="max-height: 230px">
+                <a href="apply-project.html" class="text-reset notification-item">
+                  <div class="d-flex border-top">
+                    <div class="avatar-xs me-3">
+                      <span
+                        class="avatar-title bg-primary rounded-circle font-size-16"
+                      >
+                        <img
+                          src="../assets/images/Oval.png"
+                          width="30"
+                          height="30"
+                        />
+                      </span>
+                    </div>
+                    <div class="flex-grow-1 w-100">
+                      <h6 class="mb-1" key="t-your-order">
+                        Saad Siddique
+                        <span class="mx-3 font-size-12"> 3 min ago </span>
+                      </h6>
 
-                <!-- App Search-->
-                <nav class="navbar navbar-expand-lg navbar-white bg-white">
-                    <div class="container-fluid">
-                      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav" style=" font-weight: 400; line-height: 24px;">
-                          <li class="nav-item">
-                            <a class="nav-link " aria-current="page" href="./../profile.html">Profile</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="../project.html">Projects</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link text-nowrap" href="#">Job Board</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link active" href="../freelance.html">Freelancers</a>
-                          </li>
-                        </ul>
+                      <div class="font-size-12 text-muted">
+                        <p class="mb-1" key="t-grammer">
+                          You’ve received a new proposal
+                        </p>
                       </div>
                     </div>
-                  </nav>
-        
+                  </div>
+                </a>
+                <a href="apply-project.html" class="text-reset notification-item">
+                  <div class="d-flex border-top">
+                    <div class="avatar-xs me-3">
+                      <span
+                        class="avatar-title bg-primary rounded-circle font-size-16"
+                      >
+                        <img
+                          src="../assets/images/Oval.png"
+                          width="30"
+                          height="30"
+                        />
+                      </span>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1" key="t-your-order">
+                        Saad Siddique
+                        <span class="mx-3 font-size-12"> 3 min ago </span>
+                      </h6>
+
+                      <div class="font-size-12 text-muted">
+                        <p class="mb-1" key="t-grammer">
+                          You’ve received a new proposal
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="apply-project.html" class="text-reset notification-item">
+                  <div class="d-flex border-top">
+                    <div class="avatar-xs me-3">
+                      <span
+                        class="avatar-title bg-primary rounded-circle font-size-16"
+                      >
+                        <img
+                          src="../assets/images/Oval.png"
+                          width="30"
+                          height="30"
+                        />
+                      </span>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1" key="t-your-order">
+                        Saad Siddique
+                        <span class="mx-3 font-size-12"> 3 min ago </span>
+                      </h6>
+
+                      <div class="font-size-12 text-muted">
+                        <p class="mb-1" key="t-grammer">
+                          You’ve received a new proposal
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="apply-project.html" class="text-reset notification-item">
+                  <div class="d-flex border-top">
+                    <div class="avatar-xs me-3">
+                      <span
+                        class="avatar-title bg-primary rounded-circle font-size-16"
+                      >
+                        <img
+                          src="../assets/images/Oval.png"
+                          width="30"
+                          height="30"
+                        />
+                      </span>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1" key="t-your-order">
+                        Saad Siddique
+                        <span class="mx-3 font-size-12"> 3 min ago </span>
+                      </h6>
+
+                      <div class="font-size-12 text-muted">
+                        <p class="mb-1" key="t-grammer">
+                          You’ve received a new proposal
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <a href="apply-project.html" class="text-reset notification-item">
+                  <div class="d-flex border-top">
+                    <div class="avatar-xs me-3">
+                      <span
+                        class="avatar-title bg-primary rounded-circle font-size-16"
+                      >
+                        <img
+                          src="../assets/images/Oval.png"
+                          width="30"
+                          height="30"
+                        />
+                      </span>
+                    </div>
+                    <div class="flex-grow-1">
+                      <h6 class="mb-1" key="t-your-order">
+                        Saad Siddique
+                        <span class="mx-3 font-size-12"> 3 min ago </span>
+                      </h6>
+
+                      <div class="font-size-12 text-muted">
+                        <p class="mb-1" key="t-grammer">
+                          You’ve received a new proposal
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="p-2 border-top">
+                <a
+                  class="btn btn-sm btn-link font-size-14 text-left"
+                  href="javascript:void(0)"
+                >
+                  <span key="t-view-more">View all notifications</span>
+                </a>
+              </div>
             </div>
-   
+          </div>
 
-            <div class="d-flex">
-                <form class="app-search d-none d-lg-block">
-                    <div class="position-relative">
-                        <input type="text" class="form-control" placeholder="Search..." style="width: 300px;height: 40px;">
-                        <span class="bx bx-search-alt"></span>
-                    </div>
-                </form>
-                <div class="dropdown d-inline-block d-lg-none ms-2">
-                    <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-search-dropdown"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="mdi mdi-magnify"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                        aria-labelledby="page-header-search-dropdown">
-        
-                        <form class="p-3">
-                            <div class="form-group m-0">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search ..." aria-label="Recipient's username">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary" type="submit"><i class="mdi mdi-magnify"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-     
-
-
-                <div class="dropdown d-inline-block" >
-                    <button type="button" style="margin-left: 50px;" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="bx bx-bell bx-tada"></i>
-                        <span class="badge bg-danger rounded-pill">3</span>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
-                        aria-labelledby="page-header-notifications-dropdown">
-                        <div class="p-3">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <h6 class="m-0" key="t-notifications"> Notifications </h6>
-                                </div>
-                                <div class="col-auto">
-                                    <a href="#!" class="small" key="t-view-all"> View All</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div data-simplebar style="max-height: 230px;">
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <div class="avatar-xs me-3">
-                                        <span class="avatar-title bg-primary rounded-circle font-size-16">
-                                            <i class="bx bx-cart"></i>
-                                        </span>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1" key="t-your-order">Your order is placed</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <img src="assets/images/users/avatar-3.jpg"
-                                        class="me-3 rounded-circle avatar-xs" alt="user-pic">
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1">James Lemire</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <div class="avatar-xs me-3">
-                                        <span class="avatar-title bg-success rounded-circle font-size-16">
-                                            <i class="bx bx-badge-check"></i>
-                                        </span>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
-                            <a href="javascript: void(0);" class="text-reset notification-item">
-                                <div class="d-flex">
-                                    <img src="assets/images/users/avatar-4.jpg"
-                                        class="me-3 rounded-circle avatar-xs" alt="user-pic">
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-1">Salena Layfield</h6>
-                                        <div class="font-size-12 text-muted">
-                                            <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
-                                            <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="p-2 border-top d-grid">
-                            <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
-                                <i class="mdi mdi-arrow-right-circle me-1"></i> <span key="t-view-more">View More..</span> 
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="dropdown d-inline-block">
-                    <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
-                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
-                            alt="Header Avatar">
-                        <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
-                        <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end">
-                        <!-- item-->
-                        <a class="dropdown-item" href="#"><i class="bx bx-user font-size-16 align-middle me-1"></i> <span key="t-profile">Profile</span></a>
-                        <a class="dropdown-item" href="#"><i class="bx bx-wallet font-size-16 align-middle me-1"></i> <span key="t-my-wallet">My Wallet</span></a>
-                        <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end">11</span><i class="bx bx-wrench font-size-16 align-middle me-1"></i> <span key="t-settings">Settings</span></a>
-                        <a class="dropdown-item" href="#"><i class="bx bx-lock-open font-size-16 align-middle me-1"></i> <span key="t-lock-screen">Lock screen</span></a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item text-danger" href="#"><i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i> <span key="t-logout">Logout</span></a>
-                    </div>
-                </div>
+          <div class="dropdown d-inline-block">
+            <button
+              type="button"
+              class="btn header-item waves-effect"
+              id="page-header-user-dropdown"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img
+                class="rounded-circle header-profile-user"
+                src="assets/images/users/avatar-1.jpg"
+                alt="Header Avatar"
+              />
+              <span class="d-none d-xl-inline-block ms-1" key="t-henry">Henry</span>
+              <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
+            </button>
+            <div class="dropdown-menu dropdown-menu-end">
+              <!-- item-->
+              <a class="dropdown-item" href="#"
+                ><i class="bx bx-user font-size-16 align-middle me-1"></i>
+                <span key="t-profile">Profile</span></a
+              >
+              <a class="dropdown-item" href="#"
+                ><i class="bx bx-wallet font-size-16 align-middle me-1"></i>
+                <span key="t-my-wallet">My Wallet</span></a
+              >
+              <a class="dropdown-item d-block" href="#"
+                ><span class="badge bg-success float-end">11</span
+                ><i class="bx bx-wrench font-size-16 align-middle me-1"></i>
+                <span key="t-settings">Settings</span></a
+              >
+              <a class="dropdown-item" href="#"
+                ><i class="bx bx-lock-open font-size-16 align-middle me-1"></i>
+                <span key="t-lock-screen">Lock screen</span></a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-danger" href="../sign-in-energygig.html"
+                ><i
+                  class="bx bx-power-off font-size-16 align-middle me-1 text-danger"
+                ></i>
+                <span key="t-logout">Logout</span></a
+              >
             </div>
+          </div>
         </div>
+      </div>
     </header>
+
 
     <!-- ========== Left Sidebar Start ========== -->
     <div class="vertical-menu">
@@ -382,7 +552,7 @@
     </div>
     <!-- Left Sidebar End -->
 
-    
+
 
      <!-- ============================================================== -->
             <!-- Start right Content here -->
@@ -391,8 +561,8 @@
 
                 <div class="page-content">
 
+                  <form action="#">
                     <div class="container-fluid">
-
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -419,7 +589,14 @@
                                     <div class="bg-white bg-soft">
                                         <div class="row ">
                                             <div class="col-md-4">        
-                                            <img class="rounded-circle avatar-md" alt="80x80" src="assets/images/users/avatar-4.jpg" data-holder-rendered="true" width="80" height="80">
+                                              <div class="fallback">
+                                                <input name="file" type="file" class="d-none" multiple="multiple">
+                                            </div>
+                                            <div class="dz-message needsclick">
+                                                <div class="mb-3">
+                                                    <img class="rounded-circle avatar-md" alt="80x80" src="assets/images/upload-image.png" data-holder-rendered="true" width="80" height="80">
+                                                </div>
+                                            </div>
                                             </div>
                                            
                                             <div class="col-md-8">
@@ -446,18 +623,37 @@
                                                 </div>
                                               </div>
                                         </div>
+                                        <div class="rating-star mt-3 d-flex justify-content-start align-items-center" >
+                                          <input type="hidden" class="rating" data-filled="mdi mdi-star text-primary" data-empty="mdi mdi-star-outline text-primary" data-fractions="2"/>
+                                          <span class="mx-4 ">No reviews yet</span>
+                                        </div>
                                         <div class="row">
                                             <div class="col-12">
                                               <div class="my-3">
-                                                <a id="add-category-link" class="d-flex align-items-center" href="#">
-                                                  <i class="bx bx-plus-circle text-primary"></i>
-                                                  <p class="text-primary" style="margin-bottom: 0;"><ins>Add Category</ins></p>
-                                                </a>
+                                                <div id="profileCatergoryDropdown" class="dropdown">
+                                                    <button class="dropdown-toggle bg-white border-0" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <a class="d-flex align-items-center mt-2" href="#">
+                                                            <i class="bx bx-plus-circle text-primary" type="solid"></i>
+                                                            <p class="text-primary" style="margin-bottom: 0px;"><ins class="text-primary">Add Category</ins></p>
+                                                        </a>
+                                                    </button>
+                                                    <ul class="profileCatergoryMenu dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <li>
+                                                        <div class="input-group mt-2 mx-2" style="width: 200px;">
+                                                        <input type="search" id="profileSkillSearchInput" class="form-control" />
+                                                        </div>
+                                                    </li>
+                                                    <li><hr class="dropdown-divider" /></li>
+                                                    <li><a class="dropdown-item">Category 1</a></li>
+                                                    <li><a class="dropdown-item">Category 2</a></li>
+                                                    <li><a class="dropdown-item">Category 3</a></li>
+                                                    </ul>
+                                                </div>
+                                                <ul id="profile-category-container" class="nav nav-pills custom-hover"></ul>
                                               </div>
                                             </div>
                                           </div>
                                           
-                                          <ul id="category-container" class="nav nav-pills custom-hover"></ul>
                                          
                                         <hr class="border-1 border-top" style="border-color: #E5E6EB;">
                                     </div>
@@ -467,14 +663,17 @@
                                         <p><strong>VISIBLE INFORMATION</strong></p>
                                         <div class="col-12 col-lg-6 col-md-6">
                                             <div class="mb-3">
-                                                <label class="form-label">Location</label>
-                                                <input type="text" class="form-control" placeholder="Houston, TX, USA">
+                                                
+                                                  <label>Location</label>
+                                                  <input type="text" class="form-control" maxlength="25" placeholder="Houston, TX, USA" name="defaultconfig" id="defaultconfig" />
+                                              
                                             </div>
                                         </div>
                                         <div class="col-12 col-lg-6 col-md-6">
                                             <div class="mb-3">
-                                                <label class="form-label">Rate (USD)</label>
-                                                <input type="number" class="form-control" placeholder="0.00">
+                                              
+                                              <label>Rate (USD)</label>
+                                                <input type="number" class="form-control" name="defaultconfig" id="defaultconfig" placeholder="0.00">
                                             </div>
                                         </div>
                                     </div>
@@ -489,10 +688,15 @@
                                         </div>
                                         <div class="col-12 col-lg-6 col-md-6">
                                             <div class="mb-3">
-                                                <label for="formrow-inputState" class="form-label">Company Size</label>
-                                                <select id="formrow-inputState" class="form-select">
-                                                    <option selected>0-150</option>
-                                                </select>
+                                              <label class="form-label">Single Select</label>
+                                              <select class="form-control select2">
+                                                  <option>Select</option>
+                                                  <optgroup label="Select Company Size">
+                                                      <option value="1">0-150 employees</option>
+                                                      <option value="2">150-500 employees</option>
+                                                      <option value="2">More than 500 employees</option>
+                                                  </optgroup>
+                                              </select>
                                             </div>
                                         </div>
                                     </div>
@@ -501,7 +705,7 @@
                                         <div class="form-check form-switch">
                                             <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
                                           </div>
-                                    </form>
+                            
                                     <hr class="border-1 border-top" style="border-color: #E5E6EB;">
 
                                     <div class="mb-3">
@@ -543,9 +747,9 @@
                                                 </a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" data-bs-toggle="tab" href="#setting1" role="tab">
+                                                <a class="nav-link" data-bs-toggle="tab" href="#notification1" role="tab">
                                                     <span class="d-block d-sm-none"><i class="far fa-envelope"></i></span>
-                                                    <span class="d-none d-sm-block">Setting</span>   
+                                                    <span class="d-none d-sm-block">Notifications</span>   
                                                 </a>
                                             </li>
                                         </ul>
@@ -554,34 +758,60 @@
                                         <div class="tab-pane active" id="general1" role="tabpanel">
                                             <div class="row mb-5 mt-5">
                                                 <div class="col-12 col-lg-4 d-flex align-items-center">
-                                                  <p class="mb-0">Skills</p>
+                                                  Skills
                                                 </div>
                                                 <div class="col-12 col-lg-8">
-                                                  <div class="d-flex align-items-center">
-                                                   <label class="input-group-text bg-white border-0 text-primary" >
-                                                    <a id="add-skills-link" href="#" class="pe-auto">
-                                                      <i class="bx bx-plus-circle text-primary"></i>
-                                                      <span class="ms-2">Add Skills</span>
-                                                    </a>
-                                                    </label>
+                                                  
+                                                  <div id="profileSkillDropdown" class="dropdown">
+                                                    <button class="dropdown-toggle bg-white border-0" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <a class="d-flex align-items-center" href="#">
+                                                            <i class="bx bx-plus-circle text-primary" type="solid"></i>
+                                                            <p class="text-primary" style="margin-bottom: 0px;"><ins class="text-primary">Add Skills</ins></p>
+                                                        </a>
+                                                    </button>
+                                                    <ul class="profileSkillMenu dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <li>
+                                                        <div class="input-group mx-2" style="width: 200px;">
+                                                        <input type="search" id="profileSkillSearchInput" class="form-control" />
+                                                        </div>
+                                                    </li>
+                                                    <li><hr class="dropdown-divider" /></li>
+                                                    <li><a class="dropdown-item">Skills 1</a></li>
+                                                    <li><a class="dropdown-item">Skills 2</a></li>
+                                                    <li><a class="dropdown-item">Skills 3</a></li>
+                                                    </ul>
                                                 </div>
-                                                <ul id="skill-pill-container" class="nav nav-pills custom-hover"></ul>
+                                                <ul id="profile-skill-container" class="nav nav-pills custom-hover"></ul>
                                                 </div>
+                                                
                                             </div>
                                             <div class="row mb-5">
                                                 <div class="col-12 col-lg-4 d-flex align-items-center">
                                                   <p class="mb-0">Language</p>
                                                 </div>
                                                 <div class="col-12 col-lg-8">
-                                                  <div class="d-flex align-items-center">
-                                                    <label class="input-group-text bg-white border-0 text-primary" >
-                                                        <a href="#" id="add-language-link" class="pe-auto">
-                                                      <i class="bx bx-plus-circle text-primary"></i>
-                                                      <span class="ms-2">Add Language</span>
-                                                    </a>
-                                                    </label>
+                                                 
+                                                    <div id="profileLanguageDropdown" class="dropdown">
+                                                      <button class="dropdown-toggle bg-white border-0" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                                          <a class="d-flex align-items-center" href="#">
+                                                              <i class="bx bx-plus-circle text-primary" type="solid"></i>
+                                                              <p class="text-primary" style="margin-bottom: 0px;"><ins class="text-primary">Add Language</ins></p>
+                                                          </a>
+                                                      </button>
+                                                      <ul class="profileLanguageMenu dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                      <li>
+                                                          <div class="input-group mx-2" style="width: 200px;">
+                                                          <input type="search" id="LanguageSearchInput" class="form-control" />
+                                                          </div>
+                                                      </li>
+                                                      <li><hr class="dropdown-divider" /></li>
+                                                      <li><a class="dropdown-item">Language 1</a></li>
+                                                      <li><a class="dropdown-item">Language 2</a></li>
+                                                      <li><a class="dropdown-item">Language 3</a></li>
+                                                      </ul>
                                                   </div>
-                                                  <ul id="language-pill-container" class="nav nav-pills custom-hover"></ul>
+                                                                                            
+                                                  <ul id="profile-language-container" class="nav nav-pills custom-hover"></ul>
                                                 </div>
                                             </div>
                                             <div class="row mb-5">
@@ -652,21 +882,21 @@
                                                 </div>
                                             </div>
                                         </div>
-                                         <div class="tab-pane" id="setting1" role="tabpanel">
-                                            <p class="mb-0">
-                                            Food truck fixie locavore, accusamus mcsweeney's marfa nulla
-                                            single-origin coffee squid. Exercitation +1 labore velit, blog
-                                            sartorial PBR leggings next level wes anderson artisan four loko
-                                            farm-to-table craft beer twee. Qui photo booth letterpress,
-                                            commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
-                                            vinyl cillum PBR. Homo nostrud organic, assumenda labore
-                                            aesthetic magna delectus.
+                                         <div class="tab-pane" id="notification1" role="tabpanel">
+                                            <p class="mb-0 mt-3 fw-bold">
+                                              Notifications
                                             </p>
+                                            <div class="row">
+                                              <div class="col-8">
+                                                <p></p>
+                                              </div>
+                                              <div class="col-4"></div>
+                                            </div>
                                         </div>
                                         <div class="tab-pane" id="payement1" role="tabpanel">
                                          
                                             <p class="mb-3"><strong>BILLING INFORMATIONS</strong></p>
-                                           <form>
+                                    
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
@@ -731,7 +961,9 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
+                  </form>
                 </div>        
 <footer class="footer">
     <div class="container-fluid">
@@ -822,8 +1054,36 @@
 
 <!-- App js -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap rating js -->
+<script src="assets/libs/bootstrap-rating/bootstrap-rating.min.js"></script>
+<script src="assets/js/pages/rating-init.js"></script>
+
+<script src="assets/libs/dropzone/min/dropzone.min.js"></script>
+<script src="assets/libs/select2/js/select2.min.js"></script>
+<script src="assets/js/pages/form-advanced.init.js"></script>
+
+
+
 <script src="assets/js/energygigs/profile.js"></script>
 <script src="assets/js/app.js"></script>
+
+<script>
+  function uploadImage() {
+   var input = document.getElementById("image");
+   var file = input.files[0];
+   var reader = new FileReader();
+
+   reader.onload = function(e) {
+     var image = document.createElement("img");
+     image.src = e.target.result;
+     image.className = "img-thumbnail";
+     document.getElementById("preview").appendChild(image);
+   };
+
+   reader.readAsDataURL(file);
+ }
+     </script>
 
 
 

@@ -1,0 +1,79 @@
+.comp-industry-wrapper{
+   .heading{
+    font-size: 45px;
+    font-weight: 700;
+    color: #4D5461;
+   }
+   .para1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: #4D5461;
+    margin-bottom: 8px;
+   }
+   .para2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: #4D5461;
+   }
+   
+
+}
+
+.form-element-company {
+  position: relative;
+
+  input {
+    display: none;
+  }
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80px;
+    
+    cursor: pointer;
+
+    .svg-icon {
+      width: 61px;
+      height: 61px;
+      background-color: #D3D5DA;
+      border-radius:30px;
+      padding: 15px;
+      transition: background-color 200ms ease-in-out;
+    }
+
+    .svg-path {
+      fill: #fff;
+    }
+
+    .title {
+      margin-left: 8px;
+      font-size: 15px;
+      color: #D3D5DA;
+      transition: color 200ms ease-in-out;
+    }
+  }
+
+  input:checked + label {
+    .svg-icon {
+      background-color: #FFB802;
+    }
+
+    .svg-path {
+      fill: #fff;
+    }
+
+    .title {
+      color: #FFB802;
+    }
+
+  }
+}

@@ -1,0 +1,45 @@
+@@include("partials/main.html")
+
+    <head>
+        
+        @@include("partials/title-meta.html", {"title": "Email Verification"})
+
+        @@include("partials/head-css.html")
+
+    </head>
+
+    <body>
+        <div class="account-pages my-5 pt-sm-5">
+            <div class="container">
+                <div class="row justify-content-center">     
+                <!-- end row -->
+                    <div class="col-md-8 col-lg-6 col-xl-5">
+                        
+                                <div class="p-2">
+                                    <div class="mb-5 text-themeblack fw-bold font-size-24">Verification Code.</div>
+                                  
+                                    <div >
+                                        <p class="text-themeGray mt-3">Dear Mark Kaplan,</p>
+                                        <p class="text-themeGray mt-4">This is the verification code to access your <span class="text-primary">account</span>.</p>
+                                        <p class="text-themeGray mt-4">Please copy the <span class="text-primary">below code</span> and paste it in the reset screen.</p>
+                                        <p class="font-size-16 fw-bold text-themeGray mt-4">12223DH98JK</p>
+                                    </div>
+                                </div>
+            
+                            
+                
+                        <div class="mt-5 text-left">
+                           <a href="#" class="btn btn-primary w-auto px-4 fw-medium text-themeblack rounded-pill">Reset Password </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include("partials/vendor-scripts.html")
+        
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>

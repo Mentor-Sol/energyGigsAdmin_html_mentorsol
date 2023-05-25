@@ -8,94 +8,136 @@ $(document).ready(function () {
   });
 });
 
-//pill generation
+//creating pill using select 2
 
 $(document).ready(function () {
-  $("#add-category-link").click(function (event) {
+  $("#industries-add-link").click(function (event) {
     event.preventDefault(); // Prevent the default link behavior
+    $("#profileSkillDropdown").toggleClass("show"); // Toggle the dropdown display
+  });
 
-    var pillText = "New Category"; // Text for the new pill
-    var pillId = "pill-" + pillText.toLowerCase().replace(/\s+/g, "-");
+  // Function to handle pill deletion
+  function deletePill() {
+    $(this).closest("li.nav-item").remove();
+  }
+
+  $(".profileCatergoryMenu").on("click", ".dropdown-item", function () {
+    var selectedCategory = $(this).text();
+    var pillId = "pill-" + selectedCategory.toLowerCase().replace(/\s+/g, "-");
 
     var pillElement = $(
-      '<li class="nav-item"><a class="badge rounded-pill bg-primary bg-opacity-10 m-1 p-2  font-size-12 text-primary custom-hover" href="#' +
+      '<li class="nav-item"><a class="mt-2 badge rounded-pill bg-primary bg-opacity-10 mx-2 px-2 py-2 font-size-12 text-themeblack custom-hover" href="#' +
         pillId +
         '">' +
-        pillText +
-        "</a></li>"
+        selectedCategory +
+        ' <span class="pill-delete-icon text-white bg-primary rounded-circle px-1 mx-1">&times;</span></a></li>'
     );
-    $("#category-container").append(pillElement);
+
+    // Add click event listener to the delete icon
+    pillElement.find(".pill-delete-icon").click(deletePill);
+
+    $("#profile-category-container").append(pillElement);
   });
+
+  $("#profileAddCatergorySearchInput").on("input", function () {
+    var searchTerm = $(this).val().toLowerCase();
+
+    $(".profileCatergoryMenu .dropdown-item").each(function () {
+      var optionText = $(this).text().toLowerCase();
+      var isMatch = optionText.includes(searchTerm);
+
+      $(this).toggle(isMatch);
+    });
+  });
+
+  // Add click event listener to existing pills for deletion
+  $("#profile-category-container").on("click", ".pill-delete-icon", deletePill);
 });
 
 $(document).ready(function () {
-  $("#add-skills-link").click(function (event) {
+  $("#profile-skill-link").click(function (event) {
     event.preventDefault(); // Prevent the default link behavior
+    $("#profileSkillDropdown").toggleClass("show"); // Toggle the dropdown display
+  });
 
-    var pillText = "New Skill"; // Text for the new pill
-    var pillId = "pill-" + pillText.toLowerCase().replace(/\s+/g, "-");
+  // Function to handle pill deletion
+  function deletePill() {
+    $(this).closest("li.nav-item").remove();
+  }
+
+  $(".profileSkillMenu").on("click", ".dropdown-item", function () {
+    var selectedCategory = $(this).text();
+    var pillId = "pill-" + selectedCategory.toLowerCase().replace(/\s+/g, "-");
 
     var pillElement = $(
-      '<li class="nav-item"><a class="badge rounded-pill bg-primary bg-opacity-10 m-1 p-2  font-size-12 text-primary custom-hover" href="#' +
+      '<li class="nav-item"><a class="mt-2 badge rounded-pill bg-primary bg-opacity-10 mx-2 px-2 py-2 font-size-12 text-themeblack custom-hover" href="#' +
         pillId +
         '">' +
-        pillText +
-        "</a></li>"
+        selectedCategory +
+        ' <span class="pill-delete-icon text-white bg-primary rounded-circle px-1 mx-1">&times;</span></a></li>'
     );
-    $("#skill-pill-container").append(pillElement);
+
+    // Add click event listener to the delete icon
+    pillElement.find(".pill-delete-icon").click(deletePill);
+
+    $("#profile-skill-container").append(pillElement);
   });
+
+  $("#profileSkillSearchInput").on("input", function () {
+    var searchTerm = $(this).val().toLowerCase();
+
+    $(".profileSkillMenu .dropdown-item").each(function () {
+      var optionText = $(this).text().toLowerCase();
+      var isMatch = optionText.includes(searchTerm);
+
+      $(this).toggle(isMatch);
+    });
+  });
+
+  // Add click event listener to existing pills for deletion
+  $("#profile-skill-container").on("click", ".pill-delete-icon", deletePill);
 });
 
 $(document).ready(function () {
-  $("#add-language-link").click(function (event) {
+  $("#profile-language-link").click(function (event) {
     event.preventDefault(); // Prevent the default link behavior
+    $("#profileLanguageDropdown").toggleClass("show"); // Toggle the dropdown display
+  });
 
-    var pillText = "New Language"; // Text for the new pill
-    var pillId = "pill-" + pillText.toLowerCase().replace(/\s+/g, "-");
+  // Function to handle pill deletion
+  function deletePill() {
+    $(this).closest("li.nav-item").remove();
+  }
+
+  $(".profileLanguageMenu").on("click", ".dropdown-item", function () {
+    var selectedCategory = $(this).text();
+    var pillId = "pill-" + selectedCategory.toLowerCase().replace(/\s+/g, "-");
 
     var pillElement = $(
-      '<li class="nav-item"><a class="badge rounded-pill bg-primary bg-opacity-10 m-1 p-2  font-size-12 text-primary custom-hover" href="#' +
+      '<li class="nav-item"><a class="mt-2 badge rounded-pill bg-primary bg-opacity-10 mx-2 px-2 py-2 font-size-12 text-themeblack custom-hover" href="#' +
         pillId +
         '">' +
-        pillText +
-        "</a></li>"
+        selectedCategory +
+        ' <span class="pill-delete-icon text-white bg-primary rounded-circle px-1 mx-1">&times;</span></a></li>'
     );
-    $("#language-pill-container").append(pillElement);
+
+    // Add click event listener to the delete icon
+    pillElement.find(".pill-delete-icon").click(deletePill);
+
+    $("#profile-language-container").append(pillElement);
   });
-});
 
-$(document).ready(function () {
-  $("#add-experience-link").click(function (event) {
-    event.preventDefault(); // Prevent the default link behavior
+  $("#LanguageSearchInput").on("input", function () {
+    var searchTerm = $(this).val().toLowerCase();
 
-    var pillText = "New Language"; // Text for the new pill
-    var pillId = "pill-" + pillText.toLowerCase().replace(/\s+/g, "-");
+    $(".profileLanguageMenu .dropdown-item").each(function () {
+      var optionText = $(this).text().toLowerCase();
+      var isMatch = optionText.includes(searchTerm);
 
-    var pillElement = $(
-      '<li class="nav-item"><a class="badge rounded-pill bg-primary bg-opacity-10 m-1 p-2  font-size-12 text-primary custom-hover" href="#' +
-        pillId +
-        '">' +
-        pillText +
-        "</a></li>"
-    );
-    $("#experience-pill-container").append(pillElement);
+      $(this).toggle(isMatch);
+    });
   });
-});
 
-$(document).ready(function () {
-  $("#add-Certification-link").click(function (event) {
-    event.preventDefault(); // Prevent the default link behavior
-
-    var pillText = "New Language"; // Text for the new pill
-    var pillId = "pill-" + pillText.toLowerCase().replace(/\s+/g, "-");
-
-    var pillElement = $(
-      '<li class="nav-item"><a class="badge rounded-pill bg-primary bg-opacity-10 m-1 p-2  font-size-12 text-primary custom-hover" href="#' +
-        pillId +
-        '">' +
-        pillText +
-        "</a></li>"
-    );
-    $("#certification-pill-container").append(pillElement);
-  });
+  // Add click event listener to existing pills for deletion
+  $("#profile-language-container").on("click", ".pill-delete-icon", deletePill);
 });

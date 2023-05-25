@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Template Name: Skote - Admin & Dashboard Template
 Author: Themesbrand
@@ -267,6 +268,10 @@ File: Main Css File
 
 .formSetting {
   font-size: 14px;
+}
+
+.select2-selection .select2-selection--single {
+  height: 40px; /* Adjust the height as needed */
 }
 
 #page-topbar {
@@ -2094,6 +2099,45 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid, body[data
   background-color: #14378F;
 }
 
+.form-check-themeGray .form-check-input:checked {
+  background-color: #6C727F;
+  border-color: #6C727F;
+}
+
+.form-radio-themeGray .form-check-input:checked {
+  border-color: #6C727F;
+  background-color: #6C727F;
+}
+.form-radio-themeGray .form-check-input:checked:after {
+  background-color: #6C727F;
+}
+
+.form-check-themeBorderColor .form-check-input:checked {
+  background-color: #9EA3AE;
+  border-color: #9EA3AE;
+}
+
+.form-radio-themeBorderColor .form-check-input:checked {
+  border-color: #9EA3AE;
+  background-color: #9EA3AE;
+}
+.form-radio-themeBorderColor .form-check-input:checked:after {
+  background-color: #9EA3AE;
+}
+
+.form-check-customthemePills .form-check-input:checked {
+  background-color: #E5E6EB;
+  border-color: #E5E6EB;
+}
+
+.form-radio-customthemePills .form-check-input:checked {
+  border-color: #E5E6EB;
+  background-color: #E5E6EB;
+}
+.form-radio-customthemePills .form-check-input:checked:after {
+  background-color: #E5E6EB;
+}
+
 .form-check,
 .form-check-input,
 .form-check-label {
@@ -2995,6 +3039,21 @@ input[type=checkbox].tui-full-calendar-checkbox-round + span {
 .toast-blueColor {
   border: 2px solid #14378F !important;
   background-color: rgba(20, 55, 143, 0.8) !important;
+}
+
+.toast-themeGray {
+  border: 2px solid #6C727F !important;
+  background-color: rgba(108, 114, 127, 0.8) !important;
+}
+
+.toast-themeBorderColor {
+  border: 2px solid #9EA3AE !important;
+  background-color: rgba(158, 163, 174, 0.8) !important;
+}
+
+.toast-customthemePills {
+  border: 2px solid #E5E6EB !important;
+  background-color: rgba(229, 230, 235, 0.8) !important;
 }
 
 .toast-error {
@@ -4226,12 +4285,6 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
   height: 300px;
   border-radius: 50%;
 }
-.auth-full-bg .bg-overlay {
-  background: url("../images/signup-background-image.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 
 .auth-full-page-content {
   display: -webkit-box;
@@ -5176,4 +5229,257 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
 }
 .jobs-categories a:hover {
   color: #ffb802;
+}
+
+.comp-industry-wrapper .heading {
+  font-size: 45px;
+  font-weight: 700;
+  color: #4D5461;
+}
+.comp-industry-wrapper .para1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  color: #4D5461;
+  margin-bottom: 8px;
+}
+.comp-industry-wrapper .para2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+  color: #4D5461;
+}
+
+.form-element-company {
+  position: relative;
+}
+.form-element-company input {
+  display: none;
+}
+.form-element-company label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80px;
+  cursor: pointer;
+}
+.form-element-company label .svg-icon {
+  width: 61px;
+  height: 61px;
+  background-color: #D3D5DA;
+  border-radius: 30px;
+  padding: 15px;
+  -webkit-transition: background-color 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out;
+}
+.form-element-company label .svg-path {
+  fill: #fff;
+}
+.form-element-company label .title {
+  margin-right: 8px;
+  font-size: 15px;
+  color: #D3D5DA;
+  -webkit-transition: color 200ms ease-in-out;
+  transition: color 200ms ease-in-out;
+}
+.form-element-company input:checked + label .svg-icon {
+  background-color: #FFB802;
+}
+.form-element-company input:checked + label .svg-path {
+  fill: #fff;
+}
+.form-element-company input:checked + label .title {
+  color: #FFB802;
+}
+
+h2 {
+  font-size: 25px;
+  color: #888;
+  text-align: center;
+}
+
+.list {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  max-width: 650px;
+}
+
+.form-element {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+.form-element input {
+  display: none;
+}
+.form-element label {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  cursor: pointer;
+  border: 2px solid #ECE8E8;
+  border-radius: 8px;
+  background: #fff;
+  -webkit-box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  border-radius: 5px;
+}
+.form-element label .icon {
+  margin-top: 10px;
+  font-size: 30px;
+  color: #555;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.form-element label .icon img {
+  background: #F9F9F9;
+  padding: 15px;
+  border-radius: 60px;
+}
+.form-element label .title {
+  font-size: 15px;
+  color: #555;
+  padding: 5px 0px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.form-element label:before {
+  content: "✓";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 8px;
+  right: 8px;
+  background: #FFB802;
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+.form-element input:checked + label:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  display: none;
+}
+.form-element input:checked + label .icon {
+  color: #FFB802;
+}
+.form-element input:checked + label .title {
+  color: #FFB802;
+}
+.form-element input:checked + label {
+  border: 2px solid #FFB802;
+}
+.form-element input:checked + img {
+  background-color: #FFB802;
+}
+
+.porfile-heading {
+  font-size: 38px;
+  font-weight: 700;
+  color: #4D5461;
+}
+
+.profile-para {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 34px;
+  text-align: center;
+  color: #9EA3AE;
+}
+
+.custom-bg-white {
+  background-color: #fff;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.project-tab {
+  white-space: nowrap;
+  font-size: 14px;
+}
+.project-tab .active {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.project-tab-heading-circle {
+  padding: 5px 10px;
+}
+
+.nav-tabs-custom .nav-item .nav-link::after {
+  content: "";
+  background: black;
+  height: 2px;
+}
+
+.candidate-address {
+  border-left: 1px solid #E5E6EB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.candidate-section {
+  border-left: 1px solid #E5E6EB;
 }
