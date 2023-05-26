@@ -9,10 +9,85 @@
   <body class="overflow-x-hidden">
     <div class="mt-4 pt-sm-5"></div>
     <div class="container-fluid border-top border-bottom border-themeGray">
-      <div class="row py-3">
-        <div class="col-4">
+      <div class="row py-3 top-bar-management">
+        <div class="col-lg-6 col-md-6 col-sm-12">
           <div class="row d-flex justify-content-start align-items-start">
-            <div class="col-2">
+            <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+              <div class="dropdown">
+                <button class="btn bg-transparent text-primary border-0 dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Deals <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Deal 1</a>
+                  <a class="dropdown-item" href="#">Deal 2</a>
+                  <a class="dropdown-item" href="#">Deal 3</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-1 col-md-6 col-sm-6 col-6">
+              <div class="btn-group" role="group" aria-label="View Toggle">
+                <button type="button" class="btn btn-outline-light active">
+                  <i class="fas fa-th-list"></i>
+                </button>
+                <button type="button" class="btn btn-outline-light active">
+                  <i class="fas fa-th-large"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-6">
+              <div class="dropdown mx-2">
+                <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Talent Acquisition <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Talent Acquisition 1</a>
+                  <a class="dropdown-item" href="#">Talent Acquisition 2</a>
+                  <a class="dropdown-item" href="#">Talent Acquisition 3</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+              <div class="dropdown">
+                <button class="btn text-themeblack bg-white rounded border-1 dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  All Deals <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">All Deal 1</a>
+                  <a class="dropdown-item" href="#">All Deal 2</a>
+                  <a class="dropdown-item" href="#">All Deal 3</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="offset-lg-2 col-lg-4 col-md-6 col-sm-12">
+          <div class="row gap-2 d-flex justify-content-start align-items-start">
+            <div class="col-lg-2 col-md-3 col-sm-6 col-3 mx-4">
+              <div class="dropdown">
+                <button class="btn btn-outline-primary text-themeblack rounded-pill px-4 dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Actions <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Deal 1</a>
+                  <a class="dropdown-item" href="#">Deal 2</a>
+                  <a class="dropdown-item" href="#">Deal 3</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 col-4">
+              <button class="btn btn-secondary text-light rounded-pill px-4" disabled style="color: #9ea3ae">import</button>
+            </div>
+            <div class="col-lg-4 col-md-3 col-sm-6 col-4 ">
+              <button class="btn btn-primary text-themeblack rounded-pill px-4">Post Project</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- <div class="row py-3">
+        <div class="col-4 col-md-4 col-sm-12">
+          <div class="row d-flex justify-content-start align-items-start">
+            <div class="col-lg-2">
               <div class="dropdown">
                 <button
                   class="btn bg-transparent text-primary border-0 dropdown-toggle"
@@ -30,7 +105,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-3">
+            <div class="col-lg-3">
               <div class="btn-group" role="group" aria-label="View Toggle">
                 <button type="button" class="btn btn-outline-light active">
                   <i class="fas fa-th-list"></i>
@@ -40,7 +115,7 @@
                 </button>
               </div>
             </div>
-            <div class="col-5">
+            <div class="col-lg-5">
               <div class="dropdown mx-2">
                 <button
                   class="btn text-themeblack bg-transparent rounded border-1 dropdown-toggle"
@@ -58,7 +133,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-2">
+            <div class="col-lg-2">
               <div class="dropdown">
                 <button
                   class="btn text-themeblack bg-white rounded border-1 dropdown-toggle"
@@ -80,7 +155,7 @@
         </div>
         <div class="offset-4 col-4">
           <div class="row gap-2 d-flex justify-content-start align-items-start">
-            <div class="col-2 mx-4">
+            <div class="col-lg-2 col-sm-6 mx-4">
               <div class="dropdown">
                 <button
                   class="btn btn-outline-primary text-themeblack rounded-pill px-4 dropdown-toggle"
@@ -98,7 +173,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-2 mx-2">
+            <div class="col-lg-2 col-sm-6 mx-2">
               <button
                 class="btn btn-secondary text-light rounded-pill px-4"
                 disabled
@@ -107,14 +182,14 @@
                 import
               </button>
             </div>
-            <div class="col-4 mx-1">
+            <div class="col-lg-4 col-sm-6 mx-1">
               <button class="btn btn-primary text-themeblack rounded-pill px-4">
                 Post Project
               </button>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <div class="container-fluid border-bottom border-themeGray">
       <div class="row d-flex justify-content-start align-items-center">

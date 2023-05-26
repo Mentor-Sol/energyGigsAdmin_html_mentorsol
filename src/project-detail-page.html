@@ -51,7 +51,7 @@
                                             </div>
                                             <div class="col-lg-6 col-sm-12 col-12">
                                                 <div class="d-flex flex-row justify-content-end align-items-center">
-                                                <button type="button" class="btn btn-primary rounded-pill mx-3 text-themeblack px-3 py-2 fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModalFullscreen">Apply to Project</button>
+                                                <button type="button" class="btn btn-primary rounded-pill mx-3 text-themeblack px-3 py-2 fw-bold">Apply to Project</button>
                                                 Posted May 1 2023
                                                 <div class="mx-5">
                                                 <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -271,7 +271,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
                                 </div>
                             </div>
                             <div class="row mt-5 mb-0">
-                                <div class="col-4"><a href="" data-bs-toggle="modal" data-bs-target=".modal-dialog-centered" class="btn btn-danger text-white px-4 pe-4 rounded-pill">Decline proposal</a></div>
+                                <div class="col-4"><a href="" data-bs-toggle="modal" data-bs-target="#firstmodal" class="btn btn-danger text-white px-4 pe-4 rounded-pill">Decline proposal</a></div>
                                 <div class="col-8 d-flex justify-content-end">
                                     <a href=""  class="btn btn-outline-primary text-themeblack px-4 pe-4 rounded-pill mx-5 me-5">Request changes</a>
                                     <a href="" class="btn btn-primary text-themeblack px-4 pe-4 rounded-pill  me-5">Accept proposal</a>
@@ -324,29 +324,34 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
                 <!-- Decline Proposal Modal -->
 
-                <div class="modal fade modal-dialog modal-lg modal-dialog-centered" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
+                <div class="modal fade" id="firstmodal" aria-hidden="true" aria-labelledby="..." tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="myLargeModalLabel">Large modal</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Cras mattis consectetur purus sit amet fermentum.
-                                    Cras justo odio, dapibus ac facilisis in,
-                                    egestas eget quam. Morbi leo risus, porta ac
-                                    consectetur ac, vestibulum at eros.</p>
-                                <p>Praesent commodo cursus magna, vel scelerisque
-                                    nisl consectetur et. Vivamus sagittis lacus vel
-                                    augue laoreet rutrum faucibus dolor auctor.</p>
-                                <p class="mb-0">Aenean lacinia bibendum nulla sed consectetur.
-                                    Praesent commodo cursus magna, vel scelerisque
-                                    nisl consectetur et. Donec sed odio dui. Donec
-                                    ullamcorper nulla non metus auctor
-                                    fringilla.</p>
-                            </div>
-                        </div><!-- /.modal-content -->
-                    </div><!-- /.modal-dialog -->
+                            <p class="fs-1 fw-bold text-center mt-5 pt-5">Project “Looking for a new solar”</p>
+                            <p class="text-center text-themeblack font-size-16">You are about to decline this proposal.</p>
+                            <p class="text-center text-themeblack font-size-16">Please let the freelancer know why in a few words.</p>
+                          
+                            <div class="d-flex justify-content-center mb-5 pb-2">
+                                <textarea class="mt-4 w-50 resize-none border-custom-color-heading rounded-3" rows="4" placeholder="optional"></textarea>
+                              </div>
+                           
+                              <div class="row d-flex">
+                                <div class="col-12 d-flex justify-content-center">
+                                  <button type="button" class="btn text-themeblack border-0 font-size-14 mb-5 mx-5 fw-bold" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                               
+                                  <button type="button" class="btn btn-danger text-white rounded-pill border-0 font-size-14 mb-5 mx-5 px-3 pe-3" data-bs-dismiss="modal" aria-label="Close">Decline Proposal</button>
+                                </div>
+                              </div>
+                              
+
+                                
+                        
+                            
+                               
+                        
+                           
+                        </div>
+                    </div>
                 </div>
                 
                 <!-- End Page-content -->

@@ -1,0 +1,14 @@
+
+.custom-bg-white{
+    background-color: #fff;
+}
+
+.overflow-x-hidden{
+    overflow-x: hidden;
+}
+
+.top-bar-management{
+    @media screen and (max-width:800px) {
+        margin-top: 3rem;
+    }
+}
