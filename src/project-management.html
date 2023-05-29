@@ -9,10 +9,10 @@
     <div class="mt-4 pt-sm-5"></div>
     <div class="container-fluid border-top border-bottom border-themeGray">
       <div class="row py-3 top-bar-management">
-        <div class="col-lg-8 col-md-8 col-sm-12">
-          <div class="row d-flex justify-content-start align-items-start">
+        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+          <div class="row d-flex justify-content-start align-items-center">
             <div class="col-lg-2 col-md-2 col-sm-6 col-6">
-              <ul class="nav nav-tabs border-0" role="tablist">
+              <!-- <ul class="nav nav-tabs border-0" role="tablist">
                 <li class="nav-item ">
                     <a class="nav-link btn btn-default btn-sm bg-black6 active border-custom-color-heading rounded-3" data-bs-toggle="tab" href="#kanban" role="tab">
                         <i class="bx bxs-grid"></i>
@@ -24,7 +24,16 @@
                     </a>
                 </li>
             
-            </ul>
+            </ul> -->
+            <div class="btn-group bg-white text-themeblack " role="tablist">
+              <a class="btn btn-custom-color-heading btn-sm border-customthemePills rounded-start tab-btn" data-bs-toggle="tab" href="#kanban" role="tab"><span class="bx bxs-grid font-size-20">
+              </span>
+            </a> 
+            <a class="btn btn-custom-color-heading btn-sm font-size-20 border-customthemePills rounded-end tab-btn" data-bs-toggle="tab" href="#list" role="tab"><span
+                  class="bx bx-list-ul"></span>
+            </a>
+            </div>
+
             </div>
             <div class="col-lg-2 col-md-2 col-sm-6 col-6">
               <div class="dropdown ">
@@ -100,7 +109,7 @@
             </div>
             <div class="col-lg-2 col-md-2 col-sm-6 col-6">
               <form class="app-search p-0">
-                <div class="position-relative">
+                <div class="position-relative mt-2">
                   <input type="text" class="form-control" placeholder="Search..." style="width: 200px; height: 35px">
                   <span class="bx bx-search-alt"></span>
                 </div>
@@ -110,8 +119,8 @@
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="row gap-3 d-flex justify-content-start align-items-start">
-            <div class="offset-4 col-lg-8 col-md-8 col-sm-6 col-4">
+          <div class="row gap-3 d-flex justify-content-end align-items-center mt-2">
+            <div class="col-lg-4 col-md-3 col-sm-6 col-4">
               <button
                 class="btn btn-outline-primary text-themeblack rounded-pill px-4"
                 style="color: #9ea3ae"
@@ -119,13 +128,16 @@
               <span class="bx bxs-save"></span>
                 Save View
               </button>
+              
+            </div>
+            <div class="col-lg-4 col-md-3 col-sm-6 col-4">
+            
               <button class="btn btn-primary text-themeblack rounded-pill px-4">
                 Create Project
               </button>
             </div>
-            
           </div>
-            </div>
+        </div>
             </div>
     </div>
           </div>
@@ -825,11 +837,11 @@
       <div class="tab-pane" id="list" role="tabpanel">
         <div class="row p-2">
           <div class="col-lg-12">
-            <div class="table-responsive">
+            <div class="table-responsive rounded-4 border-custom-color-heading">
               <table
                 id="example"
-                class="display example1 table table-bordered rounded-3 border-customthemePills"
-                style="width: 100%; "
+                class="display example1 table table-bordered rounded-4 border-customthemePills "
+                style="width: 100%; margin: 0px;"
               >
                 <thead class="bg-tableBg">
                   <tr>
