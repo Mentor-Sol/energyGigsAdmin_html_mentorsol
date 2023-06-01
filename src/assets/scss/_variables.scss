@@ -131,9 +131,12 @@ $blue3: #235BE9;
 $blue6: #E0E8FF;
 $green1: #34BF49;
 $greenLight: #EBF9ED;
-$black2 :#4D4D4D;
+$black2: #4D4D4D;
+$black3: #4D5461;
 $black6: #E5E6EB;
+$black7: #F4F4F6;
 $tableBg: #F9FAFB;
+
 
 
 // scss-docs-end color-variables
@@ -168,6 +171,8 @@ $colors: (
     "black2": $black2,
     "black6": $black6,
     "tableBg":  $tableBg,
+    "black3": $black3,
+    "black7": $black7,
 );
 // scss-docs-end colors-map
 
@@ -193,6 +198,8 @@ $greenLight: $greenLight;
 $black2:  $black2; 
 $black6:  $black6;
 $tableBg: $tableBg;
+$black3:  $black3;
+$black7: $black7;
 
 
 // scss-docs-end theme-color-variables
@@ -220,7 +227,9 @@ $theme-colors: (
     "black2":  $black2,
     "black6":  $black6,
     "greenLight": $greenLight,
-    "tableBg":$tableBg,
+    "tableBg": $tableBg,
+    "black3": $black3,
+    "black7": $black7,
     
 );
 // scss-docs-end theme-colors-map

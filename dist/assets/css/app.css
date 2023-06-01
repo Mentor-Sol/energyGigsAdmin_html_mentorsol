@@ -2267,6 +2267,32 @@ body[data-layout=horizontal][data-layout-size=boxed] .container-fluid, body[data
   background-color: #F9FAFB;
 }
 
+.form-check-black3 .form-check-input:checked {
+  background-color: #4D5461;
+  border-color: #4D5461;
+}
+
+.form-radio-black3 .form-check-input:checked {
+  border-color: #4D5461;
+  background-color: #4D5461;
+}
+.form-radio-black3 .form-check-input:checked:after {
+  background-color: #4D5461;
+}
+
+.form-check-black7 .form-check-input:checked {
+  background-color: #F4F4F6;
+  border-color: #F4F4F6;
+}
+
+.form-radio-black7 .form-check-input:checked {
+  border-color: #F4F4F6;
+  background-color: #F4F4F6;
+}
+.form-radio-black7 .form-check-input:checked:after {
+  background-color: #F4F4F6;
+}
+
 .form-check,
 .form-check-input,
 .form-check-label {
@@ -3223,6 +3249,16 @@ input[type=checkbox].tui-full-calendar-checkbox-round + span {
 .toast-tableBg {
   border: 2px solid #F9FAFB !important;
   background-color: rgba(249, 250, 251, 0.8) !important;
+}
+
+.toast-black3 {
+  border: 2px solid #4D5461 !important;
+  background-color: rgba(77, 84, 97, 0.8) !important;
+}
+
+.toast-black7 {
+  border: 2px solid #F4F4F6 !important;
+  background-color: rgba(244, 244, 246, 0.8) !important;
 }
 
 .toast-error {
@@ -5446,10 +5482,10 @@ table.dataTable.dtr-inline.collapsed > tbody > tr > td.dtr-control:before {
   cursor: pointer;
 }
 .form-element-company label .svg-icon {
-  width: 61px;
-  height: 61px;
+  width: 71px;
+  height: 71px;
   background-color: #D3D5DA;
-  border-radius: 30px;
+  border-radius: 40px;
   padding: 15px;
   -webkit-transition: background-color 200ms ease-in-out;
   transition: background-color 200ms ease-in-out;
@@ -5532,7 +5568,6 @@ h2 {
   color: #555;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5542,8 +5577,9 @@ h2 {
 }
 .form-element label .icon img {
   background: #F9F9F9;
-  padding: 15px;
-  border-radius: 60px;
+  border-radius: 50px;
+  height: 105px;
+  width: 105px;
 }
 .form-element label .title {
   font-size: 15px;
@@ -5659,9 +5695,19 @@ h2 {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (max-width: 768px) {
+  .candidate-address {
+    border-left: 0px !important;
+  }
+}
 
 .candidate-section {
   border-left: 1px solid #E5E6EB;
+}
+@media screen and (max-width: 768px) {
+  .candidate-section {
+    border-left: 0px;
+  }
 }
 
 .bg-signup {

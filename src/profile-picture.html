@@ -10,57 +10,71 @@
 
     </head>
 
-    <body>
-        <div class="account-pages my-5 pt-sm-5">
+    <body class="bg-white">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <!-- Logo -->
+              <a class="navbar-brand" href="#">
+                <img src="./assets/images/energy-gigs-logo-dark.png" alt="Logo" width="195px"  height="36px">
+              </a>
+            </div>
+        </nav>
+        <div class="d-flex justify-content-end"><a class="text-themeBorderColor px-5" href="./index.html">Skip</a></div>
+        <div class="account-pages my-2 pt-sm-5">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 col-lg-6 col-xl-5">
                         <div class="overflow-hidden">
                             <div class="profile-section text-center">
-                                <p class="porfile-heading">Profile Picture</p>
-                                <p class="profile-para">It is better for companies to add their profile picture as theyr will be recongnized and intercated with easier.</p>
+                                <p class="porfile-heading text-black3">Profile Picture</p>
+                                <p class="text-themeBorderColor lh-lg">It is better for companies to add their profile picture as theyr will be recongnized and intercated with easier.</p>
                                 <div>
-                                    <form action="#" class="dropzone bg-transparent" style="border: 0px; min-height:100px; padding: 0px;">
+                                    
+                                    <form action="#" class="dropzone bg-transparent border-0 p-0 min-height-100 pb-2">
                                         <div class="fallback">
-                                            <input name="file" type="file" multiple="multiple">
+                                            <input name="file" type="file">
                                         </div>
                                         <div class="dz-message needsclick">
                                             <div class="mb-3">
                                                 <img src="assets/images/upload-image.png"/>
                                             </div>
                                         </div>
+                                                                             
+                                        </form>
                                         <div class="d-flex justify-content-center align-items-center">
                                             <label class="input-group-text  border-0 text-primary" for="resume">
                                               <i class="fas fa-upload text-primary"></i>
                                               <span class="ms-2">Upload Photo</span>
                                             </label>
                                             <input type="file" class="form-control d-none" id="resume" accept=".png,.svg.jpg">
-                                          </div>
+                                        </div>
+
                                           <div class="row">
                                             <div class="col-6">
-                                                <a type="button" class="btn rounded-pill  p-2" style="background-color: #FFB802; margin-top: 3rem;" href="./company-industry.html"> 
-                                                    <span class="mx-2">
+                                                <a type="button" class="btn rounded-pill px-3" style="background-color: #FFB802; margin-top: 3rem;" href="./company-industry.html"> 
+                                                    <span class="mx-1">
                                                         <svg width="15" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M0.731215 3.50522L3.95657 0.246526C4.03405 0.16841 4.12623 0.106408 4.22779 0.064096C4.32935 0.0217841 4.43828 0 4.5483 0C4.65832 0 4.76726 0.0217841 4.86882 0.064096C4.97038 0.106408 5.06256 0.16841 5.14003 0.246526C5.29526 0.402678 5.38239 0.613911 5.38239 0.83409C5.38239 1.05427 5.29526 1.2655 5.14003 1.42165L2.17304 4.41365H19.1666C19.3876 4.41365 19.5996 4.50146 19.7559 4.65776C19.9122 4.81405 20 5.02604 20 5.24708C20 5.46811 19.9122 5.6801 19.7559 5.8364C19.5996 5.99269 19.3876 6.0805 19.1666 6.0805H2.12303L5.14003 9.08917C5.21815 9.16664 5.28015 9.25882 5.32246 9.36038C5.36477 9.46194 5.38656 9.57088 5.38656 9.6809C5.38656 9.79092 5.36477 9.89985 5.32246 10.0014C5.28015 10.103 5.21815 10.1952 5.14003 10.2726C5.06256 10.3507 4.97038 10.4127 4.86882 10.4551C4.76726 10.4974 4.65832 10.5192 4.5483 10.5192C4.43828 10.5192 4.32935 10.4974 4.22779 10.4551C4.12623 10.4127 4.03405 10.3507 3.95657 10.2726L0.731215 7.03894C0.262995 6.57014 0 5.93465 0 5.27208C0 4.6095 0.262995 3.97402 0.731215 3.50522Z" fill="#001F3F"/>
                                                         </svg>
                                                     </span>
-                                                    <span class="mx-2 text-themeblack">
+                                                    <span class="mx-1 text-themeblack fw-bold">
                                                         Back
                                                     </span>
                                                 </a>
                                             </div>
-                                            <div class="col-6"><a type="button" class="btn rounded-pill p-2" style="background-color: #FFB802; margin-top: 3rem;" href="index.html">
-                                                <span class="mx-2 text-themeblack">
-                                                    Next
-                                                </span>
-                                               <span class="mx-2">
-                                               <svg width="15" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                   <path d="M19.2688 3.50522L16.0434 0.246526C15.966 0.16841 15.8738 0.106408 15.7722 0.064096C15.6707 0.0217841 15.5617 0 15.4517 0C15.3417 0 15.2327 0.0217841 15.1312 0.064096C15.0296 0.106408 14.9374 0.16841 14.86 0.246526C14.7047 0.402678 14.6176 0.613911 14.6176 0.83409C14.6176 1.05427 14.7047 1.2655 14.86 1.42165L17.827 4.41365H0.833425C0.612387 4.41365 0.400402 4.50146 0.244105 4.65776C0.087807 4.81405 0 5.02604 0 5.24708C0 5.46811 0.087807 5.6801 0.244105 5.8364C0.400402 5.99269 0.612387 6.0805 0.833425 6.0805H17.877L14.86 9.08917C14.7819 9.16664 14.7198 9.25882 14.6775 9.36038C14.6352 9.46194 14.6134 9.57088 14.6134 9.6809C14.6134 9.79092 14.6352 9.89985 14.6775 10.0014C14.7198 10.103 14.7819 10.1952 14.86 10.2726C14.9374 10.3507 15.0296 10.4127 15.1312 10.4551C15.2327 10.4974 15.3417 10.5192 15.4517 10.5192C15.5617 10.5192 15.6707 10.4974 15.7722 10.4551C15.8738 10.4127 15.966 10.3507 16.0434 10.2726L19.2688 7.03894C19.737 6.57014 20 5.93465 20 5.27208C20 4.6095 19.737 3.97402 19.2688 3.50522Z" fill="#001F3F"/>
-                                               </svg>
-                                           </span>
-                                        </a></div>
-                                          </div>
-                                    </form>
+                                            <div class="col-6">
+                                                <a type="button" class="btn rounded-pill px-3" style="background-color: #FFB802; margin-top: 3rem;" href="index.html">
+                                                    <span class="mx-1 text-themeblack fw-bold">
+                                                        Next
+                                                    </span>
+                                                    <span class="mx-1">
+                                                        <svg width="15" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M19.2688 3.50522L16.0434 0.246526C15.966 0.16841 15.8738 0.106408 15.7722 0.064096C15.6707 0.0217841 15.5617 0 15.4517 0C15.3417 0 15.2327 0.0217841 15.1312 0.064096C15.0296 0.106408 14.9374 0.16841 14.86 0.246526C14.7047 0.402678 14.6176 0.613911 14.6176 0.83409C14.6176 1.05427 14.7047 1.2655 14.86 1.42165L17.827 4.41365H0.833425C0.612387 4.41365 0.400402 4.50146 0.244105 4.65776C0.087807 4.81405 0 5.02604 0 5.24708C0 5.46811 0.087807 5.6801 0.244105 5.8364C0.400402 5.99269 0.612387 6.0805 0.833425 6.0805H17.877L14.86 9.08917C14.7819 9.16664 14.7198 9.25882 14.6775 9.36038C14.6352 9.46194 14.6134 9.57088 14.6134 9.6809C14.6134 9.79092 14.6352 9.89985 14.6775 10.0014C14.7198 10.103 14.7819 10.1952 14.86 10.2726C14.9374 10.3507 15.0296 10.4127 15.1312 10.4551C15.2327 10.4974 15.3417 10.5192 15.4517 10.5192C15.5617 10.5192 15.6707 10.4974 15.7722 10.4551C15.8738 10.4127 15.966 10.3507 16.0434 10.2726L19.2688 7.03894C19.737 6.57014 20 5.93465 20 5.27208C20 4.6095 19.737 3.97402 19.2688 3.50522Z" fill="#001F3F"/>
+                                                        </svg>
+                                                    </span>
+                                                </a>
+                                             </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -77,6 +91,7 @@
         <!-- App js -->
         <script src="assets/js/app.js"></script>
         <script>
+      
      function uploadImage() {
       var input = document.getElementById("image");
       var file = input.files[0];
