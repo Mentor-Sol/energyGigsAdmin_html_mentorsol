@@ -2,14 +2,31 @@
   @@include("partials/full-page-topbar.html")
 
   <head>
-    @@include("partials/title-meta.html", {"title": "Email Verification"})
+    <link
+      href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Responsive datatable examples -->
+    <link
+      href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
     @@include("partials/head-css.html")
   </head>
 
   <body class="overflow-x-hidden">
     <div class="mt-4 pt-sm-5"></div>
     <div class="container-fluid border-top border-bottom border-themeGray">
-      <div class="row py-3">
+      <div class="row py-3 bg-white">
         <div class="col-4">
           <div class="row d-flex justify-content-start align-items-start">
             <div class="col-2">
@@ -116,400 +133,185 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid border-bottom border-themeGray">
-      <div class="row d-flex justify-content-start align-items-center">
-        <div class="col-8">
-          <div class="row d-flex justify-content-start align-items-center">
-            <div class="col-3">
-              <form class="app-search m-0 d-none d-lg-block">
-                <div class="position-relative mx-1">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="myInput"
-                    placeholder="Search..."
-                    style="width: 200px; height: 35px"
-                  />
-                  <span class="bx bx-search-alt"></span>
-                </div>
-              </form>
-            </div>
-            <div class="col-8">
-              <div class="row gap-3">
-                <div class="col-2">
-                  <div class="dropdown">
-                    <button
-                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Deals Owner <i class="mdi mdi-chevron-down"></i>
-                    </button>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <a class="dropdown-item" href="#">Owner 1</a>
-                      <a class="dropdown-item" href="#">Owner 2</a>
-                      <a class="dropdown-item" href="#">Owner 3</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="dropdown">
-                    <button
-                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Create Date <i class="mdi mdi-chevron-down"></i>
-                    </button>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <a class="dropdown-item" href="#">Date 1</a>
-                      <a class="dropdown-item" href="#">Date 2</a>
-                      <a class="dropdown-item" href="#">Date 3</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-3 mr-auto">
-                  <div class="dropdown">
-                    <button
-                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Last Activity Date <i class="mdi mdi-chevron-down"></i>
-                    </button>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <a class="dropdown-item" href="#">Last Activity 1</a>
-                      <a class="dropdown-item" href="#">Last Activity 2</a>
-                      <a class="dropdown-item" href="#">Last Activity 3</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="dropdown">
-                    <button
-                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Close Date <i class="mdi mdi-chevron-down"></i>
-                    </button>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <a class="dropdown-item" href="#">Close Date 1</a>
-                      <a class="dropdown-item" href="#">Close Date 2</a>
-                      <a class="dropdown-item" href="#">Close Date 3</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-1">
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-transparent dropdown-toggle"
-                      type="button"
-                      id="filterDropdown"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <i class="bx bx-slider-alt"></i> Filter
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="filterDropdown">
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <input type="checkbox" id="option1" />
-                          <label for="option1">Option 1</label>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <input type="checkbox" id="option2" />
-                          <label for="option2">Option 2</label>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <input type="checkbox" id="option3" />
-                          <label for="option3">Option 3</label>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div
-            class="row gap-2 d-flex align-items-center justify-content-center"
-          >
-            <div class="col-4">
-              <div class="dropdown">
-                <button
-                  class="btn btn-outline-light text-dark rounded-pill px-4 dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Actions <i class="mdi mdi-chevron-down"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Deal 1</a>
-                  <a class="dropdown-item" href="#">Deal 2</a>
-                  <a class="dropdown-item" href="#">Deal 3</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <button class="btn btn-outline-light text-dark rounded-pill px-4">
-                <i class="bx bx-save"></i> Save View
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="row">
+    <div class="row m-3">
       <div class="col-lg-12">
-        <div class="card">
-          <div class="card-body">
-            <div class="table-responsive rounded">
-              <table class="table align-middle table-nowrap mb-0">
-                <thead class="table-light">
-                  <tr>
-                    <th style="width: 20px">
-                      <div class="form-check font-size-16 align-middle">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="transactionCheck01"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="transactionCheck01"
-                        ></label>
-                      </div>
-                    </th>
-                    <th class="align-middle">PROJECT NAME</th>
-                    <th class="align-middle">STATUS</th>
-                    <th class="align-middle"># APPLICANTS</th>
-                    <th class="align-middle">TOTAL COST</th>
-                    <th class="align-middle">CREATE DATE</th>
-                    <th class="align-middle">CLOSE DATE</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="form-check font-size-16">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="transactionCheck02"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="transactionCheck02"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>
-                      <a href="javascript: void(0);" class="text-body fw-bold"
-                        >#SK2540</a
-                      >
-                    </td>
-                    <td>Neal Matthews</td>
-                    <td>07 Oct, 2019</td>
-                    <td>$400</td>
-                    <td>
-                      <span
-                        class="badge badge-pill badge-soft-success font-size-11"
-                        >Paid</span
-                      >
-                    </td>
-                    <td>
-                      <i class="fab fa-cc-mastercard me-1"></i> Mastercard
-                    </td>
-                  </tr>
+        <div class="table-responsive">
+          <table
+            id="example"
+            class="display example1 table table-bordered table-rounded-3 border-primary"
+            style="width: 100%; border-radius: 30px !important"
+          >
+            <thead class="bg-tableBg">
+              <tr>
+                <th><input id="headerCheckbox" type="checkbox" /></th>
+                <th>PROJECT NAME</th>
+                <th>PROJECT STATUS</th>
+                <th>MILESTONE STATUS</th>
+                <th>TOTAL COST</th>
+                <th>PROJECT DUE DATE</th>
+                <th>% COMPLETE</th>
+              </tr>
+            </thead>
+            <tbody class="bg-white">
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Porject Name 1</td>
+                <td>
+                  <span
+                    class="rounded-pill bg-lightYellow text-primary font-size-16 px-3 py-1"
+                    >In Progerss
+                  </span>
+                </td>
+                <td>
+                  <span class="text-themeblack font-size-16">In Review</span>
+                </td>
+                <td>$ 10,490</td>
+                <td>14 Oct, 2019</td>
+                <td><span class="text-blue3">80%</span></td>
+              </tr>
 
-                  <tr>
-                    <td>
-                      <div class="form-check font-size-16">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="transactionCheck03"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="transactionCheck03"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>
-                      <a href="javascript: void(0);" class="text-body fw-bold"
-                        >#SK2541</a
-                      >
-                    </td>
-                    <td>Jamal Burnett</td>
-                    <td>07 Oct, 2019</td>
-                    <td>$380</td>
-                    <td>
-                      <span
-                        class="badge badge-pill badge-soft-danger font-size-11"
-                        >Chargeback</span
-                      >
-                    </td>
-                    <td><i class="fab fa-cc-visa me-1"></i> Visa</td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <div class="form-check font-size-16">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="transactionCheck04"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="transactionCheck04"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>
-                      <a href="javascript: void(0);" class="text-body fw-bold"
-                        >#SK2542</a
-                      >
-                    </td>
-                    <td>Juan Mitchell</td>
-                    <td>06 Oct, 2019</td>
-                    <td>$384</td>
-                    <td>
-                      <span
-                        class="badge badge-pill badge-soft-success font-size-11"
-                        >Paid</span
-                      >
-                    </td>
-                    <td><i class="fab fa-cc-paypal me-1"></i> Paypal</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="form-check font-size-16">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="transactionCheck05"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="transactionCheck05"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>
-                      <a href="javascript: void(0);" class="text-body fw-bold"
-                        >#SK2543</a
-                      >
-                    </td>
-                    <td>Barry Dick</td>
-                    <td>05 Oct, 2019</td>
-                    <td>$412</td>
-                    <td>
-                      <span
-                        class="badge badge-pill badge-soft-success font-size-11"
-                        >Paid</span
-                      >
-                    </td>
-                    <td>
-                      <i class="fab fa-cc-mastercard me-1"></i> Mastercard
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="form-check font-size-16">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="transactionCheck06"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="transactionCheck06"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>
-                      <a href="javascript: void(0);" class="text-body fw-bold"
-                        >#SK2544</a
-                      >
-                    </td>
-                    <td>Ronald Taylor</td>
-                    <td>04 Oct, 2019</td>
-                    <td>$404</td>
-                    <td>
-                      <span
-                        class="badge badge-pill badge-soft-warning font-size-11"
-                        >Refund</span
-                      >
-                    </td>
-                    <td><i class="fab fa-cc-visa me-1"></i> Visa</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="form-check font-size-16">
-                        <input
-                          class="form-check-input"
-                          type="checkbox"
-                          id="transactionCheck07"
-                        />
-                        <label
-                          class="form-check-label"
-                          for="transactionCheck07"
-                        ></label>
-                      </div>
-                    </td>
-                    <td>
-                      <a href="javascript: void(0);" class="text-body fw-bold"
-                        >#SK2545</a
-                      >
-                    </td>
-                    <td>Jacob Hunter</td>
-                    <td>04 Oct, 2019</td>
-                    <td>$392</td>
-                    <td>
-                      <span
-                        class="badge badge-pill badge-soft-success font-size-11"
-                        >Paid</span
-                      >
-                    </td>
-                    <td><i class="fab fa-cc-paypal me-1"></i> Paypal</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <!-- end table-responsive -->
-          </div>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Porject Name 2</td>
+                <td>
+                  <span
+                    class="rounded-pill bg-blue6 text-blue3 font-size-16 px-3 py-1"
+                    >Approved</span
+                  >
+                </td>
+                <td>
+                  <span class="text-themeblack font-size-16">In Progerss</span>
+                </td>
+                <td>$ 10,490</td>
+                <td>14 Oct, 2019</td>
+                <td class="text-primary">77%</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Porject Name 2</td>
+                <td>
+                  <span
+                    class="rounded-pill bg-greenLight text-green1 font-size-16 px-3 py-1"
+                    >Completed</span
+                  >
+                </td>
+                <td>
+                  <span class="text-themeblack font-size-16">Completed</span>
+                </td>
+                <td>$ 10,490</td>
+                <td>14 Oct, 2019</td>
+                <td><span class="text-green1">100%</span></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Porject Name 3</td>
+                <td>
+                  <span
+                    class="rounded-pill bg-black6 text-black2 font-size-16 px-3 py-1"
+                    >Draft</span
+                  >
+                </td>
+                <td>
+                  <span class="text-themeblack font-size-16">In Progress</span>
+                </td>
+                <td>$ 10,490</td>
+                <td>14 Oct, 2019</td>
+                <td><span class="text-primary">34%</span></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Porject Name 4</td>
+                <td>
+                  <span
+                    class="rounded-pill bg-blue6 text-blue3 font-size-16 px-3 py-1"
+                    >Approved</span
+                  >
+                </td>
+                <td>
+                  <span class="text-themeblack font-size-16">Completed</span>
+                </td>
+                <td>$ 10,490</td>
+                <td>14 Oct, 2019</td>
+                <td><span class="text-black2">0%</span></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Porject Name 5</td>
+                <td>
+                  <span
+                    class="rounded-pill bg-greenLight text-green1 font-size-16 px-3 py-1"
+                    >Completed</span
+                  >
+                </td>
+                <td>
+                  <span class="text-themeblack font-size-16">Not Started</span>
+                </td>
+                <td>$ 10,490</td>
+                <td>14 Oct, 2019</td>
+                <td><span class="text-green1">100%</span></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Porject Name 6</td>
+                <td>
+                  <span
+                    class="rounded-pill bg-lightYellow text-primary font-size-16 px-3 py-1"
+                    >Pending</span
+                  >
+                </td>
+                <td>
+                  <span class="text-themeblack font-size-16">Completed</span>
+                </td>
+                <td>$ 10,490</td>
+                <td>14 Oct, 2019</td>
+                <td>$90,560</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Porject Name 7</td>
+                <td>
+                  <span
+                    class="rounded-pill bg-greenLight text-green1 font-size-16 px-3 py-1"
+                    >Completed</span
+                  >
+                </td>
+                <td>
+                  <span class="text-themeblack font-size-16">In Review</span>
+                </td>
+                <td>$ 10,490</td>
+                <td>14 Oct, 2019</td>
+                <td>$342,000</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Porject Name 8</td>
+                <td>
+                  <span
+                    class="rounded-pill bg-lightYellow text-primary font-size-16 px-3 py-1"
+                    >Pending</span
+                  >
+                </td>
+                <td>
+                  <span class="text-themeblack font-size-16">Completed</span>
+                </td>
+                <td>$ 10,490</td>
+                <td>14 Oct, 2019</td>
+                <td>$313,500</td>
+              </tr>
+            </tbody>
+            <!-- <tfoot>
+            <tr>
+              <td><input type="checkbox"></td>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Office</th>
+              <th>Age</th>
+              <th>Start date</th>
+              <th>Salary</th>
+            </tr>
+          </tfoot> -->
+          </table>
         </div>
       </div>
     </div>
@@ -517,6 +319,102 @@
     @@include("partials/vendor-scripts.html")
 
     <!-- App js -->
+    <script>
+      $(document).ready(function () {
+        // Setup - add a text input to each footer cell
+        $("#example tfoot th").each(function () {
+          var title = $(this).text();
+          $(this).html(
+            '<input type="text" placeholder="Search ' + title + '" />'
+          );
+        });
+
+        // DataTable
+        var table = $("#example").DataTable({
+          bPaginate: false,
+          bFilter: false,
+          bInfo: false,
+
+          initComplete: function () {
+            // Apply the search
+            this.api()
+              .columns()
+              .every(function () {
+                var that = this;
+
+                $("input", this.footer()).on("keyup change clear", function () {
+                  if (that.search() !== this.value) {
+                    that.search(this.value).draw();
+                  }
+                });
+              });
+          },
+        });
+      });
+
+      window.addEventListener("DOMContentLoaded", function () {
+        const headerCheckbox = document.getElementById("headerCheckbox");
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+        headerCheckbox.addEventListener("change", function () {
+          checkboxes.forEach(function (checkbox) {
+            checkbox.checked = headerCheckbox.checked;
+          });
+        });
+
+        checkboxes.forEach(function (checkbox) {
+          checkbox.addEventListener("change", function () {
+            // Check if all checkboxes except the header checkbox are checked
+            const allCheckedExceptHeader = Array.from(checkboxes).every(
+              function (checkbox) {
+                return checkbox !== headerCheckbox || checkbox.checked;
+              }
+            );
+
+            headerCheckbox.checked = allCheckedExceptHeader;
+          });
+        });
+      });
+      window.addEventListener("DOMContentLoaded", function () {
+        const tableBody = document.querySelector(".bg-white");
+        const rows = tableBody.querySelectorAll("tr");
+
+        rows.forEach(function (row) {
+          const statusCell = row.querySelector("td:nth-child(3)");
+          const status = statusCell.textContent.trim();
+
+          if (status === "In Progerss") {
+            statusCell.innerHTML = `<span class="bg-rounded-pill bg-primary">${status}</span>`;
+          } else if (status === "Approved") {
+            statusCell.innerHTML = `<span class="bg-rounded-pill bg-secondary">${status}</span>`;
+          } else if (status === "Pending") {
+            statusCell.innerHTML = `<span class="bg-rounded-pill bg-light">${status}</span>`;
+          } else if (status === "Draft") {
+            statusCell.innerHTML = `<span class="bg-rounded-pill bg-danger">${status}</span>`;
+          }
+        });
+      });
+    </script>
+
+    <!-- Required datatable js -->
+    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+    <!-- Buttons examples -->
+    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+    <script src="assets/libs/jszip/jszip.min.js"></script>
+    <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+    <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+
+    <!-- Responsive examples -->
+    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+
+    <!-- Datatable init js -->
+    <script src="assets/js/pages/datatables.init.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>

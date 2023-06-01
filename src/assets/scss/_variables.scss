@@ -117,6 +117,7 @@ $pink:    #e83e8c;
 $red:     #f46a6a;
 $orange:  #f1734f;
 $yellow:  #ffb802;
+$lightYellow: #FFF7D1;
 $green:   #34c38f;
 $teal:    #050505;
 $cyan:    #50a5f1;
@@ -126,6 +127,16 @@ $blueColor: #14378F;
 $themeGray:#6C727F;
 $themeBorderColor: #9EA3AE;
 $customthemePills: #E5E6EB;
+$blue3: #235BE9;
+$blue6: #E0E8FF;
+$green1: #34BF49;
+$greenLight: #EBF9ED;
+$black2: #4D4D4D;
+$black3: #4D5461;
+$black6: #E5E6EB;
+$black7: #F4F4F6;
+$tableBg: #F9FAFB;
+
 
 
 // scss-docs-end color-variables
@@ -152,6 +163,16 @@ $colors: (
     "themeGray": $themeGray,
     "themeBorderColor": $themeBorderColor,
     "customthemePills": $customthemePills,
+    "lightYellow": $lightYellow,
+    "blue3": $blue3,
+    "blue6": $blue6,
+    "green1": $green1,
+    "greenLight" :  $greenLight,
+    "black2": $black2,
+    "black6": $black6,
+    "tableBg":  $tableBg,
+    "black3": $black3,
+    "black7": $black7,
 );
 // scss-docs-end colors-map
 
@@ -169,6 +190,16 @@ $blueColor:     $blueColor;
 $themeGray:    $themeGray;
 $themeBorderColor:    $themeBorderColor;
 $customthemePills:    $customthemePills;
+$lightYellow: $lightYellow;
+$blue3:   $blue3;
+$blue6:   $blue6;
+$green1:  $green1;
+$greenLight: $greenLight;
+$black2:  $black2; 
+$black6:  $black6;
+$tableBg: $tableBg;
+$black3:  $black3;
+$black7: $black7;
 
 
 // scss-docs-end theme-color-variables
@@ -189,6 +220,17 @@ $theme-colors: (
     "themeGray":   $themeGray,
     "themeBorderColor":   $themeBorderColor,
     "customthemePills":   $customthemePills,
+    "lightYellow":  $lightYellow,
+    "blue3":   $blue3,
+    "blue6":   $blue6,
+    "green1":  $green1,
+    "black2":  $black2,
+    "black6":  $black6,
+    "greenLight": $greenLight,
+    "tableBg": $tableBg,
+    "black3": $black3,
+    "black7": $black7,
+    
 );
 // scss-docs-end theme-colors-map
 
