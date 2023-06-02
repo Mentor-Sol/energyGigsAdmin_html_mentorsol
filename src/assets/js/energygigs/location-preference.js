@@ -55,11 +55,11 @@ function toggleSelection(checkboxId, elementId) {
   } else if (elementId === "factory-image") {
     if (checkbox.checked) {
       // Checkbox is checked
-      image.src = "assets/images/location-preference/factory-color.svg"; // Change the image source to the selected image
+      image.src = "assets/images/location-preference/location-color.svg"; // Change the image source to the selected image
     } else {
       // Checkbox is unchecked
       image.style.border = "";
-      image.src = "assets/images/location-preference/factory-dark.svg"; // Change the image source back to the original image
+      image.src = "assets/images/location-preference/location-dark.svg"; // Change the image source back to the original image
     }
   }
 }
@@ -69,11 +69,11 @@ function toggleSelection1(checkboxId, elementId) {
   var image = document.getElementById(elementId);
   if (checkbox.checked) {
     // Checkbox is checked
-    image.src = "assets/images/location-preference/location-color.svg";
+    image.src = "assets/images/location-preference/factory-color.svg";
     console.log(image); // Change the image source to the selected image
   } else {
     // Checkbox is unchecked
     image.style.border = "";
-    image.src = "assets/images/location-preference/location-dark.svg"; // Change the image source back to the original image
+    image.src = "assets/images/location-preference/factory-dark.svg"; // Change the image source back to the original image
   }
 }

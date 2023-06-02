@@ -6,3 +6,40 @@
     background-position: center;
 
 }
+
+
+.nav {
+    &.nav-sign-up {
+      &.nav-pills {
+        &.nav-justified {
+          &.rounded-pill {
+            &.p-2 {
+              &.bg-lightYellow {
+              
+                .nav-item {
+                
+                  .nav-link {
+                  color: $themeBorderColor;
+  
+                    &.active {
+                    background: #FFB802;
+                      color: #001F3F;
+                    }
+  
+                   
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .nav-link span:first-child {
+      margin-right: 0.25rem;
+    }
+  }
+  

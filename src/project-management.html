@@ -1,150 +1,235 @@
 <html>
-  @@include("partials/full-page-topbar.html")
+@@include("partials/full-page-topbar.html")
 
-  <head>
-    @@include("partials/head-css.html")
-  </head>
+<head>
+  @@include("partials/head-css.html")
+</head>
 
-  <body class="overflow-x-hidden">
-    <div class="mt-4 pt-sm-5"></div>
-    <div class="container-fluid border-top border-bottom border-themeGray">
-      <div class="row py-3 top-bar-management">
-        <div class="col-lg-8 col-md-8 col-sm-12 col-12">
-          <div class="row d-flex justify-content-start align-items-center">
-            <div class="col-lg-2 col-md-2 col-sm-6 col-6">
-              <!-- <ul class="nav nav-tabs border-0" role="tablist">
-                <li class="nav-item ">
-                    <a class="nav-link btn btn-default btn-sm bg-black6 active border-custom-color-heading rounded-3" data-bs-toggle="tab" href="#kanban" role="tab">
-                        <i class="bx bxs-grid"></i>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link btn btn-default btn-sm bg-black6 border-custom-color-heading rounded-3" data-bs-toggle="tab" href="#list" role="tab">
-                        <i class="bx bx-list-ul"></i>
-                    </a>
-                </li>
-            
-            </ul> -->
-            <div class="btn-group bg-white text-themeblack " role="tablist">
-              <a class="btn btn-custom-color-heading btn-sm border-customthemePills rounded-start tab-btn" data-bs-toggle="tab" href="#kanban" role="tab"><span class="bx bxs-grid font-size-20">
-              </span>
-            </a> 
-            <a class="btn btn-custom-color-heading btn-sm font-size-20 border-customthemePills rounded-end tab-btn" data-bs-toggle="tab" href="#list" role="tab"><span
-                  class="bx bx-list-ul"></span>
-            </a>
+<body class="overflow-x-hidden">
+  <div class="mt-4 pt-sm-5"></div>
+  <div class="container-fluid border-top border-black6">
+    <div class="row py-3 top-bar-management">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+        <div class="row d-flex justify-content-start align-items-center">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center gap-3 flex-lg-col flex-md-col flex-xl-col flex-xxl-col  ">
+            <div class="dropdown mx-2">
+              <button class="btn text-primary bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
+                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Create Date <i class="mdi mdi-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Date 1</a>
+                <a class="dropdown-item" href="#">Date 2</a>
+                <a class="dropdown-item" href="#">Date 3</a>
+              </div>
             </div>
 
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-6 col-6">
-              <div class="dropdown ">
-                <button
-                  class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Create Date <i class="mdi mdi-chevron-down"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Date 1</a>
-                  <a class="dropdown-item" href="#">Date 2</a>
-                  <a class="dropdown-item" href="#">Date 3</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-6 col-6">
-              <div class="dropdown">
-                <button
-                  class="btn text-themeblack bg-white rounded border-1 dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Last Activity Date <i class="mdi mdi-chevron-down"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">All Deal 1</a>
-                  <a class="dropdown-item" href="#">All Deal 2</a>
-                  <a class="dropdown-item" href="#">All Deal 3</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-6 col-6">
-              <div class="dropdown ">
-                <button
-                  class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Close Date <i class="mdi mdi-chevron-down"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Date 1</a>
-                  <a class="dropdown-item" href="#">Date 2</a>
-                  <a class="dropdown-item" href="#">Date 3</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-6 col-6">
-              <div class="dropdown ">
-                <button
-                  class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                ><span class="bx bx-slider-alt"></span>
-                  All Filter <i class="mdi mdi-chevron-down"></i>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Date 1</a>
-                  <a class="dropdown-item" href="#">Date 2</a>
-                  <a class="dropdown-item" href="#">Date 3</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-2 col-sm-6 col-6">
-              <form class="app-search p-0">
-                <div class="position-relative mt-2">
-                  <input type="text" class="form-control" placeholder="Search..." style="width: 200px; height: 35px">
-                  <span class="bx bx-search-alt"></span>
-                </div>
-              </form>
+            <!-- <ul class="nav nav-tabs border-0" role="tablist">
+                  <li class="nav-item ">
+                      <a class="nav-link btn btn-default btn-sm bg-black6 active border-custom-color-heading rounded-3" data-bs-toggle="tab" href="#kanban" role="tab">
+                          <i class="bx bxs-grid"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link btn btn-default btn-sm bg-black6 border-custom-color-heading rounded-3" data-bs-toggle="tab" href="#list" role="tab">
+                          <i class="bx bx-list-ul"></i>
+                      </a>
+                  </li>
               
+              </ul> -->
+            <div class="btn-group bg-white text-themeblack mx-2" role="tablist">
+              <a class="btn btn-custom-color-heading btn-sm border-customthemePills rounded-start tab-btn"
+                data-bs-toggle="tab" href="#kanban" role="tab"><span class="bx bxs-grid font-size-20">
+                </span>
+              </a>
+              <a class="btn btn-custom-color-heading btn-sm font-size-20 border-customthemePills rounded-end tab-btn"
+                data-bs-toggle="tab" href="#list" role="tab"><span class="bx bx-list-ul"></span>
+              </a>
             </div>
+
+            <div class="dropdown mx-2">
+              <button class="btn text-themeblack bg-transparent rounded-3 border-customthemePills font-size-14 fw-normal dropdown-toggle"
+                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Talent Acquisition<i class="mdi mdi-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Talent 1</a>
+                <a class="dropdown-item" href="#">Talent 2</a>
+                <a class="dropdown-item" href="#">Talent 3</a>
+              </div>
+            </div>
+            <div class="dropdown mx-2">
+              <button class="btn text-themeblack bg-transparent rounded-3 border-customthemePills font-size-14 fw-normal dropdown-toggle"
+                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                All Deals<i class="mdi mdi-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Deals 1</a>
+                <a class="dropdown-item" href="#">Deals 2</a>
+                <a class="dropdown-item" href="#">Deals 3</a>
+              </div>
+            </div>
+
           </div>
+
+        
+        
+         
+            <!-- <form class="app-search p-0">
+              <div class="position-relative mt-2">
+                <input type="text" class="form-control" placeholder="Search..." style="width: 200px; height: 35px">
+                <span class="bx bx-search-alt"></span>
+              </div>
+            </form> -->
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-12">
-          <div class="row gap-3 d-flex justify-content-end align-items-center mt-2">
-            <div class="col-lg-4 col-md-3 col-sm-6 col-4">
-              <button
-                class="btn btn-outline-primary text-themeblack rounded-pill px-4"
-                style="color: #9ea3ae"
-              >
-              <span class="bx bxs-save"></span>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="row gap-2  mt-2">
+          <div class="col-lg-4 col-md-3 col-sm-6 col-4">
+            <div class="d-flex justify-content-end align-items-center">
+              <button class="btn btn-outline-primary text-themeblack rounded-pill px-4" style="color: #9ea3ae">
+                <span class="bx bxs-save"></span>
                 Save View
               </button>
-              
             </div>
-            <div class="col-lg-4 col-md-3 col-sm-6 col-4">
-            
-              <button class="btn btn-primary text-themeblack rounded-pill px-4">
-                Create Project
-              </button>
-            </div>
+
           </div>
-        </div>
-            </div>
-    </div>
+          <div class="col-lg-4 col-md-3 col-sm-6 col-4">
+
+            <button class="btn btn-primary text-themeblack rounded-pill px-4">
+              Create Project
+            </button>
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="container-fluid border-bottom border-themeGray">
+    <div class="row py-3 bg-white border-top border-black6 border-2">
+      <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+        <div class="row d-flex justify-content-start align-items-center">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
+            <div class="dropdown mx-2">
+              <button class="btn text-primary bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
+                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Create Date <i class="mdi mdi-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Date 1</a>
+                <a class="dropdown-item" href="#">Date 2</a>
+                <a class="dropdown-item" href="#">Date 3</a>
+              </div>
+            </div>
+
+            <!-- <ul class="nav nav-tabs border-0" role="tablist">
+                  <li class="nav-item ">
+                      <a class="nav-link btn btn-default btn-sm bg-black6 active border-custom-color-heading rounded-3" data-bs-toggle="tab" href="#kanban" role="tab">
+                          <i class="bx bxs-grid"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link btn btn-default btn-sm bg-black6 border-custom-color-heading rounded-3" data-bs-toggle="tab" href="#list" role="tab">
+                          <i class="bx bx-list-ul"></i>
+                      </a>
+                  </li>
+              
+              </ul> -->
+            <div class="btn-group bg-white text-themeblack mx-2" role="tablist">
+              <a class="btn btn-custom-color-heading btn-sm border-customthemePills rounded-start tab-btn"
+                data-bs-toggle="tab" href="#kanban" role="tab"><span class="bx bxs-grid font-size-20">
+                </span>
+              </a>
+              <a class="btn btn-custom-color-heading btn-sm font-size-20 border-customthemePills rounded-end tab-btn"
+                data-bs-toggle="tab" href="#list" role="tab"><span class="bx bx-list-ul"></span>
+              </a>
+            </div>
+
+            <div class="dropdown mx-2">
+              <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
+                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Talent Acquisition<i class="mdi mdi-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Talent 1</a>
+                <a class="dropdown-item" href="#">Talent 2</a>
+                <a class="dropdown-item" href="#">Talent 3</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-2 col-md-2 col-sm-6 col-6">
+            <div class="dropdown">
+              <button class="btn text-themeblack bg-white rounded border-1 dropdown-toggle" type="button"
+                id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Last Activity Date <i class="mdi mdi-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">All Deal 1</a>
+                <a class="dropdown-item" href="#">All Deal 2</a>
+                <a class="dropdown-item" href="#">All Deal 3</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-6 col-6">
+            <div class="dropdown ">
+              <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
+                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Close Date <i class="mdi mdi-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Date 1</a>
+                <a class="dropdown-item" href="#">Date 2</a>
+                <a class="dropdown-item" href="#">Date 3</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-6 col-6">
+            <div class="dropdown ">
+              <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
+                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"><span
+                  class="bx bx-slider-alt"></span>
+                All Filter <i class="mdi mdi-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Date 1</a>
+                <a class="dropdown-item" href="#">Date 2</a>
+                <a class="dropdown-item" href="#">Date 3</a>
+              </div>
+            </div>
+          </div>
+            <!-- <form class="app-search p-0">
+              <div class="position-relative mt-2">
+                <input type="text" class="form-control" placeholder="Search..." style="width: 200px; height: 35px">
+                <span class="bx bx-search-alt"></span>
+              </div>
+            </form> -->
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="row gap-2  mt-2">
+          <div class="col-lg-4 col-md-3 col-sm-6 col-4">
+            <div class="d-flex justify-content-end align-items-center">
+              <button class="btn btn-outline-primary text-themeblack rounded-pill px-4" style="color: #9ea3ae">
+                <span class="bx bxs-save"></span>
+                Save View
+              </button>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-3 col-sm-6 col-4">
+
+            <button class="btn btn-primary text-themeblack rounded-pill px-4">
+              Create Project
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <!-- <div class="container-fluid border-bottom border-themeGray">
       <div class="row d-flex justify-content-start align-items-center">
         <div class="col-8">
           <div class="row d-flex justify-content-start align-items-center">
@@ -316,109 +401,49 @@
         </div>
       </div>
     </div> -->
-
-    
-
-    <div class="tab-content text-muted">
-      <div class="tab-pane active" id="kanban" role="tabpanel">
-        <div class="container-fluid mt-3">
-          <div class="row p-2">
-            <div class="col-md-3">
-              <div class="card rounded-3">
-                <div class="card-body">
-                  <div class="d-flex justify-content-between align-items-center">
-                    <h5 class="card-title text-themeblack">Sourced</h5>
-                    <svg
-                      width="4"
-                      height="15"
-                      viewBox="0 0 4 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                        fill="#9EA3AE"
-                      />
-                    </svg>
-                  </div>
-                  <div class="d-flex flex-column">
-                    <section
-                      class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4" style="border-radius: 14px;"
-                    >
-                      <div class="d-flex justify-content-between fw-bold">
-                        Very long Name of the Project...
-                        <svg
-                          width="4"
-                          height="15"
-                          viewBox="0 0 4 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                            fill="#9EA3AE"
-                          />
-                        </svg>
-                      </div>
-                      <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
-                        <div class="d-flex align-items-center mx-2">
-                          <img
-                            src="assets/images/avatar-management.png"
-                            width="32"
-                            height="32"
-                          />
-                         
-                          </div>
-                          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 -6.99382e-07C24.8366 -1.08564e-06 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 -3.13124e-07 24.8366 -6.99382e-07 16C-1.08564e-06 7.16344 7.16344 -3.13124e-07 16 -6.99382e-07ZM16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93076 3.2 16C3.2 23.0692 8.93075 28.8 16 28.8Z" fill="#E5E6EB"/>
-                            <path d="M16 -6.99382e-07C19.1645 -8.37707e-07 22.2579 0.938382 24.8891 2.69648C27.5203 4.45459 29.5711 6.95345 30.7821 9.87706C31.9931 12.8007 32.3099 16.0177 31.6926 19.1214C31.0752 22.2251 29.5513 25.0761 27.3137 27.3137C25.0761 29.5513 22.2251 31.0752 19.1214 31.6926C16.0177 32.3099 12.8007 31.9931 9.87706 30.7821C6.95345 29.5711 4.45459 27.5203 2.69649 24.8891C0.938383 22.2579 -5.98794e-07 19.1645 -6.99382e-07 16L3.2 16C3.2 18.5316 3.95071 21.0063 5.35719 23.1113C6.76367 25.2162 8.76276 26.8569 11.1017 27.8257C13.4405 28.7945 16.0142 29.0479 18.4972 28.5541C20.9801 28.0602 23.2609 26.8411 25.051 25.051C26.8411 23.2609 28.0602 20.9801 28.5541 18.4972C29.0479 16.0142 28.7945 13.4405 27.8257 11.1017C26.8569 8.76276 25.2162 6.76367 23.1113 5.35719C21.0063 3.95071 18.5316 3.2 16 3.2L16 -6.99382e-07Z" fill="#34BF49"/>
-                            <path d="M11.8936 11.8906V12.5352L9.05176 19H7.81152L10.6484 12.8281H6.9668V11.8906H11.8936ZM14.0908 15.6943L13.1533 15.4648L13.5391 11.8906H17.3721V12.8867H14.5156L14.3203 14.6299C14.431 14.5648 14.584 14.5013 14.7793 14.4395C14.9746 14.3743 15.1976 14.3418 15.4482 14.3418C15.7835 14.3418 16.083 14.3971 16.3467 14.5078C16.6136 14.6152 16.8398 14.7731 17.0254 14.9814C17.2109 15.1865 17.3525 15.4372 17.4502 15.7334C17.5479 16.0264 17.5967 16.3568 17.5967 16.7246C17.5967 17.0534 17.5479 17.361 17.4502 17.6475C17.3558 17.9339 17.2126 18.1862 17.0205 18.4043C16.8285 18.6224 16.5859 18.7933 16.293 18.917C16.0033 19.0374 15.6598 19.0977 15.2627 19.0977C14.9665 19.0977 14.6816 19.0553 14.4082 18.9707C14.138 18.8828 13.8955 18.7542 13.6807 18.585C13.4658 18.4124 13.2933 18.2008 13.1631 17.9502C13.0329 17.6963 12.958 17.4049 12.9385 17.0762H14.0908C14.1201 17.3073 14.1836 17.5042 14.2812 17.667C14.3822 17.8265 14.5156 17.9486 14.6816 18.0332C14.8477 18.1178 15.0397 18.1602 15.2578 18.1602C15.4564 18.1602 15.6273 18.126 15.7705 18.0576C15.9137 17.986 16.0326 17.8851 16.127 17.7549C16.2246 17.6214 16.2962 17.4652 16.3418 17.2861C16.3906 17.1071 16.415 16.9085 16.415 16.6904C16.415 16.4821 16.3874 16.2917 16.332 16.1191C16.2799 15.9466 16.2002 15.7969 16.0928 15.6699C15.9886 15.543 15.8568 15.4453 15.6973 15.377C15.5378 15.3053 15.3538 15.2695 15.1455 15.2695C14.8656 15.2695 14.6507 15.3102 14.501 15.3916C14.3545 15.473 14.2178 15.5739 14.0908 15.6943ZM18.4902 13.6338V13.2578C18.4902 12.9876 18.5488 12.7419 18.666 12.5205C18.7832 12.2992 18.9541 12.1217 19.1787 11.9883C19.4033 11.8548 19.6735 11.7881 19.9893 11.7881C20.3148 11.7881 20.5882 11.8548 20.8096 11.9883C21.0342 12.1217 21.2051 12.2992 21.3223 12.5205C21.4395 12.7419 21.498 12.9876 21.498 13.2578V13.6338C21.498 13.8975 21.4395 14.14 21.3223 14.3613C21.2083 14.5827 21.0391 14.7601 20.8145 14.8936C20.5931 15.027 20.3213 15.0938 19.999 15.0938C19.68 15.0938 19.4066 15.027 19.1787 14.8936C18.9541 14.7601 18.7832 14.5827 18.666 14.3613C18.5488 14.14 18.4902 13.8975 18.4902 13.6338ZM19.3057 13.2578V13.6338C19.3057 13.764 19.3301 13.8877 19.3789 14.0049C19.431 14.1221 19.5091 14.2165 19.6133 14.2881C19.7174 14.3597 19.846 14.3955 19.999 14.3955C20.1553 14.3955 20.2822 14.3597 20.3799 14.2881C20.4808 14.2165 20.5557 14.1221 20.6045 14.0049C20.6533 13.8877 20.6777 13.764 20.6777 13.6338V13.2578C20.6777 13.1243 20.6517 12.999 20.5996 12.8818C20.5508 12.7614 20.4759 12.6654 20.375 12.5938C20.2741 12.5221 20.1455 12.4863 19.9893 12.4863C19.8395 12.4863 19.7126 12.5221 19.6084 12.5938C19.5075 12.6654 19.431 12.7614 19.3789 12.8818C19.3301 12.999 19.3057 13.1243 19.3057 13.2578ZM21.918 17.6377V17.2568C21.918 16.9899 21.9766 16.7458 22.0938 16.5244C22.2142 16.3031 22.3867 16.1257 22.6113 15.9922C22.8359 15.8587 23.1061 15.792 23.4219 15.792C23.7474 15.792 24.0208 15.8587 24.2422 15.9922C24.4668 16.1257 24.6361 16.3031 24.75 16.5244C24.8672 16.7458 24.9258 16.9899 24.9258 17.2568V17.6377C24.9258 17.9046 24.8672 18.1488 24.75 18.3701C24.6361 18.5915 24.4684 18.7689 24.2471 18.9023C24.0257 19.0358 23.7555 19.1025 23.4365 19.1025C23.1143 19.1025 22.8392 19.0358 22.6113 18.9023C22.3867 18.7689 22.2142 18.5915 22.0938 18.3701C21.9766 18.1488 21.918 17.9046 21.918 17.6377ZM22.7383 17.2568V17.6377C22.7383 17.7679 22.7643 17.8916 22.8164 18.0088C22.8717 18.126 22.9515 18.222 23.0557 18.2969C23.1598 18.3685 23.2852 18.4043 23.4316 18.4043C23.5977 18.4043 23.7311 18.3685 23.832 18.2969C23.9329 18.222 24.0046 18.1276 24.0469 18.0137C24.0924 17.8965 24.1152 17.7712 24.1152 17.6377V17.2568C24.1152 17.1234 24.0892 16.998 24.0371 16.8809C23.9883 16.7637 23.9118 16.6693 23.8076 16.5977C23.7067 16.526 23.5781 16.4902 23.4219 16.4902C23.2689 16.4902 23.1419 16.526 23.041 16.5977C22.9401 16.6693 22.8636 16.7637 22.8115 16.8809C22.7627 16.998 22.7383 17.1234 22.7383 17.2568ZM23.7148 12.9062L20.2432 18.4629L19.6426 18.1162L23.1143 12.5596L23.7148 12.9062Z" fill="#001F3F"/>
-                            </svg>
-                            
-                        </div>
-                      <div class="mt-3">
-                        Lorem ipsum dolor sit amet, ut vis commune invidunt
-                        electram, vel ea aliquando honestatis. Cu mel docendi
-                        dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
-                        similique, eu duo elit invidunt.
-                      </div>
-                      <div class="font-size-16 mt-2 mb-0">
-                        
-                          Budget :<span class="fw-bold fs-3 text-themeblack mx-2"
-                            >$ 154</span
-                          >
-                        </p>
-                      </div>
-                    </section>
-                    <section
-                    class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4" style="border-radius: 14px;"
-                  >
+  <div class="tab-content text-muted">
+    <div class="tab-pane active" id="kanban" role="tabpanel">
+      <div class="container-fluid mt-3">
+        <div class="row p-2">
+          <div class="col-md-3">
+            <div class="card rounded-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title text-themeblack">Sourced</h5>
+                  <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
+                      fill="#9EA3AE" />
+                  </svg>
+                </div>
+                <div class="d-flex flex-column">
+                  <section class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4"
+                    style="border-radius: 14px;">
                     <div class="d-flex justify-content-between fw-bold">
                       Very long Name of the Project...
-                      <svg
-                        width="4"
-                        height="15"
-                        viewBox="0 0 4 15"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
+                      <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
                           d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                          fill="#9EA3AE"
-                        />
+                          fill="#9EA3AE" />
                       </svg>
                     </div>
                     <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
-                    <div class="d-flex align-items-center mx-2">
-                      <img
-                        src="assets/images/avatar-management.png"
-                        width="32"
-                        height="32"
-                      />
-                      <div class="rounded-pill opacity-10 text-primary px-3 py-1" style="background: #FFF7D1;">Pending</div>
+                      <div class="d-flex align-items-center mx-2">
+                        <img src="assets/images/avatar-management.png" width="32" height="32" />
+
                       </div>
-                      
-                        
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M16 -6.99382e-07C24.8366 -1.08564e-06 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 -3.13124e-07 24.8366 -6.99382e-07 16C-1.08564e-06 7.16344 7.16344 -3.13124e-07 16 -6.99382e-07ZM16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93076 3.2 16C3.2 23.0692 8.93075 28.8 16 28.8Z"
+                          fill="#E5E6EB" />
+                        <path
+                          d="M16 -6.99382e-07C19.1645 -8.37707e-07 22.2579 0.938382 24.8891 2.69648C27.5203 4.45459 29.5711 6.95345 30.7821 9.87706C31.9931 12.8007 32.3099 16.0177 31.6926 19.1214C31.0752 22.2251 29.5513 25.0761 27.3137 27.3137C25.0761 29.5513 22.2251 31.0752 19.1214 31.6926C16.0177 32.3099 12.8007 31.9931 9.87706 30.7821C6.95345 29.5711 4.45459 27.5203 2.69649 24.8891C0.938383 22.2579 -5.98794e-07 19.1645 -6.99382e-07 16L3.2 16C3.2 18.5316 3.95071 21.0063 5.35719 23.1113C6.76367 25.2162 8.76276 26.8569 11.1017 27.8257C13.4405 28.7945 16.0142 29.0479 18.4972 28.5541C20.9801 28.0602 23.2609 26.8411 25.051 25.051C26.8411 23.2609 28.0602 20.9801 28.5541 18.4972C29.0479 16.0142 28.7945 13.4405 27.8257 11.1017C26.8569 8.76276 25.2162 6.76367 23.1113 5.35719C21.0063 3.95071 18.5316 3.2 16 3.2L16 -6.99382e-07Z"
+                          fill="#34BF49" />
+                        <path
+                          d="M11.8936 11.8906V12.5352L9.05176 19H7.81152L10.6484 12.8281H6.9668V11.8906H11.8936ZM14.0908 15.6943L13.1533 15.4648L13.5391 11.8906H17.3721V12.8867H14.5156L14.3203 14.6299C14.431 14.5648 14.584 14.5013 14.7793 14.4395C14.9746 14.3743 15.1976 14.3418 15.4482 14.3418C15.7835 14.3418 16.083 14.3971 16.3467 14.5078C16.6136 14.6152 16.8398 14.7731 17.0254 14.9814C17.2109 15.1865 17.3525 15.4372 17.4502 15.7334C17.5479 16.0264 17.5967 16.3568 17.5967 16.7246C17.5967 17.0534 17.5479 17.361 17.4502 17.6475C17.3558 17.9339 17.2126 18.1862 17.0205 18.4043C16.8285 18.6224 16.5859 18.7933 16.293 18.917C16.0033 19.0374 15.6598 19.0977 15.2627 19.0977C14.9665 19.0977 14.6816 19.0553 14.4082 18.9707C14.138 18.8828 13.8955 18.7542 13.6807 18.585C13.4658 18.4124 13.2933 18.2008 13.1631 17.9502C13.0329 17.6963 12.958 17.4049 12.9385 17.0762H14.0908C14.1201 17.3073 14.1836 17.5042 14.2812 17.667C14.3822 17.8265 14.5156 17.9486 14.6816 18.0332C14.8477 18.1178 15.0397 18.1602 15.2578 18.1602C15.4564 18.1602 15.6273 18.126 15.7705 18.0576C15.9137 17.986 16.0326 17.8851 16.127 17.7549C16.2246 17.6214 16.2962 17.4652 16.3418 17.2861C16.3906 17.1071 16.415 16.9085 16.415 16.6904C16.415 16.4821 16.3874 16.2917 16.332 16.1191C16.2799 15.9466 16.2002 15.7969 16.0928 15.6699C15.9886 15.543 15.8568 15.4453 15.6973 15.377C15.5378 15.3053 15.3538 15.2695 15.1455 15.2695C14.8656 15.2695 14.6507 15.3102 14.501 15.3916C14.3545 15.473 14.2178 15.5739 14.0908 15.6943ZM18.4902 13.6338V13.2578C18.4902 12.9876 18.5488 12.7419 18.666 12.5205C18.7832 12.2992 18.9541 12.1217 19.1787 11.9883C19.4033 11.8548 19.6735 11.7881 19.9893 11.7881C20.3148 11.7881 20.5882 11.8548 20.8096 11.9883C21.0342 12.1217 21.2051 12.2992 21.3223 12.5205C21.4395 12.7419 21.498 12.9876 21.498 13.2578V13.6338C21.498 13.8975 21.4395 14.14 21.3223 14.3613C21.2083 14.5827 21.0391 14.7601 20.8145 14.8936C20.5931 15.027 20.3213 15.0938 19.999 15.0938C19.68 15.0938 19.4066 15.027 19.1787 14.8936C18.9541 14.7601 18.7832 14.5827 18.666 14.3613C18.5488 14.14 18.4902 13.8975 18.4902 13.6338ZM19.3057 13.2578V13.6338C19.3057 13.764 19.3301 13.8877 19.3789 14.0049C19.431 14.1221 19.5091 14.2165 19.6133 14.2881C19.7174 14.3597 19.846 14.3955 19.999 14.3955C20.1553 14.3955 20.2822 14.3597 20.3799 14.2881C20.4808 14.2165 20.5557 14.1221 20.6045 14.0049C20.6533 13.8877 20.6777 13.764 20.6777 13.6338V13.2578C20.6777 13.1243 20.6517 12.999 20.5996 12.8818C20.5508 12.7614 20.4759 12.6654 20.375 12.5938C20.2741 12.5221 20.1455 12.4863 19.9893 12.4863C19.8395 12.4863 19.7126 12.5221 19.6084 12.5938C19.5075 12.6654 19.431 12.7614 19.3789 12.8818C19.3301 12.999 19.3057 13.1243 19.3057 13.2578ZM21.918 17.6377V17.2568C21.918 16.9899 21.9766 16.7458 22.0938 16.5244C22.2142 16.3031 22.3867 16.1257 22.6113 15.9922C22.8359 15.8587 23.1061 15.792 23.4219 15.792C23.7474 15.792 24.0208 15.8587 24.2422 15.9922C24.4668 16.1257 24.6361 16.3031 24.75 16.5244C24.8672 16.7458 24.9258 16.9899 24.9258 17.2568V17.6377C24.9258 17.9046 24.8672 18.1488 24.75 18.3701C24.6361 18.5915 24.4684 18.7689 24.2471 18.9023C24.0257 19.0358 23.7555 19.1025 23.4365 19.1025C23.1143 19.1025 22.8392 19.0358 22.6113 18.9023C22.3867 18.7689 22.2142 18.5915 22.0938 18.3701C21.9766 18.1488 21.918 17.9046 21.918 17.6377ZM22.7383 17.2568V17.6377C22.7383 17.7679 22.7643 17.8916 22.8164 18.0088C22.8717 18.126 22.9515 18.222 23.0557 18.2969C23.1598 18.3685 23.2852 18.4043 23.4316 18.4043C23.5977 18.4043 23.7311 18.3685 23.832 18.2969C23.9329 18.222 24.0046 18.1276 24.0469 18.0137C24.0924 17.8965 24.1152 17.7712 24.1152 17.6377V17.2568C24.1152 17.1234 24.0892 16.998 24.0371 16.8809C23.9883 16.7637 23.9118 16.6693 23.8076 16.5977C23.7067 16.526 23.5781 16.4902 23.4219 16.4902C23.2689 16.4902 23.1419 16.526 23.041 16.5977C22.9401 16.6693 22.8636 16.7637 22.8115 16.8809C22.7627 16.998 22.7383 17.1234 22.7383 17.2568ZM23.7148 12.9062L20.2432 18.4629L19.6426 18.1162L23.1143 12.5596L23.7148 12.9062Z"
+                          fill="#001F3F" />
+                      </svg>
+
                     </div>
                     <div class="mt-3">
                       Lorem ipsum dolor sit amet, ut vis commune invidunt
@@ -427,581 +452,489 @@
                       similique, eu duo elit invidunt.
                     </div>
                     <div class="font-size-16 mt-2 mb-0">
-                      
-                        Budget :<span class="fw-bold fs-3 text-themeblack mx-2"
-                          >$ 154</span
-                        >
+
+                      Budget :<span class="fw-bold fs-3 text-themeblack mx-2">$ 154</span>
                       </p>
                     </div>
                   </section>
-                  </div>
-                
-                 
-                </div>
-                <div class="border-top border-themeBorderColor mt-3">
-                  
-                    <div class="font-size-16 mt-2 mx-3 mb-0">
-                         
-                         Total:<span class="fw-bold fs-3 text-black mx-2"
-                          >$ 13,590.00</span
-                        >
+                  <section class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4"
+                    style="border-radius: 14px;">
+                    <div class="d-flex justify-content-between fw-bold">
+                      Very long Name of the Project...
+                      <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
+                          fill="#9EA3AE" />
+                      </svg>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
+                      <div class="d-flex align-items-center mx-2">
+                        <img src="assets/images/avatar-management.png" width="32" height="32" />
+                        <div class="rounded-pill opacity-10 text-primary px-3 py-1" style="background: #FFF7D1;">Pending
+                        </div>
+                      </div>
+
+
+                    </div>
+                    <div class="mt-3">
+                      Lorem ipsum dolor sit amet, ut vis commune invidunt
+                      electram, vel ea aliquando honestatis. Cu mel docendi
+                      dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
+                      similique, eu duo elit invidunt.
+                    </div>
+                    <div class="font-size-16 mt-2 mb-0">
+
+                      Budget :<span class="fw-bold fs-3 text-themeblack mx-2">$ 154</span>
                       </p>
                     </div>
+                  </section>
+                </div>
+
+
+              </div>
+              <div class="border-top border-themeBorderColor mt-3">
+
+                <div class="font-size-16 mt-2 mx-3 mb-0">
+
+                  Total:<span class="fw-bold fs-3 text-black mx-2">$ 13,590.00</span>
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
-                <div class="card rounded-3">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between align-items-center">
-                        <h5 class="card-title text-themeblack">Applied</h5>
-                        <svg
-                          width="4"
-                          height="15"
-                          viewBox="0 0 4 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                            fill="#9EA3AE"
-                          />
-                        </svg>
-                      </div>
-                      <div class="d-flex flex-column">
-                        <section
-                          class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4" style="border-radius: 14px;"
-                        >
-                          <div class="d-flex justify-content-between fw-bold">
-                            Very long Name of the Project...
-                            <svg
-                              width="4"
-                              height="15"
-                              viewBox="0 0 4 15"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                                fill="#9EA3AE"
-                              />
-                            </svg>
-                          </div>
-                          <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
-                            <div class="d-flex align-items-center mx-2">
-                              <img
-                                src="assets/images/avatar-management.png"
-                                width="32"
-                                height="32"
-                              />
-                             
-                              </div>
-                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 -6.99382e-07C24.8366 -1.08564e-06 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 -3.13124e-07 24.8366 -6.99382e-07 16C-1.08564e-06 7.16344 7.16344 -3.13124e-07 16 -6.99382e-07ZM16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93076 3.2 16C3.2 23.0692 8.93075 28.8 16 28.8Z" fill="#E5E6EB"/>
-                                <path d="M16 -6.99382e-07C19.1645 -8.37707e-07 22.2579 0.938382 24.8891 2.69648C27.5203 4.45459 29.5711 6.95345 30.7821 9.87706C31.9931 12.8007 32.3099 16.0177 31.6926 19.1214C31.0752 22.2251 29.5513 25.0761 27.3137 27.3137C25.0761 29.5513 22.2251 31.0752 19.1214 31.6926C16.0177 32.3099 12.8007 31.9931 9.87706 30.7821C6.95345 29.5711 4.45459 27.5203 2.69649 24.8891C0.938383 22.2579 -5.98794e-07 19.1645 -6.99382e-07 16L3.2 16C3.2 18.5316 3.95071 21.0063 5.35719 23.1113C6.76367 25.2162 8.76276 26.8569 11.1017 27.8257C13.4405 28.7945 16.0142 29.0479 18.4972 28.5541C20.9801 28.0602 23.2609 26.8411 25.051 25.051C26.8411 23.2609 28.0602 20.9801 28.5541 18.4972C29.0479 16.0142 28.7945 13.4405 27.8257 11.1017C26.8569 8.76276 25.2162 6.76367 23.1113 5.35719C21.0063 3.95071 18.5316 3.2 16 3.2L16 -6.99382e-07Z" fill="#34BF49"/>
-                                <path d="M11.8936 11.8906V12.5352L9.05176 19H7.81152L10.6484 12.8281H6.9668V11.8906H11.8936ZM14.0908 15.6943L13.1533 15.4648L13.5391 11.8906H17.3721V12.8867H14.5156L14.3203 14.6299C14.431 14.5648 14.584 14.5013 14.7793 14.4395C14.9746 14.3743 15.1976 14.3418 15.4482 14.3418C15.7835 14.3418 16.083 14.3971 16.3467 14.5078C16.6136 14.6152 16.8398 14.7731 17.0254 14.9814C17.2109 15.1865 17.3525 15.4372 17.4502 15.7334C17.5479 16.0264 17.5967 16.3568 17.5967 16.7246C17.5967 17.0534 17.5479 17.361 17.4502 17.6475C17.3558 17.9339 17.2126 18.1862 17.0205 18.4043C16.8285 18.6224 16.5859 18.7933 16.293 18.917C16.0033 19.0374 15.6598 19.0977 15.2627 19.0977C14.9665 19.0977 14.6816 19.0553 14.4082 18.9707C14.138 18.8828 13.8955 18.7542 13.6807 18.585C13.4658 18.4124 13.2933 18.2008 13.1631 17.9502C13.0329 17.6963 12.958 17.4049 12.9385 17.0762H14.0908C14.1201 17.3073 14.1836 17.5042 14.2812 17.667C14.3822 17.8265 14.5156 17.9486 14.6816 18.0332C14.8477 18.1178 15.0397 18.1602 15.2578 18.1602C15.4564 18.1602 15.6273 18.126 15.7705 18.0576C15.9137 17.986 16.0326 17.8851 16.127 17.7549C16.2246 17.6214 16.2962 17.4652 16.3418 17.2861C16.3906 17.1071 16.415 16.9085 16.415 16.6904C16.415 16.4821 16.3874 16.2917 16.332 16.1191C16.2799 15.9466 16.2002 15.7969 16.0928 15.6699C15.9886 15.543 15.8568 15.4453 15.6973 15.377C15.5378 15.3053 15.3538 15.2695 15.1455 15.2695C14.8656 15.2695 14.6507 15.3102 14.501 15.3916C14.3545 15.473 14.2178 15.5739 14.0908 15.6943ZM18.4902 13.6338V13.2578C18.4902 12.9876 18.5488 12.7419 18.666 12.5205C18.7832 12.2992 18.9541 12.1217 19.1787 11.9883C19.4033 11.8548 19.6735 11.7881 19.9893 11.7881C20.3148 11.7881 20.5882 11.8548 20.8096 11.9883C21.0342 12.1217 21.2051 12.2992 21.3223 12.5205C21.4395 12.7419 21.498 12.9876 21.498 13.2578V13.6338C21.498 13.8975 21.4395 14.14 21.3223 14.3613C21.2083 14.5827 21.0391 14.7601 20.8145 14.8936C20.5931 15.027 20.3213 15.0938 19.999 15.0938C19.68 15.0938 19.4066 15.027 19.1787 14.8936C18.9541 14.7601 18.7832 14.5827 18.666 14.3613C18.5488 14.14 18.4902 13.8975 18.4902 13.6338ZM19.3057 13.2578V13.6338C19.3057 13.764 19.3301 13.8877 19.3789 14.0049C19.431 14.1221 19.5091 14.2165 19.6133 14.2881C19.7174 14.3597 19.846 14.3955 19.999 14.3955C20.1553 14.3955 20.2822 14.3597 20.3799 14.2881C20.4808 14.2165 20.5557 14.1221 20.6045 14.0049C20.6533 13.8877 20.6777 13.764 20.6777 13.6338V13.2578C20.6777 13.1243 20.6517 12.999 20.5996 12.8818C20.5508 12.7614 20.4759 12.6654 20.375 12.5938C20.2741 12.5221 20.1455 12.4863 19.9893 12.4863C19.8395 12.4863 19.7126 12.5221 19.6084 12.5938C19.5075 12.6654 19.431 12.7614 19.3789 12.8818C19.3301 12.999 19.3057 13.1243 19.3057 13.2578ZM21.918 17.6377V17.2568C21.918 16.9899 21.9766 16.7458 22.0938 16.5244C22.2142 16.3031 22.3867 16.1257 22.6113 15.9922C22.8359 15.8587 23.1061 15.792 23.4219 15.792C23.7474 15.792 24.0208 15.8587 24.2422 15.9922C24.4668 16.1257 24.6361 16.3031 24.75 16.5244C24.8672 16.7458 24.9258 16.9899 24.9258 17.2568V17.6377C24.9258 17.9046 24.8672 18.1488 24.75 18.3701C24.6361 18.5915 24.4684 18.7689 24.2471 18.9023C24.0257 19.0358 23.7555 19.1025 23.4365 19.1025C23.1143 19.1025 22.8392 19.0358 22.6113 18.9023C22.3867 18.7689 22.2142 18.5915 22.0938 18.3701C21.9766 18.1488 21.918 17.9046 21.918 17.6377ZM22.7383 17.2568V17.6377C22.7383 17.7679 22.7643 17.8916 22.8164 18.0088C22.8717 18.126 22.9515 18.222 23.0557 18.2969C23.1598 18.3685 23.2852 18.4043 23.4316 18.4043C23.5977 18.4043 23.7311 18.3685 23.832 18.2969C23.9329 18.222 24.0046 18.1276 24.0469 18.0137C24.0924 17.8965 24.1152 17.7712 24.1152 17.6377V17.2568C24.1152 17.1234 24.0892 16.998 24.0371 16.8809C23.9883 16.7637 23.9118 16.6693 23.8076 16.5977C23.7067 16.526 23.5781 16.4902 23.4219 16.4902C23.2689 16.4902 23.1419 16.526 23.041 16.5977C22.9401 16.6693 22.8636 16.7637 22.8115 16.8809C22.7627 16.998 22.7383 17.1234 22.7383 17.2568ZM23.7148 12.9062L20.2432 18.4629L19.6426 18.1162L23.1143 12.5596L23.7148 12.9062Z" fill="#001F3F"/>
-                                </svg>
-                                
-                            </div>
-                          <div class="mt-3">
-                            Lorem ipsum dolor sit amet, ut vis commune invidunt
-                            electram, vel ea aliquando honestatis. Cu mel docendi
-                            dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
-                            similique, eu duo elit invidunt.
-                          </div>
-                          <div class="font-size-16 mt-2 mb-0">
-                            
-                              Budget :<span class="fw-bold fs-3 text-themeblack mx-2"
-                                >$ 154</span
-                              >
-                            </p>
-                          </div>
-                        </section>
-                        <section
-                        class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4" style="border-radius: 14px;"
-                      >
-                        <div class="d-flex justify-content-between fw-bold">
-                          Very long Name of the Project...
-                          <svg
-                            width="4"
-                            height="15"
-                            viewBox="0 0 4 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                              fill="#9EA3AE"
-                            />
-                          </svg>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
-                        <div class="d-flex align-items-center mx-2">
-                          <img
-                            src="assets/images/avatar-management.png"
-                            width="32"
-                            height="32"
-                          />
-                          <div class="rounded-pill opacity-10 text-primary px-3 py-1" style="background: #FFF7D1;">Pending</div>
-                          </div>
-                          
-                            
-                        </div>
-                        <div class="mt-3">
-                          Lorem ipsum dolor sit amet, ut vis commune invidunt
-                          electram, vel ea aliquando honestatis. Cu mel docendi
-                          dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
-                          similique, eu duo elit invidunt.
-                        </div>
-                        <div class="font-size-16 mt-2 mb-0">
-                          
-                            Budget :<span class="fw-bold fs-3 text-themeblack mx-2"
-                              >$ 154</span
-                            >
-                          </p>
-                        </div>
-                      </section>
-                      </div>
-                    
-                     
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title text-themeblack">Applied</h5>
+                  <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
+                      fill="#9EA3AE" />
+                  </svg>
+                </div>
+                <div class="d-flex flex-column">
+                  <section class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4"
+                    style="border-radius: 14px;">
+                    <div class="d-flex justify-content-between fw-bold">
+                      Very long Name of the Project...
+                      <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
+                          fill="#9EA3AE" />
+                      </svg>
                     </div>
-                    <div class="border-top border-themeBorderColor mt-3">
-                      
-                        <div class="font-size-16 mt-2 mx-3 mb-0">
-                             
-                             Total:<span class="fw-bold fs-3 text-black mx-2"
-                              >$ 13,590.00</span
-                            >
-                          </p>
-                        </div>
+                    <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
+                      <div class="d-flex align-items-center mx-2">
+                        <img src="assets/images/avatar-management.png" width="32" height="32" />
+
+                      </div>
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M16 -6.99382e-07C24.8366 -1.08564e-06 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 -3.13124e-07 24.8366 -6.99382e-07 16C-1.08564e-06 7.16344 7.16344 -3.13124e-07 16 -6.99382e-07ZM16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93076 3.2 16C3.2 23.0692 8.93075 28.8 16 28.8Z"
+                          fill="#E5E6EB" />
+                        <path
+                          d="M16 -6.99382e-07C19.1645 -8.37707e-07 22.2579 0.938382 24.8891 2.69648C27.5203 4.45459 29.5711 6.95345 30.7821 9.87706C31.9931 12.8007 32.3099 16.0177 31.6926 19.1214C31.0752 22.2251 29.5513 25.0761 27.3137 27.3137C25.0761 29.5513 22.2251 31.0752 19.1214 31.6926C16.0177 32.3099 12.8007 31.9931 9.87706 30.7821C6.95345 29.5711 4.45459 27.5203 2.69649 24.8891C0.938383 22.2579 -5.98794e-07 19.1645 -6.99382e-07 16L3.2 16C3.2 18.5316 3.95071 21.0063 5.35719 23.1113C6.76367 25.2162 8.76276 26.8569 11.1017 27.8257C13.4405 28.7945 16.0142 29.0479 18.4972 28.5541C20.9801 28.0602 23.2609 26.8411 25.051 25.051C26.8411 23.2609 28.0602 20.9801 28.5541 18.4972C29.0479 16.0142 28.7945 13.4405 27.8257 11.1017C26.8569 8.76276 25.2162 6.76367 23.1113 5.35719C21.0063 3.95071 18.5316 3.2 16 3.2L16 -6.99382e-07Z"
+                          fill="#34BF49" />
+                        <path
+                          d="M11.8936 11.8906V12.5352L9.05176 19H7.81152L10.6484 12.8281H6.9668V11.8906H11.8936ZM14.0908 15.6943L13.1533 15.4648L13.5391 11.8906H17.3721V12.8867H14.5156L14.3203 14.6299C14.431 14.5648 14.584 14.5013 14.7793 14.4395C14.9746 14.3743 15.1976 14.3418 15.4482 14.3418C15.7835 14.3418 16.083 14.3971 16.3467 14.5078C16.6136 14.6152 16.8398 14.7731 17.0254 14.9814C17.2109 15.1865 17.3525 15.4372 17.4502 15.7334C17.5479 16.0264 17.5967 16.3568 17.5967 16.7246C17.5967 17.0534 17.5479 17.361 17.4502 17.6475C17.3558 17.9339 17.2126 18.1862 17.0205 18.4043C16.8285 18.6224 16.5859 18.7933 16.293 18.917C16.0033 19.0374 15.6598 19.0977 15.2627 19.0977C14.9665 19.0977 14.6816 19.0553 14.4082 18.9707C14.138 18.8828 13.8955 18.7542 13.6807 18.585C13.4658 18.4124 13.2933 18.2008 13.1631 17.9502C13.0329 17.6963 12.958 17.4049 12.9385 17.0762H14.0908C14.1201 17.3073 14.1836 17.5042 14.2812 17.667C14.3822 17.8265 14.5156 17.9486 14.6816 18.0332C14.8477 18.1178 15.0397 18.1602 15.2578 18.1602C15.4564 18.1602 15.6273 18.126 15.7705 18.0576C15.9137 17.986 16.0326 17.8851 16.127 17.7549C16.2246 17.6214 16.2962 17.4652 16.3418 17.2861C16.3906 17.1071 16.415 16.9085 16.415 16.6904C16.415 16.4821 16.3874 16.2917 16.332 16.1191C16.2799 15.9466 16.2002 15.7969 16.0928 15.6699C15.9886 15.543 15.8568 15.4453 15.6973 15.377C15.5378 15.3053 15.3538 15.2695 15.1455 15.2695C14.8656 15.2695 14.6507 15.3102 14.501 15.3916C14.3545 15.473 14.2178 15.5739 14.0908 15.6943ZM18.4902 13.6338V13.2578C18.4902 12.9876 18.5488 12.7419 18.666 12.5205C18.7832 12.2992 18.9541 12.1217 19.1787 11.9883C19.4033 11.8548 19.6735 11.7881 19.9893 11.7881C20.3148 11.7881 20.5882 11.8548 20.8096 11.9883C21.0342 12.1217 21.2051 12.2992 21.3223 12.5205C21.4395 12.7419 21.498 12.9876 21.498 13.2578V13.6338C21.498 13.8975 21.4395 14.14 21.3223 14.3613C21.2083 14.5827 21.0391 14.7601 20.8145 14.8936C20.5931 15.027 20.3213 15.0938 19.999 15.0938C19.68 15.0938 19.4066 15.027 19.1787 14.8936C18.9541 14.7601 18.7832 14.5827 18.666 14.3613C18.5488 14.14 18.4902 13.8975 18.4902 13.6338ZM19.3057 13.2578V13.6338C19.3057 13.764 19.3301 13.8877 19.3789 14.0049C19.431 14.1221 19.5091 14.2165 19.6133 14.2881C19.7174 14.3597 19.846 14.3955 19.999 14.3955C20.1553 14.3955 20.2822 14.3597 20.3799 14.2881C20.4808 14.2165 20.5557 14.1221 20.6045 14.0049C20.6533 13.8877 20.6777 13.764 20.6777 13.6338V13.2578C20.6777 13.1243 20.6517 12.999 20.5996 12.8818C20.5508 12.7614 20.4759 12.6654 20.375 12.5938C20.2741 12.5221 20.1455 12.4863 19.9893 12.4863C19.8395 12.4863 19.7126 12.5221 19.6084 12.5938C19.5075 12.6654 19.431 12.7614 19.3789 12.8818C19.3301 12.999 19.3057 13.1243 19.3057 13.2578ZM21.918 17.6377V17.2568C21.918 16.9899 21.9766 16.7458 22.0938 16.5244C22.2142 16.3031 22.3867 16.1257 22.6113 15.9922C22.8359 15.8587 23.1061 15.792 23.4219 15.792C23.7474 15.792 24.0208 15.8587 24.2422 15.9922C24.4668 16.1257 24.6361 16.3031 24.75 16.5244C24.8672 16.7458 24.9258 16.9899 24.9258 17.2568V17.6377C24.9258 17.9046 24.8672 18.1488 24.75 18.3701C24.6361 18.5915 24.4684 18.7689 24.2471 18.9023C24.0257 19.0358 23.7555 19.1025 23.4365 19.1025C23.1143 19.1025 22.8392 19.0358 22.6113 18.9023C22.3867 18.7689 22.2142 18.5915 22.0938 18.3701C21.9766 18.1488 21.918 17.9046 21.918 17.6377ZM22.7383 17.2568V17.6377C22.7383 17.7679 22.7643 17.8916 22.8164 18.0088C22.8717 18.126 22.9515 18.222 23.0557 18.2969C23.1598 18.3685 23.2852 18.4043 23.4316 18.4043C23.5977 18.4043 23.7311 18.3685 23.832 18.2969C23.9329 18.222 24.0046 18.1276 24.0469 18.0137C24.0924 17.8965 24.1152 17.7712 24.1152 17.6377V17.2568C24.1152 17.1234 24.0892 16.998 24.0371 16.8809C23.9883 16.7637 23.9118 16.6693 23.8076 16.5977C23.7067 16.526 23.5781 16.4902 23.4219 16.4902C23.2689 16.4902 23.1419 16.526 23.041 16.5977C22.9401 16.6693 22.8636 16.7637 22.8115 16.8809C22.7627 16.998 22.7383 17.1234 22.7383 17.2568ZM23.7148 12.9062L20.2432 18.4629L19.6426 18.1162L23.1143 12.5596L23.7148 12.9062Z"
+                          fill="#001F3F" />
+                      </svg>
+
                     </div>
-                  </div>
+                    <div class="mt-3">
+                      Lorem ipsum dolor sit amet, ut vis commune invidunt
+                      electram, vel ea aliquando honestatis. Cu mel docendi
+                      dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
+                      similique, eu duo elit invidunt.
+                    </div>
+                    <div class="font-size-16 mt-2 mb-0">
+
+                      Budget :<span class="fw-bold fs-3 text-themeblack mx-2">$ 154</span>
+                      </p>
+                    </div>
+                  </section>
+                  <section class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4"
+                    style="border-radius: 14px;">
+                    <div class="d-flex justify-content-between fw-bold">
+                      Very long Name of the Project...
+                      <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
+                          fill="#9EA3AE" />
+                      </svg>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
+                      <div class="d-flex align-items-center mx-2">
+                        <img src="assets/images/avatar-management.png" width="32" height="32" />
+                        <div class="rounded-pill opacity-10 text-primary px-3 py-1" style="background: #FFF7D1;">Pending
+                        </div>
+                      </div>
+
+
+                    </div>
+                    <div class="mt-3">
+                      Lorem ipsum dolor sit amet, ut vis commune invidunt
+                      electram, vel ea aliquando honestatis. Cu mel docendi
+                      dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
+                      similique, eu duo elit invidunt.
+                    </div>
+                    <div class="font-size-16 mt-2 mb-0">
+
+                      Budget :<span class="fw-bold fs-3 text-themeblack mx-2">$ 154</span>
+                      </p>
+                    </div>
+                  </section>
+                </div>
+
+
+              </div>
+              <div class="border-top border-themeBorderColor mt-3">
+
+                <div class="font-size-16 mt-2 mx-3 mb-0">
+
+                  Total:<span class="fw-bold fs-3 text-black mx-2">$ 13,590.00</span>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="col-md-3">
-                <div class="card rounded-3">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between align-items-center">
-                        <h5 class="card-title text-themeblack">Interview</h5>
-                        <svg
-                          width="4"
-                          height="15"
-                          viewBox="0 0 4 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                            fill="#9EA3AE"
-                          />
-                        </svg>
-                      </div>
-                      <div class="d-flex flex-column">
-                        <section
-                          class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4" style="border-radius: 14px;"
-                        >
-                          <div class="d-flex justify-content-between fw-bold">
-                            Very long Name of the Project...
-                            <svg
-                              width="4"
-                              height="15"
-                              viewBox="0 0 4 15"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                                fill="#9EA3AE"
-                              />
-                            </svg>
-                          </div>
-                          <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
-                            <div class="d-flex align-items-center mx-2">
-                              <img
-                                src="assets/images/avatar-management.png"
-                                width="32"
-                                height="32"
-                              />
-                             
-                              </div>
-                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 -6.99382e-07C24.8366 -1.08564e-06 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 -3.13124e-07 24.8366 -6.99382e-07 16C-1.08564e-06 7.16344 7.16344 -3.13124e-07 16 -6.99382e-07ZM16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93076 3.2 16C3.2 23.0692 8.93075 28.8 16 28.8Z" fill="#E5E6EB"/>
-                                <path d="M16 -6.99382e-07C19.1645 -8.37707e-07 22.2579 0.938382 24.8891 2.69648C27.5203 4.45459 29.5711 6.95345 30.7821 9.87706C31.9931 12.8007 32.3099 16.0177 31.6926 19.1214C31.0752 22.2251 29.5513 25.0761 27.3137 27.3137C25.0761 29.5513 22.2251 31.0752 19.1214 31.6926C16.0177 32.3099 12.8007 31.9931 9.87706 30.7821C6.95345 29.5711 4.45459 27.5203 2.69649 24.8891C0.938383 22.2579 -5.98794e-07 19.1645 -6.99382e-07 16L3.2 16C3.2 18.5316 3.95071 21.0063 5.35719 23.1113C6.76367 25.2162 8.76276 26.8569 11.1017 27.8257C13.4405 28.7945 16.0142 29.0479 18.4972 28.5541C20.9801 28.0602 23.2609 26.8411 25.051 25.051C26.8411 23.2609 28.0602 20.9801 28.5541 18.4972C29.0479 16.0142 28.7945 13.4405 27.8257 11.1017C26.8569 8.76276 25.2162 6.76367 23.1113 5.35719C21.0063 3.95071 18.5316 3.2 16 3.2L16 -6.99382e-07Z" fill="#34BF49"/>
-                                <path d="M11.8936 11.8906V12.5352L9.05176 19H7.81152L10.6484 12.8281H6.9668V11.8906H11.8936ZM14.0908 15.6943L13.1533 15.4648L13.5391 11.8906H17.3721V12.8867H14.5156L14.3203 14.6299C14.431 14.5648 14.584 14.5013 14.7793 14.4395C14.9746 14.3743 15.1976 14.3418 15.4482 14.3418C15.7835 14.3418 16.083 14.3971 16.3467 14.5078C16.6136 14.6152 16.8398 14.7731 17.0254 14.9814C17.2109 15.1865 17.3525 15.4372 17.4502 15.7334C17.5479 16.0264 17.5967 16.3568 17.5967 16.7246C17.5967 17.0534 17.5479 17.361 17.4502 17.6475C17.3558 17.9339 17.2126 18.1862 17.0205 18.4043C16.8285 18.6224 16.5859 18.7933 16.293 18.917C16.0033 19.0374 15.6598 19.0977 15.2627 19.0977C14.9665 19.0977 14.6816 19.0553 14.4082 18.9707C14.138 18.8828 13.8955 18.7542 13.6807 18.585C13.4658 18.4124 13.2933 18.2008 13.1631 17.9502C13.0329 17.6963 12.958 17.4049 12.9385 17.0762H14.0908C14.1201 17.3073 14.1836 17.5042 14.2812 17.667C14.3822 17.8265 14.5156 17.9486 14.6816 18.0332C14.8477 18.1178 15.0397 18.1602 15.2578 18.1602C15.4564 18.1602 15.6273 18.126 15.7705 18.0576C15.9137 17.986 16.0326 17.8851 16.127 17.7549C16.2246 17.6214 16.2962 17.4652 16.3418 17.2861C16.3906 17.1071 16.415 16.9085 16.415 16.6904C16.415 16.4821 16.3874 16.2917 16.332 16.1191C16.2799 15.9466 16.2002 15.7969 16.0928 15.6699C15.9886 15.543 15.8568 15.4453 15.6973 15.377C15.5378 15.3053 15.3538 15.2695 15.1455 15.2695C14.8656 15.2695 14.6507 15.3102 14.501 15.3916C14.3545 15.473 14.2178 15.5739 14.0908 15.6943ZM18.4902 13.6338V13.2578C18.4902 12.9876 18.5488 12.7419 18.666 12.5205C18.7832 12.2992 18.9541 12.1217 19.1787 11.9883C19.4033 11.8548 19.6735 11.7881 19.9893 11.7881C20.3148 11.7881 20.5882 11.8548 20.8096 11.9883C21.0342 12.1217 21.2051 12.2992 21.3223 12.5205C21.4395 12.7419 21.498 12.9876 21.498 13.2578V13.6338C21.498 13.8975 21.4395 14.14 21.3223 14.3613C21.2083 14.5827 21.0391 14.7601 20.8145 14.8936C20.5931 15.027 20.3213 15.0938 19.999 15.0938C19.68 15.0938 19.4066 15.027 19.1787 14.8936C18.9541 14.7601 18.7832 14.5827 18.666 14.3613C18.5488 14.14 18.4902 13.8975 18.4902 13.6338ZM19.3057 13.2578V13.6338C19.3057 13.764 19.3301 13.8877 19.3789 14.0049C19.431 14.1221 19.5091 14.2165 19.6133 14.2881C19.7174 14.3597 19.846 14.3955 19.999 14.3955C20.1553 14.3955 20.2822 14.3597 20.3799 14.2881C20.4808 14.2165 20.5557 14.1221 20.6045 14.0049C20.6533 13.8877 20.6777 13.764 20.6777 13.6338V13.2578C20.6777 13.1243 20.6517 12.999 20.5996 12.8818C20.5508 12.7614 20.4759 12.6654 20.375 12.5938C20.2741 12.5221 20.1455 12.4863 19.9893 12.4863C19.8395 12.4863 19.7126 12.5221 19.6084 12.5938C19.5075 12.6654 19.431 12.7614 19.3789 12.8818C19.3301 12.999 19.3057 13.1243 19.3057 13.2578ZM21.918 17.6377V17.2568C21.918 16.9899 21.9766 16.7458 22.0938 16.5244C22.2142 16.3031 22.3867 16.1257 22.6113 15.9922C22.8359 15.8587 23.1061 15.792 23.4219 15.792C23.7474 15.792 24.0208 15.8587 24.2422 15.9922C24.4668 16.1257 24.6361 16.3031 24.75 16.5244C24.8672 16.7458 24.9258 16.9899 24.9258 17.2568V17.6377C24.9258 17.9046 24.8672 18.1488 24.75 18.3701C24.6361 18.5915 24.4684 18.7689 24.2471 18.9023C24.0257 19.0358 23.7555 19.1025 23.4365 19.1025C23.1143 19.1025 22.8392 19.0358 22.6113 18.9023C22.3867 18.7689 22.2142 18.5915 22.0938 18.3701C21.9766 18.1488 21.918 17.9046 21.918 17.6377ZM22.7383 17.2568V17.6377C22.7383 17.7679 22.7643 17.8916 22.8164 18.0088C22.8717 18.126 22.9515 18.222 23.0557 18.2969C23.1598 18.3685 23.2852 18.4043 23.4316 18.4043C23.5977 18.4043 23.7311 18.3685 23.832 18.2969C23.9329 18.222 24.0046 18.1276 24.0469 18.0137C24.0924 17.8965 24.1152 17.7712 24.1152 17.6377V17.2568C24.1152 17.1234 24.0892 16.998 24.0371 16.8809C23.9883 16.7637 23.9118 16.6693 23.8076 16.5977C23.7067 16.526 23.5781 16.4902 23.4219 16.4902C23.2689 16.4902 23.1419 16.526 23.041 16.5977C22.9401 16.6693 22.8636 16.7637 22.8115 16.8809C22.7627 16.998 22.7383 17.1234 22.7383 17.2568ZM23.7148 12.9062L20.2432 18.4629L19.6426 18.1162L23.1143 12.5596L23.7148 12.9062Z" fill="#001F3F"/>
-                                </svg>
-                                
-                            </div>
-                          <div class="mt-3">
-                            Lorem ipsum dolor sit amet, ut vis commune invidunt
-                            electram, vel ea aliquando honestatis. Cu mel docendi
-                            dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
-                            similique, eu duo elit invidunt.
-                          </div>
-                          <div class="font-size-16 mt-2 mb-0">
-                            
-                              Budget :<span class="fw-bold fs-3 text-themeblack mx-2"
-                                >$ 154</span
-                              >
-                            </p>
-                          </div>
-                        </section>
-                        <section
-                        class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4" style="border-radius: 14px;"
-                      >
-                        <div class="d-flex justify-content-between fw-bold">
-                          Very long Name of the Project...
-                          <svg
-                            width="4"
-                            height="15"
-                            viewBox="0 0 4 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                              fill="#9EA3AE"
-                            />
-                          </svg>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
-                        <div class="d-flex align-items-center mx-2">
-                          <img
-                            src="assets/images/avatar-management.png"
-                            width="32"
-                            height="32"
-                          />
-                          <div class="rounded-pill opacity-10 text-primary px-3 py-1" style="background: #FFF7D1;">Pending</div>
-                          </div>
-                          
-                            
-                        </div>
-                        <div class="mt-3">
-                          Lorem ipsum dolor sit amet, ut vis commune invidunt
-                          electram, vel ea aliquando honestatis. Cu mel docendi
-                          dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
-                          similique, eu duo elit invidunt.
-                        </div>
-                        <div class="font-size-16 mt-2 mb-0">
-                          
-                            Budget :<span class="fw-bold fs-3 text-themeblack mx-2"
-                              >$ 154</span
-                            >
-                          </p>
-                        </div>
-                      </section>
-                      </div>
-                    
-                     
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title text-themeblack">Interview</h5>
+                  <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
+                      fill="#9EA3AE" />
+                  </svg>
+                </div>
+                <div class="d-flex flex-column">
+                  <section class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4"
+                    style="border-radius: 14px;">
+                    <div class="d-flex justify-content-between fw-bold">
+                      Very long Name of the Project...
+                      <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
+                          fill="#9EA3AE" />
+                      </svg>
                     </div>
-                    <div class="border-top border-themeBorderColor mt-3">
-                      
-                        <div class="font-size-16 mt-2 mx-3 mb-0">
-                             
-                             Total:<span class="fw-bold fs-3 text-black mx-2"
-                              >$ 13,590.00</span
-                            >
-                          </p>
-                        </div>
+                    <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
+                      <div class="d-flex align-items-center mx-2">
+                        <img src="assets/images/avatar-management.png" width="32" height="32" />
+
+                      </div>
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M16 -6.99382e-07C24.8366 -1.08564e-06 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 -3.13124e-07 24.8366 -6.99382e-07 16C-1.08564e-06 7.16344 7.16344 -3.13124e-07 16 -6.99382e-07ZM16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93076 3.2 16C3.2 23.0692 8.93075 28.8 16 28.8Z"
+                          fill="#E5E6EB" />
+                        <path
+                          d="M16 -6.99382e-07C19.1645 -8.37707e-07 22.2579 0.938382 24.8891 2.69648C27.5203 4.45459 29.5711 6.95345 30.7821 9.87706C31.9931 12.8007 32.3099 16.0177 31.6926 19.1214C31.0752 22.2251 29.5513 25.0761 27.3137 27.3137C25.0761 29.5513 22.2251 31.0752 19.1214 31.6926C16.0177 32.3099 12.8007 31.9931 9.87706 30.7821C6.95345 29.5711 4.45459 27.5203 2.69649 24.8891C0.938383 22.2579 -5.98794e-07 19.1645 -6.99382e-07 16L3.2 16C3.2 18.5316 3.95071 21.0063 5.35719 23.1113C6.76367 25.2162 8.76276 26.8569 11.1017 27.8257C13.4405 28.7945 16.0142 29.0479 18.4972 28.5541C20.9801 28.0602 23.2609 26.8411 25.051 25.051C26.8411 23.2609 28.0602 20.9801 28.5541 18.4972C29.0479 16.0142 28.7945 13.4405 27.8257 11.1017C26.8569 8.76276 25.2162 6.76367 23.1113 5.35719C21.0063 3.95071 18.5316 3.2 16 3.2L16 -6.99382e-07Z"
+                          fill="#34BF49" />
+                        <path
+                          d="M11.8936 11.8906V12.5352L9.05176 19H7.81152L10.6484 12.8281H6.9668V11.8906H11.8936ZM14.0908 15.6943L13.1533 15.4648L13.5391 11.8906H17.3721V12.8867H14.5156L14.3203 14.6299C14.431 14.5648 14.584 14.5013 14.7793 14.4395C14.9746 14.3743 15.1976 14.3418 15.4482 14.3418C15.7835 14.3418 16.083 14.3971 16.3467 14.5078C16.6136 14.6152 16.8398 14.7731 17.0254 14.9814C17.2109 15.1865 17.3525 15.4372 17.4502 15.7334C17.5479 16.0264 17.5967 16.3568 17.5967 16.7246C17.5967 17.0534 17.5479 17.361 17.4502 17.6475C17.3558 17.9339 17.2126 18.1862 17.0205 18.4043C16.8285 18.6224 16.5859 18.7933 16.293 18.917C16.0033 19.0374 15.6598 19.0977 15.2627 19.0977C14.9665 19.0977 14.6816 19.0553 14.4082 18.9707C14.138 18.8828 13.8955 18.7542 13.6807 18.585C13.4658 18.4124 13.2933 18.2008 13.1631 17.9502C13.0329 17.6963 12.958 17.4049 12.9385 17.0762H14.0908C14.1201 17.3073 14.1836 17.5042 14.2812 17.667C14.3822 17.8265 14.5156 17.9486 14.6816 18.0332C14.8477 18.1178 15.0397 18.1602 15.2578 18.1602C15.4564 18.1602 15.6273 18.126 15.7705 18.0576C15.9137 17.986 16.0326 17.8851 16.127 17.7549C16.2246 17.6214 16.2962 17.4652 16.3418 17.2861C16.3906 17.1071 16.415 16.9085 16.415 16.6904C16.415 16.4821 16.3874 16.2917 16.332 16.1191C16.2799 15.9466 16.2002 15.7969 16.0928 15.6699C15.9886 15.543 15.8568 15.4453 15.6973 15.377C15.5378 15.3053 15.3538 15.2695 15.1455 15.2695C14.8656 15.2695 14.6507 15.3102 14.501 15.3916C14.3545 15.473 14.2178 15.5739 14.0908 15.6943ZM18.4902 13.6338V13.2578C18.4902 12.9876 18.5488 12.7419 18.666 12.5205C18.7832 12.2992 18.9541 12.1217 19.1787 11.9883C19.4033 11.8548 19.6735 11.7881 19.9893 11.7881C20.3148 11.7881 20.5882 11.8548 20.8096 11.9883C21.0342 12.1217 21.2051 12.2992 21.3223 12.5205C21.4395 12.7419 21.498 12.9876 21.498 13.2578V13.6338C21.498 13.8975 21.4395 14.14 21.3223 14.3613C21.2083 14.5827 21.0391 14.7601 20.8145 14.8936C20.5931 15.027 20.3213 15.0938 19.999 15.0938C19.68 15.0938 19.4066 15.027 19.1787 14.8936C18.9541 14.7601 18.7832 14.5827 18.666 14.3613C18.5488 14.14 18.4902 13.8975 18.4902 13.6338ZM19.3057 13.2578V13.6338C19.3057 13.764 19.3301 13.8877 19.3789 14.0049C19.431 14.1221 19.5091 14.2165 19.6133 14.2881C19.7174 14.3597 19.846 14.3955 19.999 14.3955C20.1553 14.3955 20.2822 14.3597 20.3799 14.2881C20.4808 14.2165 20.5557 14.1221 20.6045 14.0049C20.6533 13.8877 20.6777 13.764 20.6777 13.6338V13.2578C20.6777 13.1243 20.6517 12.999 20.5996 12.8818C20.5508 12.7614 20.4759 12.6654 20.375 12.5938C20.2741 12.5221 20.1455 12.4863 19.9893 12.4863C19.8395 12.4863 19.7126 12.5221 19.6084 12.5938C19.5075 12.6654 19.431 12.7614 19.3789 12.8818C19.3301 12.999 19.3057 13.1243 19.3057 13.2578ZM21.918 17.6377V17.2568C21.918 16.9899 21.9766 16.7458 22.0938 16.5244C22.2142 16.3031 22.3867 16.1257 22.6113 15.9922C22.8359 15.8587 23.1061 15.792 23.4219 15.792C23.7474 15.792 24.0208 15.8587 24.2422 15.9922C24.4668 16.1257 24.6361 16.3031 24.75 16.5244C24.8672 16.7458 24.9258 16.9899 24.9258 17.2568V17.6377C24.9258 17.9046 24.8672 18.1488 24.75 18.3701C24.6361 18.5915 24.4684 18.7689 24.2471 18.9023C24.0257 19.0358 23.7555 19.1025 23.4365 19.1025C23.1143 19.1025 22.8392 19.0358 22.6113 18.9023C22.3867 18.7689 22.2142 18.5915 22.0938 18.3701C21.9766 18.1488 21.918 17.9046 21.918 17.6377ZM22.7383 17.2568V17.6377C22.7383 17.7679 22.7643 17.8916 22.8164 18.0088C22.8717 18.126 22.9515 18.222 23.0557 18.2969C23.1598 18.3685 23.2852 18.4043 23.4316 18.4043C23.5977 18.4043 23.7311 18.3685 23.832 18.2969C23.9329 18.222 24.0046 18.1276 24.0469 18.0137C24.0924 17.8965 24.1152 17.7712 24.1152 17.6377V17.2568C24.1152 17.1234 24.0892 16.998 24.0371 16.8809C23.9883 16.7637 23.9118 16.6693 23.8076 16.5977C23.7067 16.526 23.5781 16.4902 23.4219 16.4902C23.2689 16.4902 23.1419 16.526 23.041 16.5977C22.9401 16.6693 22.8636 16.7637 22.8115 16.8809C22.7627 16.998 22.7383 17.1234 22.7383 17.2568ZM23.7148 12.9062L20.2432 18.4629L19.6426 18.1162L23.1143 12.5596L23.7148 12.9062Z"
+                          fill="#001F3F" />
+                      </svg>
+
                     </div>
-                  </div>
+                    <div class="mt-3">
+                      Lorem ipsum dolor sit amet, ut vis commune invidunt
+                      electram, vel ea aliquando honestatis. Cu mel docendi
+                      dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
+                      similique, eu duo elit invidunt.
+                    </div>
+                    <div class="font-size-16 mt-2 mb-0">
+
+                      Budget :<span class="fw-bold fs-3 text-themeblack mx-2">$ 154</span>
+                      </p>
+                    </div>
+                  </section>
+                  <section class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4"
+                    style="border-radius: 14px;">
+                    <div class="d-flex justify-content-between fw-bold">
+                      Very long Name of the Project...
+                      <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
+                          fill="#9EA3AE" />
+                      </svg>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
+                      <div class="d-flex align-items-center mx-2">
+                        <img src="assets/images/avatar-management.png" width="32" height="32" />
+                        <div class="rounded-pill opacity-10 text-primary px-3 py-1" style="background: #FFF7D1;">Pending
+                        </div>
+                      </div>
+
+
+                    </div>
+                    <div class="mt-3">
+                      Lorem ipsum dolor sit amet, ut vis commune invidunt
+                      electram, vel ea aliquando honestatis. Cu mel docendi
+                      dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
+                      similique, eu duo elit invidunt.
+                    </div>
+                    <div class="font-size-16 mt-2 mb-0">
+
+                      Budget :<span class="fw-bold fs-3 text-themeblack mx-2">$ 154</span>
+                      </p>
+                    </div>
+                  </section>
+                </div>
+
+
+              </div>
+              <div class="border-top border-themeBorderColor mt-3">
+
+                <div class="font-size-16 mt-2 mx-3 mb-0">
+
+                  Total:<span class="fw-bold fs-3 text-black mx-2">$ 13,590.00</span>
+                  </p>
+                </div>
+              </div>
             </div>
-            <div class="col-md-3">
-                <div class="card rounded-3">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between align-items-center">
-                        <h5 class="card-title text-themeblack">Hired</h5>
-                        <svg
-                          width="4"
-                          height="15"
-                          viewBox="0 0 4 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                            fill="#9EA3AE"
-                          />
-                        </svg>
-                      </div>
-                      <div class="d-flex flex-column">
-                        <section
-                          class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4" style="border-radius: 14px;"
-                        >
-                          <div class="d-flex justify-content-between fw-bold">
-                            Very long Name of the Project...
-                            <svg
-                              width="4"
-                              height="15"
-                              viewBox="0 0 4 15"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                            >
-                              <path
-                                d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                                fill="#9EA3AE"
-                              />
-                            </svg>
-                          </div>
-                          <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
-                            <div class="d-flex align-items-center mx-2">
-                              <img
-                                src="assets/images/avatar-management.png"
-                                width="32"
-                                height="32"
-                              />
-                             
-                              </div>
-                              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16 -6.99382e-07C24.8366 -1.08564e-06 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 -3.13124e-07 24.8366 -6.99382e-07 16C-1.08564e-06 7.16344 7.16344 -3.13124e-07 16 -6.99382e-07ZM16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93076 3.2 16C3.2 23.0692 8.93075 28.8 16 28.8Z" fill="#E5E6EB"/>
-                                <path d="M16 -6.99382e-07C19.1645 -8.37707e-07 22.2579 0.938382 24.8891 2.69648C27.5203 4.45459 29.5711 6.95345 30.7821 9.87706C31.9931 12.8007 32.3099 16.0177 31.6926 19.1214C31.0752 22.2251 29.5513 25.0761 27.3137 27.3137C25.0761 29.5513 22.2251 31.0752 19.1214 31.6926C16.0177 32.3099 12.8007 31.9931 9.87706 30.7821C6.95345 29.5711 4.45459 27.5203 2.69649 24.8891C0.938383 22.2579 -5.98794e-07 19.1645 -6.99382e-07 16L3.2 16C3.2 18.5316 3.95071 21.0063 5.35719 23.1113C6.76367 25.2162 8.76276 26.8569 11.1017 27.8257C13.4405 28.7945 16.0142 29.0479 18.4972 28.5541C20.9801 28.0602 23.2609 26.8411 25.051 25.051C26.8411 23.2609 28.0602 20.9801 28.5541 18.4972C29.0479 16.0142 28.7945 13.4405 27.8257 11.1017C26.8569 8.76276 25.2162 6.76367 23.1113 5.35719C21.0063 3.95071 18.5316 3.2 16 3.2L16 -6.99382e-07Z" fill="#34BF49"/>
-                                <path d="M11.8936 11.8906V12.5352L9.05176 19H7.81152L10.6484 12.8281H6.9668V11.8906H11.8936ZM14.0908 15.6943L13.1533 15.4648L13.5391 11.8906H17.3721V12.8867H14.5156L14.3203 14.6299C14.431 14.5648 14.584 14.5013 14.7793 14.4395C14.9746 14.3743 15.1976 14.3418 15.4482 14.3418C15.7835 14.3418 16.083 14.3971 16.3467 14.5078C16.6136 14.6152 16.8398 14.7731 17.0254 14.9814C17.2109 15.1865 17.3525 15.4372 17.4502 15.7334C17.5479 16.0264 17.5967 16.3568 17.5967 16.7246C17.5967 17.0534 17.5479 17.361 17.4502 17.6475C17.3558 17.9339 17.2126 18.1862 17.0205 18.4043C16.8285 18.6224 16.5859 18.7933 16.293 18.917C16.0033 19.0374 15.6598 19.0977 15.2627 19.0977C14.9665 19.0977 14.6816 19.0553 14.4082 18.9707C14.138 18.8828 13.8955 18.7542 13.6807 18.585C13.4658 18.4124 13.2933 18.2008 13.1631 17.9502C13.0329 17.6963 12.958 17.4049 12.9385 17.0762H14.0908C14.1201 17.3073 14.1836 17.5042 14.2812 17.667C14.3822 17.8265 14.5156 17.9486 14.6816 18.0332C14.8477 18.1178 15.0397 18.1602 15.2578 18.1602C15.4564 18.1602 15.6273 18.126 15.7705 18.0576C15.9137 17.986 16.0326 17.8851 16.127 17.7549C16.2246 17.6214 16.2962 17.4652 16.3418 17.2861C16.3906 17.1071 16.415 16.9085 16.415 16.6904C16.415 16.4821 16.3874 16.2917 16.332 16.1191C16.2799 15.9466 16.2002 15.7969 16.0928 15.6699C15.9886 15.543 15.8568 15.4453 15.6973 15.377C15.5378 15.3053 15.3538 15.2695 15.1455 15.2695C14.8656 15.2695 14.6507 15.3102 14.501 15.3916C14.3545 15.473 14.2178 15.5739 14.0908 15.6943ZM18.4902 13.6338V13.2578C18.4902 12.9876 18.5488 12.7419 18.666 12.5205C18.7832 12.2992 18.9541 12.1217 19.1787 11.9883C19.4033 11.8548 19.6735 11.7881 19.9893 11.7881C20.3148 11.7881 20.5882 11.8548 20.8096 11.9883C21.0342 12.1217 21.2051 12.2992 21.3223 12.5205C21.4395 12.7419 21.498 12.9876 21.498 13.2578V13.6338C21.498 13.8975 21.4395 14.14 21.3223 14.3613C21.2083 14.5827 21.0391 14.7601 20.8145 14.8936C20.5931 15.027 20.3213 15.0938 19.999 15.0938C19.68 15.0938 19.4066 15.027 19.1787 14.8936C18.9541 14.7601 18.7832 14.5827 18.666 14.3613C18.5488 14.14 18.4902 13.8975 18.4902 13.6338ZM19.3057 13.2578V13.6338C19.3057 13.764 19.3301 13.8877 19.3789 14.0049C19.431 14.1221 19.5091 14.2165 19.6133 14.2881C19.7174 14.3597 19.846 14.3955 19.999 14.3955C20.1553 14.3955 20.2822 14.3597 20.3799 14.2881C20.4808 14.2165 20.5557 14.1221 20.6045 14.0049C20.6533 13.8877 20.6777 13.764 20.6777 13.6338V13.2578C20.6777 13.1243 20.6517 12.999 20.5996 12.8818C20.5508 12.7614 20.4759 12.6654 20.375 12.5938C20.2741 12.5221 20.1455 12.4863 19.9893 12.4863C19.8395 12.4863 19.7126 12.5221 19.6084 12.5938C19.5075 12.6654 19.431 12.7614 19.3789 12.8818C19.3301 12.999 19.3057 13.1243 19.3057 13.2578ZM21.918 17.6377V17.2568C21.918 16.9899 21.9766 16.7458 22.0938 16.5244C22.2142 16.3031 22.3867 16.1257 22.6113 15.9922C22.8359 15.8587 23.1061 15.792 23.4219 15.792C23.7474 15.792 24.0208 15.8587 24.2422 15.9922C24.4668 16.1257 24.6361 16.3031 24.75 16.5244C24.8672 16.7458 24.9258 16.9899 24.9258 17.2568V17.6377C24.9258 17.9046 24.8672 18.1488 24.75 18.3701C24.6361 18.5915 24.4684 18.7689 24.2471 18.9023C24.0257 19.0358 23.7555 19.1025 23.4365 19.1025C23.1143 19.1025 22.8392 19.0358 22.6113 18.9023C22.3867 18.7689 22.2142 18.5915 22.0938 18.3701C21.9766 18.1488 21.918 17.9046 21.918 17.6377ZM22.7383 17.2568V17.6377C22.7383 17.7679 22.7643 17.8916 22.8164 18.0088C22.8717 18.126 22.9515 18.222 23.0557 18.2969C23.1598 18.3685 23.2852 18.4043 23.4316 18.4043C23.5977 18.4043 23.7311 18.3685 23.832 18.2969C23.9329 18.222 24.0046 18.1276 24.0469 18.0137C24.0924 17.8965 24.1152 17.7712 24.1152 17.6377V17.2568C24.1152 17.1234 24.0892 16.998 24.0371 16.8809C23.9883 16.7637 23.9118 16.6693 23.8076 16.5977C23.7067 16.526 23.5781 16.4902 23.4219 16.4902C23.2689 16.4902 23.1419 16.526 23.041 16.5977C22.9401 16.6693 22.8636 16.7637 22.8115 16.8809C22.7627 16.998 22.7383 17.1234 22.7383 17.2568ZM23.7148 12.9062L20.2432 18.4629L19.6426 18.1162L23.1143 12.5596L23.7148 12.9062Z" fill="#001F3F"/>
-                                </svg>
-                                
-                            </div>
-                          <div class="mt-3">
-                            Lorem ipsum dolor sit amet, ut vis commune invidunt
-                            electram, vel ea aliquando honestatis. Cu mel docendi
-                            dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
-                            similique, eu duo elit invidunt.
-                          </div>
-                          <div class="font-size-16 mt-2 mb-0">
-                            
-                              Budget :<span class="fw-bold fs-3 text-themeblack mx-2"
-                                >$ 154</span
-                              >
-                            </p>
-                          </div>
-                        </section>
-                        <section
-                        class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4" style="border-radius: 14px;"
-                      >
-                        <div class="d-flex justify-content-between fw-bold">
-                          Very long Name of the Project...
-                          <svg
-                            width="4"
-                            height="15"
-                            viewBox="0 0 4 15"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
-                              fill="#9EA3AE"
-                            />
-                          </svg>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
-                        <div class="d-flex align-items-center mx-2">
-                          <img
-                            src="assets/images/avatar-management.png"
-                            width="32"
-                            height="32"
-                          />
-                          <div class="rounded-pill opacity-10 text-primary px-3 py-1" style="background: #FFF7D1;">Pending</div>
-                          </div>
-                          
-                            
-                        </div>
-                        <div class="mt-3">
-                          Lorem ipsum dolor sit amet, ut vis commune invidunt
-                          electram, vel ea aliquando honestatis. Cu mel docendi
-                          dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
-                          similique, eu duo elit invidunt.
-                        </div>
-                        <div class="font-size-16 mt-2 mb-0">
-                          
-                            Budget :<span class="fw-bold fs-3 text-themeblack mx-2"
-                              >$ 154</span
-                            >
-                          </p>
-                        </div>
-                      </section>
-                      </div>
-                    
-                     
+          </div>
+          <div class="col-md-3">
+            <div class="card rounded-3">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h5 class="card-title text-themeblack">Hired</h5>
+                  <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
+                      fill="#9EA3AE" />
+                  </svg>
+                </div>
+                <div class="d-flex flex-column">
+                  <section class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4"
+                    style="border-radius: 14px;">
+                    <div class="d-flex justify-content-between fw-bold">
+                      Very long Name of the Project...
+                      <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
+                          fill="#9EA3AE" />
+                      </svg>
                     </div>
-                    <div class="border-top border-themeBorderColor mt-3">
-                      
-                        <div class="font-size-16 mt-2 mx-3 mb-0">
-                             
-                             Total:<span class="fw-bold fs-3 text-black mx-2"
-                              >$ 13,590.00</span
-                            >
-                          </p>
-                        </div>
+                    <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
+                      <div class="d-flex align-items-center mx-2">
+                        <img src="assets/images/avatar-management.png" width="32" height="32" />
+
+                      </div>
+                      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M16 -6.99382e-07C24.8366 -1.08564e-06 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 -3.13124e-07 24.8366 -6.99382e-07 16C-1.08564e-06 7.16344 7.16344 -3.13124e-07 16 -6.99382e-07ZM16 28.8C23.0692 28.8 28.8 23.0692 28.8 16C28.8 8.93075 23.0692 3.2 16 3.2C8.93075 3.2 3.2 8.93076 3.2 16C3.2 23.0692 8.93075 28.8 16 28.8Z"
+                          fill="#E5E6EB" />
+                        <path
+                          d="M16 -6.99382e-07C19.1645 -8.37707e-07 22.2579 0.938382 24.8891 2.69648C27.5203 4.45459 29.5711 6.95345 30.7821 9.87706C31.9931 12.8007 32.3099 16.0177 31.6926 19.1214C31.0752 22.2251 29.5513 25.0761 27.3137 27.3137C25.0761 29.5513 22.2251 31.0752 19.1214 31.6926C16.0177 32.3099 12.8007 31.9931 9.87706 30.7821C6.95345 29.5711 4.45459 27.5203 2.69649 24.8891C0.938383 22.2579 -5.98794e-07 19.1645 -6.99382e-07 16L3.2 16C3.2 18.5316 3.95071 21.0063 5.35719 23.1113C6.76367 25.2162 8.76276 26.8569 11.1017 27.8257C13.4405 28.7945 16.0142 29.0479 18.4972 28.5541C20.9801 28.0602 23.2609 26.8411 25.051 25.051C26.8411 23.2609 28.0602 20.9801 28.5541 18.4972C29.0479 16.0142 28.7945 13.4405 27.8257 11.1017C26.8569 8.76276 25.2162 6.76367 23.1113 5.35719C21.0063 3.95071 18.5316 3.2 16 3.2L16 -6.99382e-07Z"
+                          fill="#34BF49" />
+                        <path
+                          d="M11.8936 11.8906V12.5352L9.05176 19H7.81152L10.6484 12.8281H6.9668V11.8906H11.8936ZM14.0908 15.6943L13.1533 15.4648L13.5391 11.8906H17.3721V12.8867H14.5156L14.3203 14.6299C14.431 14.5648 14.584 14.5013 14.7793 14.4395C14.9746 14.3743 15.1976 14.3418 15.4482 14.3418C15.7835 14.3418 16.083 14.3971 16.3467 14.5078C16.6136 14.6152 16.8398 14.7731 17.0254 14.9814C17.2109 15.1865 17.3525 15.4372 17.4502 15.7334C17.5479 16.0264 17.5967 16.3568 17.5967 16.7246C17.5967 17.0534 17.5479 17.361 17.4502 17.6475C17.3558 17.9339 17.2126 18.1862 17.0205 18.4043C16.8285 18.6224 16.5859 18.7933 16.293 18.917C16.0033 19.0374 15.6598 19.0977 15.2627 19.0977C14.9665 19.0977 14.6816 19.0553 14.4082 18.9707C14.138 18.8828 13.8955 18.7542 13.6807 18.585C13.4658 18.4124 13.2933 18.2008 13.1631 17.9502C13.0329 17.6963 12.958 17.4049 12.9385 17.0762H14.0908C14.1201 17.3073 14.1836 17.5042 14.2812 17.667C14.3822 17.8265 14.5156 17.9486 14.6816 18.0332C14.8477 18.1178 15.0397 18.1602 15.2578 18.1602C15.4564 18.1602 15.6273 18.126 15.7705 18.0576C15.9137 17.986 16.0326 17.8851 16.127 17.7549C16.2246 17.6214 16.2962 17.4652 16.3418 17.2861C16.3906 17.1071 16.415 16.9085 16.415 16.6904C16.415 16.4821 16.3874 16.2917 16.332 16.1191C16.2799 15.9466 16.2002 15.7969 16.0928 15.6699C15.9886 15.543 15.8568 15.4453 15.6973 15.377C15.5378 15.3053 15.3538 15.2695 15.1455 15.2695C14.8656 15.2695 14.6507 15.3102 14.501 15.3916C14.3545 15.473 14.2178 15.5739 14.0908 15.6943ZM18.4902 13.6338V13.2578C18.4902 12.9876 18.5488 12.7419 18.666 12.5205C18.7832 12.2992 18.9541 12.1217 19.1787 11.9883C19.4033 11.8548 19.6735 11.7881 19.9893 11.7881C20.3148 11.7881 20.5882 11.8548 20.8096 11.9883C21.0342 12.1217 21.2051 12.2992 21.3223 12.5205C21.4395 12.7419 21.498 12.9876 21.498 13.2578V13.6338C21.498 13.8975 21.4395 14.14 21.3223 14.3613C21.2083 14.5827 21.0391 14.7601 20.8145 14.8936C20.5931 15.027 20.3213 15.0938 19.999 15.0938C19.68 15.0938 19.4066 15.027 19.1787 14.8936C18.9541 14.7601 18.7832 14.5827 18.666 14.3613C18.5488 14.14 18.4902 13.8975 18.4902 13.6338ZM19.3057 13.2578V13.6338C19.3057 13.764 19.3301 13.8877 19.3789 14.0049C19.431 14.1221 19.5091 14.2165 19.6133 14.2881C19.7174 14.3597 19.846 14.3955 19.999 14.3955C20.1553 14.3955 20.2822 14.3597 20.3799 14.2881C20.4808 14.2165 20.5557 14.1221 20.6045 14.0049C20.6533 13.8877 20.6777 13.764 20.6777 13.6338V13.2578C20.6777 13.1243 20.6517 12.999 20.5996 12.8818C20.5508 12.7614 20.4759 12.6654 20.375 12.5938C20.2741 12.5221 20.1455 12.4863 19.9893 12.4863C19.8395 12.4863 19.7126 12.5221 19.6084 12.5938C19.5075 12.6654 19.431 12.7614 19.3789 12.8818C19.3301 12.999 19.3057 13.1243 19.3057 13.2578ZM21.918 17.6377V17.2568C21.918 16.9899 21.9766 16.7458 22.0938 16.5244C22.2142 16.3031 22.3867 16.1257 22.6113 15.9922C22.8359 15.8587 23.1061 15.792 23.4219 15.792C23.7474 15.792 24.0208 15.8587 24.2422 15.9922C24.4668 16.1257 24.6361 16.3031 24.75 16.5244C24.8672 16.7458 24.9258 16.9899 24.9258 17.2568V17.6377C24.9258 17.9046 24.8672 18.1488 24.75 18.3701C24.6361 18.5915 24.4684 18.7689 24.2471 18.9023C24.0257 19.0358 23.7555 19.1025 23.4365 19.1025C23.1143 19.1025 22.8392 19.0358 22.6113 18.9023C22.3867 18.7689 22.2142 18.5915 22.0938 18.3701C21.9766 18.1488 21.918 17.9046 21.918 17.6377ZM22.7383 17.2568V17.6377C22.7383 17.7679 22.7643 17.8916 22.8164 18.0088C22.8717 18.126 22.9515 18.222 23.0557 18.2969C23.1598 18.3685 23.2852 18.4043 23.4316 18.4043C23.5977 18.4043 23.7311 18.3685 23.832 18.2969C23.9329 18.222 24.0046 18.1276 24.0469 18.0137C24.0924 17.8965 24.1152 17.7712 24.1152 17.6377V17.2568C24.1152 17.1234 24.0892 16.998 24.0371 16.8809C23.9883 16.7637 23.9118 16.6693 23.8076 16.5977C23.7067 16.526 23.5781 16.4902 23.4219 16.4902C23.2689 16.4902 23.1419 16.526 23.041 16.5977C22.9401 16.6693 22.8636 16.7637 22.8115 16.8809C22.7627 16.998 22.7383 17.1234 22.7383 17.2568ZM23.7148 12.9062L20.2432 18.4629L19.6426 18.1162L23.1143 12.5596L23.7148 12.9062Z"
+                          fill="#001F3F" />
+                      </svg>
+
                     </div>
-                  </div>
+                    <div class="mt-3">
+                      Lorem ipsum dolor sit amet, ut vis commune invidunt
+                      electram, vel ea aliquando honestatis. Cu mel docendi
+                      dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
+                      similique, eu duo elit invidunt.
+                    </div>
+                    <div class="font-size-16 mt-2 mb-0">
+
+                      Budget :<span class="fw-bold fs-3 text-themeblack mx-2">$ 154</span>
+                      </p>
+                    </div>
+                  </section>
+                  <section class="border border-themeBorderColor bg-transparent pt-4 px-4 mt-4"
+                    style="border-radius: 14px;">
+                    <div class="d-flex justify-content-between fw-bold">
+                      Very long Name of the Project...
+                      <svg width="4" height="15" viewBox="0 0 4 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M2.3125 14.6514C1.67969 14.6514 1.15234 14.2998 0.835937 13.8076C0.519531 13.2803 0.519531 12.6123 0.835937 12.1201C1.15234 11.5928 1.67969 11.2764 2.3125 11.2764C2.91016 11.2764 3.4375 11.5928 3.75391 12.1201C4.07031 12.6123 4.07031 13.2803 3.75391 13.8076C3.4375 14.2998 2.91016 14.6514 2.3125 14.6514ZM2.3125 9.02637C1.67969 9.02637 1.15234 8.6748 0.835937 8.18262C0.519531 7.65527 0.519531 6.9873 0.835937 6.49512C1.15234 5.96777 1.67969 5.65137 2.3125 5.65137C2.91016 5.65137 3.4375 5.96777 3.75391 6.49512C4.07031 6.9873 4.07031 7.65527 3.75391 8.18262C3.4375 8.6748 2.91016 9.02637 2.3125 9.02637ZM0.625 1.71387C0.625 1.08105 0.941406 0.553711 1.46875 0.237305C1.96094 -0.0791017 2.62891 -0.0791016 3.15625 0.237305C3.64844 0.553711 4 1.08105 4 1.71387C4 2.31152 3.64844 2.83887 3.15625 3.15527C2.62891 3.47168 1.96094 3.47168 1.46875 3.15527C0.941406 2.83887 0.625 2.31152 0.625 1.71387Z"
+                          fill="#9EA3AE" />
+                      </svg>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center fw-bold mt-3">
+                      <div class="d-flex align-items-center mx-2">
+                        <img src="assets/images/avatar-management.png" width="32" height="32" />
+                        <div class="rounded-pill opacity-10 text-primary px-3 py-1" style="background: #FFF7D1;">Pending
+                        </div>
+                      </div>
+
+
+                    </div>
+                    <div class="mt-3">
+                      Lorem ipsum dolor sit amet, ut vis commune invidunt
+                      electram, vel ea aliquando honestatis. Cu mel docendi
+                      dissentiunt. Hinc mundi conceptam nam ex, ea cum agam ignota
+                      similique, eu duo elit invidunt.
+                    </div>
+                    <div class="font-size-16 mt-2 mb-0">
+
+                      Budget :<span class="fw-bold fs-3 text-themeblack mx-2">$ 154</span>
+                      </p>
+                    </div>
+                  </section>
+                </div>
+
+
+              </div>
+              <div class="border-top border-themeBorderColor mt-3">
+
+                <div class="font-size-16 mt-2 mx-3 mb-0">
+
+                  Total:<span class="fw-bold fs-3 text-black mx-2">$ 13,590.00</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="tab-pane" id="list" role="tabpanel">
-        <div class="row p-2">
-          <div class="col-lg-12">
-            <div class="table-responsive rounded-4 border-custom-color-heading">
-              <table
-                id="example"
-                class="display example1 table table-bordered rounded-4 border-customthemePills "
-                style="width: 100%; margin: 0px;"
-              >
-                <thead class="bg-tableBg">
-                  <tr>
-                    <th><input id="headerCheckbox" type="checkbox" /></th>
-                    <th>PROJECT NAME</th>
-                    <th>PROJECT STATUS</th>
-                    <th>MILESTONE STATUS</th>
-                    <th>TOTAL COST</th>
-                    <th>PROJECT DUE DATE</th>
-                    <th>% COMPLETE</th>
-                  </tr>
-                </thead>
-                <tbody class="bg-white">
-                  <tr>
-                    <td><input type="checkbox" /></td>
-                    <td>Porject Name 1</td>
-                    <td>
-                      <span
-                        class="rounded-pill bg-lightYellow text-primary font-size-16 px-3 py-1"
-                        >In Progerss
-                      </span>
-                    </td>
-                    <td>
-                      <span class="text-themeblack font-size-16">In Review</span>
-                    </td>
-                    <td>$ 10,490</td>
-                    <td>14 Oct, 2019</td>
-                    <td><span class="text-blue3">80%</span></td>
-                  </tr>
-    
-                  <tr>
-                    <td><input type="checkbox" /></td>
-                    <td>Porject Name 2</td>
-                    <td>
-                      <span
-                        class="rounded-pill bg-blue6 text-blue3 font-size-16 px-3 py-1"
-                        >Approved</span
-                      >
-                    </td>
-                    <td>
-                      <span class="text-themeblack font-size-16">In Progerss</span>
-                    </td>
-                    <td>$ 10,490</td>
-                    <td>14 Oct, 2019</td>
-                    <td class="text-primary">77%</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" /></td>
-                    <td>Porject Name 2</td>
-                    <td>
-                      <span
-                        class="rounded-pill bg-greenLight text-green1 font-size-16 px-3 py-1"
-                        >Completed</span
-                      >
-                    </td>
-                    <td>
-                      <span class="text-themeblack font-size-16">Completed</span>
-                    </td>
-                    <td>$ 10,490</td>
-                    <td>14 Oct, 2019</td>
-                    <td><span class="text-green1">100%</span></td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" /></td>
-                    <td>Porject Name 3</td>
-                    <td>
-                      <span
-                        class="rounded-pill bg-black6 text-black2 font-size-16 px-3 py-1"
-                        >Draft</span
-                      >
-                    </td>
-                    <td>
-                      <span class="text-themeblack font-size-16">In Progress</span>
-                    </td>
-                    <td>$ 10,490</td>
-                    <td>14 Oct, 2019</td>
-                    <td><span class="text-primary">34%</span></td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" /></td>
-                    <td>Porject Name 4</td>
-                    <td>
-                      <span
-                        class="rounded-pill bg-blue6 text-blue3 font-size-16 px-3 py-1"
-                        >Approved</span
-                      >
-                    </td>
-                    <td>
-                      <span class="text-themeblack font-size-16">Completed</span>
-                    </td>
-                    <td>$ 10,490</td>
-                    <td>14 Oct, 2019</td>
-                    <td><span class="text-black2">0%</span></td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" /></td>
-                    <td>Porject Name 5</td>
-                    <td>
-                      <span
-                        class="rounded-pill bg-greenLight text-green1 font-size-16 px-3 py-1"
-                        >Completed</span
-                      >
-                    </td>
-                    <td>
-                      <span class="text-themeblack font-size-16">Not Started</span>
-                    </td>
-                    <td>$ 10,490</td>
-                    <td>14 Oct, 2019</td>
-                    <td><span class="text-green1">100%</span></td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" /></td>
-                    <td>Porject Name 6</td>
-                    <td>
-                      <span
-                        class="rounded-pill bg-lightYellow text-primary font-size-16 px-3 py-1"
-                        >Pending</span
-                      >
-                    </td>
-                    <td>
-                      <span class="text-themeblack font-size-16">Completed</span>
-                    </td>
-                    <td>$ 10,490</td>
-                    <td>14 Oct, 2019</td>
-                    <td>$90,560</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" /></td>
-                    <td>Porject Name 7</td>
-                    <td>
-                      <span
-                        class="rounded-pill bg-greenLight text-green1 font-size-16 px-3 py-1"
-                        >Completed</span
-                      >
-                    </td>
-                    <td>
-                      <span class="text-themeblack font-size-16">In Review</span>
-                    </td>
-                    <td>$ 10,490</td>
-                    <td>14 Oct, 2019</td>
-                    <td>$342,000</td>
-                  </tr>
-                  <tr>
-                    <td><input type="checkbox" /></td>
-                    <td>Porject Name 8</td>
-                    <td>
-                      <span
-                        class="rounded-pill bg-lightYellow text-primary font-size-16 px-3 py-1"
-                        >Pending</span
-                      >
-                    </td>
-                    <td>
-                      <span class="text-themeblack font-size-16">Completed</span>
-                    </td>
-                    <td>$ 10,490</td>
-                    <td>14 Oct, 2019</td>
-                    <td>$313,500</td>
-                  </tr>
-                </tbody>
-                <!-- <tfoot>
+    </div>
+    <div class="tab-pane" id="list" role="tabpanel">
+      <div class="row p-2">
+        <div class="col-lg-12">
+          <div class="table-responsive rounded-4 border-custom-color-heading">
+            <table id="example" class="display example1 table table-bordered rounded-4 border-customthemePills "
+              style="width: 100%; margin: 0px;">
+              <thead class="bg-tableBg">
+                <tr>
+                  <th><input id="headerCheckbox" type="checkbox" /></th>
+                  <th>PROJECT NAME</th>
+                  <th>PROJECT STATUS</th>
+                  <th>MILESTONE STATUS</th>
+                  <th>TOTAL COST</th>
+                  <th>PROJECT DUE DATE</th>
+                  <th>% COMPLETE</th>
+                </tr>
+              </thead>
+              <tbody class="bg-white">
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Porject Name 1</td>
+                  <td>
+                    <span class="rounded-pill bg-lightYellow text-primary font-size-16 px-3 py-1">In Progerss
+                    </span>
+                  </td>
+                  <td>
+                    <span class="text-themeblack font-size-16">In Review</span>
+                  </td>
+                  <td>$ 10,490</td>
+                  <td>14 Oct, 2019</td>
+                  <td><span class="text-blue3">80%</span></td>
+                </tr>
+
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Porject Name 2</td>
+                  <td>
+                    <span class="rounded-pill bg-blue6 text-blue3 font-size-16 px-3 py-1">Approved</span>
+                  </td>
+                  <td>
+                    <span class="text-themeblack font-size-16">In Progerss</span>
+                  </td>
+                  <td>$ 10,490</td>
+                  <td>14 Oct, 2019</td>
+                  <td class="text-primary">77%</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Porject Name 2</td>
+                  <td>
+                    <span class="rounded-pill bg-greenLight text-green1 font-size-16 px-3 py-1">Completed</span>
+                  </td>
+                  <td>
+                    <span class="text-themeblack font-size-16">Completed</span>
+                  </td>
+                  <td>$ 10,490</td>
+                  <td>14 Oct, 2019</td>
+                  <td><span class="text-green1">100%</span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Porject Name 3</td>
+                  <td>
+                    <span class="rounded-pill bg-black6 text-black2 font-size-16 px-3 py-1">Draft</span>
+                  </td>
+                  <td>
+                    <span class="text-themeblack font-size-16">In Progress</span>
+                  </td>
+                  <td>$ 10,490</td>
+                  <td>14 Oct, 2019</td>
+                  <td><span class="text-primary">34%</span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Porject Name 4</td>
+                  <td>
+                    <span class="rounded-pill bg-blue6 text-blue3 font-size-16 px-3 py-1">Approved</span>
+                  </td>
+                  <td>
+                    <span class="text-themeblack font-size-16">Completed</span>
+                  </td>
+                  <td>$ 10,490</td>
+                  <td>14 Oct, 2019</td>
+                  <td><span class="text-black2">0%</span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Porject Name 5</td>
+                  <td>
+                    <span class="rounded-pill bg-greenLight text-green1 font-size-16 px-3 py-1">Completed</span>
+                  </td>
+                  <td>
+                    <span class="text-themeblack font-size-16">Not Started</span>
+                  </td>
+                  <td>$ 10,490</td>
+                  <td>14 Oct, 2019</td>
+                  <td><span class="text-green1">100%</span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Porject Name 6</td>
+                  <td>
+                    <span class="rounded-pill bg-lightYellow text-primary font-size-16 px-3 py-1">Pending</span>
+                  </td>
+                  <td>
+                    <span class="text-themeblack font-size-16">Completed</span>
+                  </td>
+                  <td>$ 10,490</td>
+                  <td>14 Oct, 2019</td>
+                  <td>$90,560</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Porject Name 7</td>
+                  <td>
+                    <span class="rounded-pill bg-greenLight text-green1 font-size-16 px-3 py-1">Completed</span>
+                  </td>
+                  <td>
+                    <span class="text-themeblack font-size-16">In Review</span>
+                  </td>
+                  <td>$ 10,490</td>
+                  <td>14 Oct, 2019</td>
+                  <td>$342,000</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" /></td>
+                  <td>Porject Name 8</td>
+                  <td>
+                    <span class="rounded-pill bg-lightYellow text-primary font-size-16 px-3 py-1">Pending</span>
+                  </td>
+                  <td>
+                    <span class="text-themeblack font-size-16">Completed</span>
+                  </td>
+                  <td>$ 10,490</td>
+                  <td>14 Oct, 2019</td>
+                  <td>$313,500</td>
+                </tr>
+              </tbody>
+              <!-- <tfoot>
                 <tr>
                   <td><input type="checkbox"></td>
                   <th>Name</th>
@@ -1012,30 +945,31 @@
                   <th>Salary</th>
                 </tr>
               </tfoot> -->
-              </table>
-            </div>
+            </table>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    @@include("partials/vendor-scripts.html")
+  @@include("partials/vendor-scripts.html")
 
-    <!-- App js -->
-    <script src="assets/js/app.js"></script>
-    <script>
-      // Close the dropdown when clicking outside of it
-      window.addEventListener("click", function (event) {
-        const dropdownMenu = document.querySelector(".dropdown-menu");
-        const dropdownToggle = document.querySelector(".dropdown-toggle");
+  <!-- App js -->
+  <script src="assets/js/app.js"></script>
+  <script>
+    // Close the dropdown when clicking outside of it
+    window.addEventListener("click", function (event) {
+      const dropdownMenu = document.querySelector(".dropdown-menu");
+      const dropdownToggle = document.querySelector(".dropdown-toggle");
 
-        if (
-          !dropdownMenu.contains(event.target) &&
-          !dropdownToggle.contains(event.target)
-        ) {
-          dropdownMenu.classList.remove("show");
-        }
-      });
-    </script>
-  </body>
+      if (
+        !dropdownMenu.contains(event.target) &&
+        !dropdownToggle.contains(event.target)
+      ) {
+        dropdownMenu.classList.remove("show");
+      }
+    });
+  </script>
+</body>
+
 </html>

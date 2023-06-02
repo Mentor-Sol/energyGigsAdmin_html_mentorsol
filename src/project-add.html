@@ -29,30 +29,29 @@
   <div class="main-content">
     <div class="page-content">
       <div class="container-fluid">
-        @@include("partials/page-title.html", {"pagetitle": "Project", "title":
-        "Create New"})
             <form id="projectForm">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
                                 <div class="font-size-24 d-flex justify-content-end mb-3" >
-                                <a href="#"><i class="bx bx-dots-horizontal-rounded"  onclick="" style="color:#4D4D4D"></i> </a>  
-                                <a href="#"><i class="bx bx-x" style="color:#4D4D4D" onclick=""></i></a> 
+                                <a href="#"><i class="bx bx-dots-horizontal-rounded text-black2"  onclick=""></i> </a>  
+                                <a href="#"><i class="bx bx-x text-black2" onclick=""></i></a> 
                                 </div>
                                     <input type="text" class="form-control border-0 fs-1 fw-bold create-project-heading mb-3" placeholder="Enter Poject Title Here ">
                                     <hr class="border-1 border-top" style="border-color: #C0BDBD;">
                                     <div class="row mt-3">
                                         <div class="col-lg-4 ">
                                             <div class="mb-3">
-                                                <label class="form-label">Location</label>
+                                                <label class="form-label text-themeGray fw-normal">Location</label>
                                                 <input type="text" class="form-control rounded" placeholder="Houston, TX">
                                             </div>
                                         </div>
                                         <div class="col-lg-4 offset-lg-2">
                                             <div class="mb-3">
                                                 
-                                                    <label class="form-label">Experience</label>
+                                                <label class="form-label text-themeGray fw-normal">Experience</label>
+
 
                                                     <select class="select2 form-control select2-multiple"
                                                         multiple="multiple" data-placeholder="Choose ...">
@@ -67,7 +66,8 @@
                                     <div class="row mt-3">
                                         <div class="col-4 col-lg-4">
                                             <div class="mb-3">
-                                                <label  class="form-label">Duration</label>
+                                                <label class="form-label text-themeGray fw-normal">Duration</label>
+
                                                 <select class="select2 form-control select2-multiple"
                                                     multiple="multiple" data-placeholder="Choose ...">
                                                     <option>1 to 3 months</option>
@@ -78,21 +78,21 @@
                                         </div>
                                         <div class="col-lg-4 offset-lg-2">
                                             <div class="mb-3">
-                                                <label class="form-label">Budget</label>
+                                                <label class="form-label text-themeGray fw-normal">Budget</label>
                                                 <input type="number" class="form-control rounded" placeholder="Enter Budget" >
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-lg-12 mb-5">
-                                            <label class="form-label mt-3">Description</label>
+                                            <label class="form-label mt-3 letter-spacing fw-bold">DESCRIPTION</label>
                                             <textarea class="form-control" rows="8" style="resize: none;" placeholder="Describe your project here"></textarea>
                                         </div>
 
                                     </div>
                                     <div class="row mb-5">
                                         <div class="col-3 col-lg-2">
-                                            <p class="mt-2">Industries</p>
+                                            <p class="mt-2 text-themeGray">Industries</p>
                                         </div>
                                         <div class="col-1 mt-2">:</div>
                                         <div class=" col-7 col-lg-9 d-inline-flex align-items-center">   
@@ -153,13 +153,13 @@
                                             
                                         </div>
                                     </div>
-                                    <div class="row  d-flex align-items-center mt-5" style="width: auto;">
+                                    <div class="row  d-flex align-items-center mt-5">
                                         <div class="col-4 col-lg-6 d-flex justify-content-start align-items-center">
                                             <a href="" class="text-danger font-size-16 fw-bold">Cancel</a>
                                         </div>
-                                        <div class="col-8 col-lg-6 d-flex justify-content-end align-items-center">
+                                        <div class="col-8 col-lg-6 d-flex justify-content-end align-items-center flex-md-row flex-lg-row flex-xl-row flex-xxl-row flex-column gap-2">
+                                            <a href="" class="btn btn-outline-primary btn-rounded text-themeblack fw-normal font-size-16 me-2">Save Draft</a>
                                             <a href="./apply-project.html" class="btn btn-primary btn-rounded fw-normal font-size-16 mx-2">Post Project</a>
-                                            <a href="" class="btn btn-outline-primary btn-rounded text-themeblack fw-normal font-size-16 me-5">Save Draft</a>
                                         </div>
                                     </div>
                                 </div>

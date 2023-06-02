@@ -23,31 +23,32 @@
                       <div class="col-md-8 col-lg-6 col-xl-5">
                         <div class="overflow-hidden">
                             <p class="fw-bolder text-center text-black3" style="font-size: 2.5rem;">Location preferences</p>
-                            <p class="font-size-16 fw-normal text-themeBorderColor text-center mt-5">Where do you want the freelancer to work?</p>
+                            <p class="font-size-16 fw-light text-themeBorderColor text-center mt-5">Where do you want the freelancer to work?</p>
                               
                             <div class="list">
-                              <div class="form-element me-2">
-                                <input type="checkbox" name="platform" value="location" id="location" onchange="toggleSelection1('location','location-image')">
-                                <label for="location">
-                                  <div class="icon">
-                                    <img src="assets/images/location-preference/location-dark.svg" class="image" id="location-image" width="70" height="70">
-                                  </div>
-                                  <div class="title">
-                                    I only want to <br> work remote
-                                  </div>
-                                </label>
-                              </div>
-                              <div class="form-element mx-2">
+                              <div class="form-element me-2 ">
                                 <input type="checkbox" name="platform" value="factory" id="factory" onchange="toggleSelection('factory','factory-image')">
                                 <label for="factory">
                                   <div class="icon">
-                                    <img src="assets/images/location-preference/factory-dark.svg" class="image" id="factory-image" width="70" height="70">
+                                    <img src="assets/images/location-preference/location-dark.svg" class="image" id="factory-image" width="70" height="70">
                                   </div>
                                   <div class="title">
                                     I am flexible to <br> work onsite
                                   </div>
                                 </label>
                               </div>
+                              <div class="form-element mx-2">
+                                <input type="checkbox" name="platform" value="location" id="location" onchange="toggleSelection1('location','location-image')">
+                                <label for="location">
+                                  <div class="icon">
+                                    <img src="assets/images/location-preference/factory-dark.svg" class="image" id="location-image" width="70" height="70">
+                                  </div>
+                                  <div class="title">
+                                    I only want to <br> work remote
+                                  </div>
+                                </label>
+                              </div>
+                              
                             </div>
                         </div>
                         <div class="row">

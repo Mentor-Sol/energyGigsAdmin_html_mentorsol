@@ -136,3 +136,21 @@ resize: none;
 .content-table{
   border-radius: 5px 5px 0 0;
 }
+
+.letter-spacing{
+  letter-spacing: 0.1em;
+}
+
+
+
+.nav-tabs-profile {
+  .nav-item {
+    .nav-link {
+      color: $themeGray;
+
+      &.active {
+        color: $themeblack;
+      }
+    }
+  }
+}
