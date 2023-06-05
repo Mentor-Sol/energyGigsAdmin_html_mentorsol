@@ -9,8 +9,11 @@
 
 .top-bar-management{
     background-color: #fff;
+    display: flex;
+    flex-direction: row;
     @media screen and (max-width:800px) {
         margin-top: 3rem;
+        flex-direction: column;
     }
 
 }

@@ -3,409 +3,199 @@
 
 <head>
   @@include("partials/head-css.html")
+
+  <link
+  href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+<!-- Responsive datatable examples -->
+<link
+  href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css"
+  rel="stylesheet"
+  type="text/css"
+/>
 </head>
 
 <body class="overflow-x-hidden">
   <div class="mt-4 pt-sm-5"></div>
   <div class="container-fluid border-top border-black6">
-    <div class="row py-3 top-bar-management">
-      <div class="col-lg-8 col-md-8 col-sm-12 col-12">
-        <div class="row d-flex justify-content-start align-items-center">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center gap-3 flex-lg-col flex-md-col flex-xl-col flex-xxl-col  ">
-            <div class="dropdown mx-2">
-              <button class="btn text-primary bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
-                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                Create Date <i class="mdi mdi-chevron-down"></i>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Date 1</a>
-                <a class="dropdown-item" href="#">Date 2</a>
-                <a class="dropdown-item" href="#">Date 3</a>
-              </div>
-            </div>
-
-            <!-- <ul class="nav nav-tabs border-0" role="tablist">
-                  <li class="nav-item ">
-                      <a class="nav-link btn btn-default btn-sm bg-black6 active border-custom-color-heading rounded-3" data-bs-toggle="tab" href="#kanban" role="tab">
-                          <i class="bx bxs-grid"></i>
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link btn btn-default btn-sm bg-black6 border-custom-color-heading rounded-3" data-bs-toggle="tab" href="#list" role="tab">
-                          <i class="bx bx-list-ul"></i>
-                      </a>
-                  </li>
-              
-              </ul> -->
-            <div class="btn-group bg-white text-themeblack mx-2" role="tablist">
-              <a class="btn btn-custom-color-heading btn-sm border-customthemePills rounded-start tab-btn"
-                data-bs-toggle="tab" href="#kanban" role="tab"><span class="bx bxs-grid font-size-20">
-                </span>
-              </a>
-              <a class="btn btn-custom-color-heading btn-sm font-size-20 border-customthemePills rounded-end tab-btn"
-                data-bs-toggle="tab" href="#list" role="tab"><span class="bx bx-list-ul"></span>
-              </a>
-            </div>
-
-            <div class="dropdown mx-2">
-              <button class="btn text-themeblack bg-transparent rounded-3 border-customthemePills font-size-14 fw-normal dropdown-toggle"
-                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                Talent Acquisition<i class="mdi mdi-chevron-down"></i>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Talent 1</a>
-                <a class="dropdown-item" href="#">Talent 2</a>
-                <a class="dropdown-item" href="#">Talent 3</a>
-              </div>
-            </div>
-            <div class="dropdown mx-2">
-              <button class="btn text-themeblack bg-transparent rounded-3 border-customthemePills font-size-14 fw-normal dropdown-toggle"
-                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                All Deals<i class="mdi mdi-chevron-down"></i>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Deals 1</a>
-                <a class="dropdown-item" href="#">Deals 2</a>
-                <a class="dropdown-item" href="#">Deals 3</a>
-              </div>
-            </div>
-
+    <div class="row py-3 top-bar-management px-2 d-flex justify-content-between align-items-center flex-wrap flex-column flex-lg-row flex-xl-row gap-lg-0 gap-3">
+      <div class="col-lg-8 col-12 d-flex gap-3">
+        <div class="dropdown mx-2">
+          <button class="btn text-primary bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
+            type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Deals <i class="mdi mdi-chevron-down"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Deals 1</a>
+            <a class="dropdown-item" href="#">Deals 2</a>
+            <a class="dropdown-item" href="#">Deals 3</a>
           </div>
+        </div>
+        <div class="btn-group d-flex align-items-center bg-white text-themeblack mx-2" role="tablist">
+          <a class="btn btn-custom-color-heading btn-sm border-customthemePills rounded-start tab-btn"
+            data-bs-toggle="tab" href="#kanban" role="tab"><span class="bx bxs-grid font-size-20">
+            </span>
+          </a>
+          <a class="btn btn-custom-color-heading btn-sm font-size-20 border-customthemePills rounded-end tab-btn"
+            data-bs-toggle="tab" href="#list" role="tab"><span class="bx bx-list-ul"></span>
+          </a>
+        </div>
+        <div class="dropdown mx-2">
+          <button
+            class="btn text-themeblack bg-transparent rounded-3 border-customthemePills font-size-14 fw-normal dropdown-toggle"
+            type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            Talent Acquisition<i class="mdi mdi-chevron-down ms-3"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Talent 1</a>
+            <a class="dropdown-item" href="#">Talent 2</a>
+            <a class="dropdown-item" href="#">Talent 3</a>
+          </div>
+        </div>
+        <div class="dropdown mx-2">
+          <button
+            class="btn text-themeblack bg-transparent rounded-3 border-customthemePills text-left btn-primary-spacing font-size-14 fw-normal dropdown-toggle"
+            type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+            All Deals<i class="mdi mdi-chevron-down text-right ms-5"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Deals 1</a>
+            <a class="dropdown-item" href="#">Deals 2</a>
+            <a class="dropdown-item" href="#">Deals 3</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 col-xl-4 d-flex align-items-center justify-content-start justify-content-lg-end gap-3">
+       
+          <div class="btn-group gap-2" role="group" aria-label="Basic example">
 
-        
-        
+            <div class="dropdown ">
+              <button
+                class="btn text-themeblack bg-transparent border rounded-pill px-3 border-customthemePills fw-bold font-size-14 fw-normal dropdown-toggle"
+                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Actions <i class="mdi mdi-chevron-down text-right ms-2"></i>
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action 1</a>
+                <a class="dropdown-item" href="#">Action 2</a>
+                <a class="dropdown-item" href="#">Action 3</a>
+              </div>
+            </div>
+
+            <button class="btn btn-customthemePills disabled text-nowrap text-themeBorderColor fw-bold rounded-pill px-4 btn-block">
+              Import
+            </button>
+
+            <button class="btn btn-primary text-themeblack fw-bold text-nowrap rounded-pill px-4 btn-block">
+              Post Project
+            </button>
          
-            <!-- <form class="app-search p-0">
-              <div class="position-relative mt-2">
-                <input type="text" class="form-control" placeholder="Search..." style="width: 200px; height: 35px">
-                <span class="bx bx-search-alt"></span>
-              </div>
-            </form> -->
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        <div class="row gap-2  mt-2">
-          <div class="col-lg-4 col-md-3 col-sm-6 col-4">
-            <div class="d-flex justify-content-end align-items-center">
-              <button class="btn btn-outline-primary text-themeblack rounded-pill px-4" style="color: #9ea3ae">
-                <span class="bx bxs-save"></span>
-                Save View
-              </button>
-            </div>
-
-          </div>
-          <div class="col-lg-4 col-md-3 col-sm-6 col-4">
-
-            <button class="btn btn-primary text-themeblack rounded-pill px-4">
-              Create Project
-            </button>
-          </div>
         </div>
       </div>
     </div>
-    <div class="row py-3 bg-white border-top border-black6 border-2">
-      <div class="col-lg-8 col-md-8 col-sm-12 col-12">
-        <div class="row d-flex justify-content-start align-items-center">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
-            <div class="dropdown mx-2">
-              <button class="btn text-primary bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
-                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                Create Date <i class="mdi mdi-chevron-down"></i>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Date 1</a>
-                <a class="dropdown-item" href="#">Date 2</a>
-                <a class="dropdown-item" href="#">Date 3</a>
-              </div>
-            </div>
-
-            <!-- <ul class="nav nav-tabs border-0" role="tablist">
-                  <li class="nav-item ">
-                      <a class="nav-link btn btn-default btn-sm bg-black6 active border-custom-color-heading rounded-3" data-bs-toggle="tab" href="#kanban" role="tab">
-                          <i class="bx bxs-grid"></i>
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link btn btn-default btn-sm bg-black6 border-custom-color-heading rounded-3" data-bs-toggle="tab" href="#list" role="tab">
-                          <i class="bx bx-list-ul"></i>
-                      </a>
-                  </li>
-              
-              </ul> -->
-            <div class="btn-group bg-white text-themeblack mx-2" role="tablist">
-              <a class="btn btn-custom-color-heading btn-sm border-customthemePills rounded-start tab-btn"
-                data-bs-toggle="tab" href="#kanban" role="tab"><span class="bx bxs-grid font-size-20">
-                </span>
-              </a>
-              <a class="btn btn-custom-color-heading btn-sm font-size-20 border-customthemePills rounded-end tab-btn"
-                data-bs-toggle="tab" href="#list" role="tab"><span class="bx bx-list-ul"></span>
-              </a>
-            </div>
-
-            <div class="dropdown mx-2">
-              <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
-                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                Talent Acquisition<i class="mdi mdi-chevron-down"></i>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Talent 1</a>
-                <a class="dropdown-item" href="#">Talent 2</a>
-                <a class="dropdown-item" href="#">Talent 3</a>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-2 col-md-2 col-sm-6 col-6">
-            <div class="dropdown">
-              <button class="btn text-themeblack bg-white rounded border-1 dropdown-toggle" type="button"
-                id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                Last Activity Date <i class="mdi mdi-chevron-down"></i>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">All Deal 1</a>
-                <a class="dropdown-item" href="#">All Deal 2</a>
-                <a class="dropdown-item" href="#">All Deal 3</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-2 col-sm-6 col-6">
-            <div class="dropdown ">
-              <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
-                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                Close Date <i class="mdi mdi-chevron-down"></i>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Date 1</a>
-                <a class="dropdown-item" href="#">Date 2</a>
-                <a class="dropdown-item" href="#">Date 3</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-2 col-sm-6 col-6">
-            <div class="dropdown ">
-              <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
-                type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"><span
-                  class="bx bx-slider-alt"></span>
-                All Filter <i class="mdi mdi-chevron-down"></i>
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Date 1</a>
-                <a class="dropdown-item" href="#">Date 2</a>
-                <a class="dropdown-item" href="#">Date 3</a>
-              </div>
-            </div>
-          </div>
-            <!-- <form class="app-search p-0">
-              <div class="position-relative mt-2">
-                <input type="text" class="form-control" placeholder="Search..." style="width: 200px; height: 35px">
-                <span class="bx bx-search-alt"></span>
-              </div>
-            </form> -->
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12">
-        <div class="row gap-2  mt-2">
-          <div class="col-lg-4 col-md-3 col-sm-6 col-4">
-            <div class="d-flex justify-content-end align-items-center">
-              <button class="btn btn-outline-primary text-themeblack rounded-pill px-4" style="color: #9ea3ae">
-                <span class="bx bxs-save"></span>
-                Save View
-              </button>
-            </div>
-
-          </div>
-          <div class="col-lg-4 col-md-3 col-sm-6 col-4">
-
-            <button class="btn btn-primary text-themeblack rounded-pill px-4">
-              Create Project
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  <!-- <div class="container-fluid border-bottom border-themeGray">
-      <div class="row d-flex justify-content-start align-items-center">
-        <div class="col-8">
-          <div class="row d-flex justify-content-start align-items-center">
-            <div class="col-3">
-              <form class="app-search m-0 d-none d-lg-block">
-                <div class="position-relative mx-1">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="myInput"
-                    placeholder="Search..."
-                    style="width: 200px; height: 35px"
-                  />
+    <div class="row bg-white border-top border-black6 border-2 py-2 px-2 flex-wrap flex-column flex-xl-row">
+           
+          <div class="col-12 col-md-8 col-lg-8 col-xl-8 d-flex align-items-center justify-content-between">
+              <form class="app-search p-0 w-100">
+                <div class="position-relative mt-2">
+                  <input type="text" class="form-control" placeholder="Search..." style="width: 250px; height: 35px">
                   <span class="bx bx-search-alt"></span>
                 </div>
               </form>
-            </div>
-            <div class="col-8">
-              <div class="row gap-3">
-                <div class="col-2">
-                  <div class="dropdown">
-                    <button
-                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Deals Owner <i class="mdi mdi-chevron-down"></i>
-                    </button>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <a class="dropdown-item" href="#">Owner 1</a>
-                      <a class="dropdown-item" href="#">Owner 2</a>
-                      <a class="dropdown-item" href="#">Owner 3</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="dropdown">
-                    <button
-                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Create Date <i class="mdi mdi-chevron-down"></i>
-                    </button>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <a class="dropdown-item" href="#">Date 1</a>
-                      <a class="dropdown-item" href="#">Date 2</a>
-                      <a class="dropdown-item" href="#">Date 3</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-3 mr-auto">
-                  <div class="dropdown">
-                    <button
-                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Last Activity Date <i class="mdi mdi-chevron-down"></i>
-                    </button>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <a class="dropdown-item" href="#">Last Activity 1</a>
-                      <a class="dropdown-item" href="#">Last Activity 2</a>
-                      <a class="dropdown-item" href="#">Last Activity 3</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="dropdown">
-                    <button
-                      class="btn bg-transparent text-themeblack border-0 dropdown-toggle"
-                      type="button"
-                      id="dropdownMenuButton"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      Close Date <i class="mdi mdi-chevron-down"></i>
-                    </button>
-                    <div
-                      class="dropdown-menu"
-                      aria-labelledby="dropdownMenuButton"
-                    >
-                      <a class="dropdown-item" href="#">Close Date 1</a>
-                      <a class="dropdown-item" href="#">Close Date 2</a>
-                      <a class="dropdown-item" href="#">Close Date 3</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-1">
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-transparent dropdown-toggle"
-                      type="button"
-                      id="filterDropdown"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      <i class="bx bx-slider-alt"></i> Filter
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="filterDropdown">
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <input type="checkbox" id="option1" />
-                          <label for="option1">Option 1</label>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <input type="checkbox" id="option2" />
-                          <label for="option2">Option 2</label>
-                        </a>
-                      </li>
-                      <li>
-                        <a class="dropdown-item" href="#">
-                          <input type="checkbox" id="option3" />
-                          <label for="option3">Option 3</label>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div
-            class="row gap-2 d-flex align-items-center justify-content-center"
-          >
-            <div class="col-4">
-              <div class="dropdown">
-                <button
-                  class="btn btn-outline-light text-dark rounded-pill px-4 dropdown-toggle"
-                  type="button"
-                  id="dropdownMenuButton"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Actions <i class="mdi mdi-chevron-down"></i>
+              <div class="dropdown ms-2">
+                <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
+                  type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Deal Owner <i class="mdi mdi-chevron-down"></i>
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">Deal 1</a>
-                  <a class="dropdown-item" href="#">Deal 2</a>
-                  <a class="dropdown-item" href="#">Deal 3</a>
+                  <a class="dropdown-item" href="#">Owner 1</a>
+                  <a class="dropdown-item" href="#">Owner 2</a>
+                  <a class="dropdown-item" href="#">Owner 3</a>
                 </div>
               </div>
-            </div>
-            <div class="col-4">
-              <button class="btn btn-outline-light text-dark rounded-pill px-4">
-                <i class="bx bx-save"></i> Save View
-              </button>
-            </div>
+              <div class="dropdown">
+                <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
+                  type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Create Date <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Date 1</a>
+                  <a class="dropdown-item" href="#">Date 2</a>
+                  <a class="dropdown-item" href="#">Date 3</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
+                  type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Last Activity Date <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Activity 1</a>
+                  <a class="dropdown-item" href="#">Activity 2</a>
+                  <a class="dropdown-item" href="#">Activity 3</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
+                  type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                  Close Date <i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Close 1</a>
+                  <a class="dropdown-item" href="#">Close 2</a>
+                  <a class="dropdown-item" href="#">Close 3</a>
+                </div>
+              </div>
+              <div class="dropdown ">
+                <button class="btn text-themeblack bg-transparent rounded-3 border-custom-color-heading dropdown-toggle"
+                  type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false"><span
+                    class="bx bx-slider-alt"></span>
+                  All Filter (0)<i class="mdi mdi-chevron-down"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Date 1</a>
+                  <a class="dropdown-item" href="#">Date 2</a>
+                  <a class="dropdown-item" href="#">Date 3</a>
+                </div>
+              </div>
           </div>
-        </div>
-      </div>
-    </div> -->
+          <div class="col-12 col-md-4 col-lg-4 col-xl-4 d-flex align-items-center justify-content-end">
+              <div class="btn-group gap-4" role="group" aria-label="Basic example">
+                <div class="dropdown ">
+                  <button
+                    class="btn text-themeblack bg-transparent border rounded-pill px-3 border-customthemePills fw-bold font-size-14 fw-normal dropdown-toggle"
+                    type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Board Action <i class="mdi mdi-chevron-down text-right ms-2"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Board Action 1</a>
+                    <a class="dropdown-item" href="#">Board Action 2</a>
+                    <a class="dropdown-item" href="#">Board Action 3</a>
+                  </div>
+                </div>
+                <button class="btn btn-outline-primary text-themeblack fw-bold text-nowrap  rounded-pill px-4" style="color: #9ea3ae">
+                  <span class="bx bxs-save"></span>
+                  Save View
+                </button>
+              </div> 
+          </div>
+        
+      
+    </div>
+  </div>
   <div class="tab-content text-muted">
     <div class="tab-pane active" id="kanban" role="tabpanel">
       <div class="container-fluid mt-3">
         <div class="row p-2">
-          <div class="col-md-3">
+          <div class="col-md-3 col-lg-3 col-xl-3  col-6">
             <div class="card rounded-3">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
@@ -502,7 +292,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-lg-3 col-xl-3 col-6">
             <div class="card rounded-3">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
@@ -599,7 +389,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-lg-3 col-xl-3 col-6">
             <div class="card rounded-3">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
@@ -696,7 +486,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-lg-3 col-xl-3 col-6">
             <div class="card rounded-3">
               <div class="card-body">
                 <div class="d-flex justify-content-between align-items-center">
@@ -905,7 +695,7 @@
                   </td>
                   <td>$ 10,490</td>
                   <td>14 Oct, 2019</td>
-                  <td>$90,560</td>
+                  <td><span class="text-green1">100%</span></td>
                 </tr>
                 <tr>
                   <td><input type="checkbox" /></td>
@@ -918,7 +708,7 @@
                   </td>
                   <td>$ 10,490</td>
                   <td>14 Oct, 2019</td>
-                  <td>$342,000</td>
+                  <td><span class="text-green1">100%</span></td>
                 </tr>
                 <tr>
                   <td><input type="checkbox" /></td>
@@ -931,7 +721,7 @@
                   </td>
                   <td>$ 10,490</td>
                   <td>14 Oct, 2019</td>
-                  <td>$313,500</td>
+                  <td><span class="text-text-black2">0%</span></td>
                 </tr>
               </tbody>
               <!-- <tfoot>
@@ -954,6 +744,22 @@
 
   @@include("partials/vendor-scripts.html")
 
+  <!-- Required datatable js -->
+  <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <!-- Buttons examples -->
+  <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+  <script src="assets/libs/jszip/jszip.min.js"></script>
+  <script src="assets/libs/pdfmake/build/pdfmake.min.js"></script>
+  <script src="assets/libs/pdfmake/build/vfs_fonts.js"></script>
+  <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+  <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+  <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js"></script>
+
+  <!-- Responsive examples -->
+  <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
   <!-- App js -->
   <script src="assets/js/app.js"></script>
   <script>
@@ -970,6 +776,83 @@
       }
     });
   </script>
+
+<script>
+  $(document).ready(function () {
+    // Setup - add a text input to each footer cell
+    $("#example tfoot th").each(function () {
+      var title = $(this).text();
+      $(this).html(
+        '<input type="text" placeholder="Search ' + title + '" />'
+      );
+    });
+
+    // DataTable
+    var table = $("#example").DataTable({
+      bPaginate: false,
+      bFilter: false,
+      bInfo: false,
+
+      initComplete: function () {
+        // Apply the search
+        this.api()
+          .columns()
+          .every(function () {
+            var that = this;
+
+            $("input", this.footer()).on("keyup change clear", function () {
+              if (that.search() !== this.value) {
+                that.search(this.value).draw();
+              }
+            });
+          });
+      },
+    });
+  });
+
+  window.addEventListener("DOMContentLoaded", function () {
+    const headerCheckbox = document.getElementById("headerCheckbox");
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+    headerCheckbox.addEventListener("change", function () {
+      checkboxes.forEach(function (checkbox) {
+        checkbox.checked = headerCheckbox.checked;
+      });
+    });
+
+    checkboxes.forEach(function (checkbox) {
+      checkbox.addEventListener("change", function () {
+        // Check if all checkboxes except the header checkbox are checked
+        const allCheckedExceptHeader = Array.from(checkboxes).every(
+          function (checkbox) {
+            return checkbox !== headerCheckbox || checkbox.checked;
+          }
+        );
+
+        headerCheckbox.checked = allCheckedExceptHeader;
+      });
+    });
+  });
+  window.addEventListener("DOMContentLoaded", function () {
+    const tableBody = document.querySelector(".bg-white");
+    const rows = tableBody.querySelectorAll("tr");
+
+    rows.forEach(function (row) {
+      const statusCell = row.querySelector("td:nth-child(3)");
+      const status = statusCell.textContent.trim();
+
+      if (status === "In Progerss") {
+        statusCell.innerHTML = `<span class="bg-rounded-pill bg-primary">${status}</span>`;
+      } else if (status === "Approved") {
+        statusCell.innerHTML = `<span class="bg-rounded-pill bg-secondary">${status}</span>`;
+      } else if (status === "Pending") {
+        statusCell.innerHTML = `<span class="bg-rounded-pill bg-light">${status}</span>`;
+      } else if (status === "Draft") {
+        statusCell.innerHTML = `<span class="bg-rounded-pill bg-danger">${status}</span>`;
+      }
+    });
+  });
+</script>
 </body>
 
 </html>

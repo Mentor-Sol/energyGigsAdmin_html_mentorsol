@@ -5642,6 +5642,10 @@ h2 {
   background-color: #FFB802;
 }
 
+.btn-hover-color:hover {
+  background: #FFB802 !important;
+}
+
 .porfile-heading {
   font-size: 38px;
   font-weight: 700;
@@ -5668,10 +5672,21 @@ h2 {
 
 .top-bar-management {
   background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 @media screen and (max-width: 800px) {
   .top-bar-management {
     margin-top: 3rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
